@@ -1,0 +1,4677 @@
+CREATE CONSTRAINT employee_id IF NOT EXISTS 
+FOR (e:Employee) 
+REQUIRE e.id IS UNIQUE;
+
+CREATE CONSTRAINT operation_id IF NOT EXISTS
+FOR (o:Operation)
+REQUIRE o.id IS UNIQUE;
+
+CREATE CONSTRAINT machine_name IF NOT EXISTS
+FOR (m:Machine)
+REQUIRE m.name IS UNIQUE;
+
+CREATE CONSTRAINT part_name IF NOT EXISTS
+FOR (p:Part)
+REQUIRE p.name IS UNIQUE;
+
+
+
+MERGE (m1:Machine {name: 'M1'})
+ON CREATE SET
+m1.process = 'Drilling'
+
+MERGE (m2:Machine {name: 'M2'})
+ON CREATE SET
+m2.process = 'Milling'
+
+MERGE (m3:Machine {name: 'M3'})
+ON CREATE SET
+m3.process = 'Assembly'
+
+MERGE (m4:Machine {name: 'M4'})
+ON CREATE SET
+m4.process = 'Painting'
+
+
+
+
+MERGE (p1:Part {name: 'Gearbox'})
+
+MERGE (p2:Part {name: 'Shaft'})
+
+MERGE (p3:Part {name: 'Valve'})
+
+MERGE (p4:Part {name: 'Piston'})
+
+MERGE (p5:Part {name: 'Bearing'})
+
+
+MERGE (Employee1:Employee {id: "Employee1"})
+ON CREATE SET
+  Employee1.name = "Danielle Johnson",
+  Employee1.gender = "M",
+  Employee1.birthdate = date("1983-01-17")
+
+MERGE (Employee2:Employee {id: "Employee2"})
+ON CREATE SET
+  Employee2.name = "John Taylor",
+  Employee2.gender = "M",
+  Employee2.birthdate = date("1971-04-22")
+
+MERGE (Employee3:Employee {id: "Employee3"})
+ON CREATE SET
+  Employee3.name = "Erica Mcclain",
+  Employee3.gender = "F",
+  Employee3.birthdate = date("1970-03-31")
+
+MERGE (Employee4:Employee {id: "Employee4"})
+ON CREATE SET
+  Employee4.name = "Brittany Johnson",
+  Employee4.gender = "M",
+  Employee4.birthdate = date("1970-09-15")
+
+MERGE (Employee5:Employee {id: "Employee5"})
+ON CREATE SET
+  Employee5.name = "Jeffery Wagner",
+  Employee5.gender = "M",
+  Employee5.birthdate = date("1966-02-19")
+
+MERGE (Employee6:Employee {id: "Employee6"})
+ON CREATE SET
+  Employee6.name = "Anna Baldwin",
+  Employee6.gender = "M",
+  Employee6.birthdate = date("2001-05-31")
+
+MERGE (Employee7:Employee {id: "Employee7"})
+ON CREATE SET
+  Employee7.name = "Robert Cole",
+  Employee7.gender = "M",
+  Employee7.birthdate = date("1983-04-06")
+
+MERGE (Employee8:Employee {id: "Employee8"})
+ON CREATE SET
+  Employee8.name = "Lisa Smith",
+  Employee8.gender = "M",
+  Employee8.birthdate = date("1975-03-13")
+
+MERGE (Employee9:Employee {id: "Employee9"})
+ON CREATE SET
+  Employee9.name = "Helen Peterson",
+  Employee9.gender = "F",
+  Employee9.birthdate = date("1974-11-29")
+
+MERGE (Employee10:Employee {id: "Employee10"})
+ON CREATE SET
+  Employee10.name = "Jason Gallagher",
+  Employee10.gender = "M",
+  Employee10.birthdate = date("1971-04-15")
+
+MERGE (Employee11:Employee {id: "Employee11"})
+ON CREATE SET
+  Employee11.name = "Christopher Davis",
+  Employee11.gender = "M",
+  Employee11.birthdate = date("1987-09-27")
+
+MERGE (Employee12:Employee {id: "Employee12"})
+ON CREATE SET
+  Employee12.name = "Cassandra Roman",
+  Employee12.gender = "M",
+  Employee12.birthdate = date("1995-08-06")
+
+MERGE (Employee13:Employee {id: "Employee13"})
+ON CREATE SET
+  Employee13.name = "Amanda Dudley",
+  Employee13.gender = "M",
+  Employee13.birthdate = date("1990-02-02")
+
+MERGE (Employee14:Employee {id: "Employee14"})
+ON CREATE SET
+  Employee14.name = "Christian Carter",
+  Employee14.gender = "M",
+  Employee14.birthdate = date("1988-12-09")
+
+MERGE (Employee15:Employee {id: "Employee15"})
+ON CREATE SET
+  Employee15.name = "Barbara Bush",
+  Employee15.gender = "M",
+  Employee15.birthdate = date("1967-06-13")
+
+MERGE (Employee16:Employee {id: "Employee16"})
+ON CREATE SET
+  Employee16.name = "Donna Mejia",
+  Employee16.gender = "M",
+  Employee16.birthdate = date("1969-10-05")
+
+MERGE (Employee17:Employee {id: "Employee17"})
+ON CREATE SET
+  Employee17.name = "Melissa Delacruz",
+  Employee17.gender = "F",
+  Employee17.birthdate = date("1990-03-14")
+
+MERGE (Employee18:Employee {id: "Employee18"})
+ON CREATE SET
+  Employee18.name = "Joshua Reid",
+  Employee18.gender = "M",
+  Employee18.birthdate = date("1989-02-26")
+
+MERGE (Employee19:Employee {id: "Employee19"})
+ON CREATE SET
+  Employee19.name = "Francisco Kelly",
+  Employee19.gender = "F",
+  Employee19.birthdate = date("1982-07-01")
+
+MERGE (Employee20:Employee {id: "Employee20"})
+ON CREATE SET
+  Employee20.name = "Jacqueline Sutton",
+  Employee20.gender = "F",
+  Employee20.birthdate = date("1969-03-10")
+
+
+
+
+
+MERGE (o1:Operation {id: "Operation1"})
+ON CREATE SET
+  o1.date = date("2025-04-26"),
+  o1.shift = "Day",
+  o1.duration = 64,
+  o1.oee = 0.68,
+  o1.quality = "Medium"
+
+MERGE (o2:Operation {id: "Operation19"})
+ON CREATE SET
+  o2.date = date("2025-04-30"),
+  o2.shift = "Morning",
+  o2.duration = 38,
+  o2.oee = 0.73,
+  o2.quality = "Medium"
+
+MERGE (o3:Operation {id: "Operation25"})
+ON CREATE SET
+  o3.date = date("2025-04-25"),
+  o3.shift = "Morning",
+  o3.duration = 31,
+  o3.oee = 0.61,
+  o3.quality = "Medium"
+
+MERGE (o4:Operation {id: "Operation32"})
+ON CREATE SET
+  o4.date = date("2025-04-29"),
+  o4.shift = "Morning",
+  o4.duration = 85,
+  o4.oee = 0.77,
+  o4.quality = "Medium"
+
+MERGE (o5:Operation {id: "Operation41"})
+ON CREATE SET
+  o5.date = date("2025-04-25"),
+  o5.shift = "Night",
+  o5.duration = 179,
+  o5.oee = 0.63,
+  o5.quality = "Low"
+
+MERGE (o6:Operation {id: "Operation60"})
+ON CREATE SET
+  o6.date = date("2025-04-25"),
+  o6.shift = "Day",
+  o6.duration = 31,
+  o6.oee = 0.83,
+  o6.quality = "Medium"
+
+MERGE (o7:Operation {id: "Operation78"})
+ON CREATE SET
+  o7.date = date("2025-04-29"),
+  o7.shift = "Morning",
+  o7.duration = 171,
+  o7.oee = 0.7,
+  o7.quality = "Medium"
+
+MERGE (o8:Operation {id: "Operation81"})
+ON CREATE SET
+  o8.date = date("2025-04-28"),
+  o8.shift = "Night",
+  o8.duration = 126,
+  o8.oee = 0.63,
+  o8.quality = "Medium"
+
+MERGE (o9:Operation {id: "Operation106"})
+ON CREATE SET
+  o9.date = date("2025-04-29"),
+  o9.shift = "Morning",
+  o9.duration = 176,
+  o9.oee = 0.79,
+  o9.quality = "High"
+
+MERGE (o10:Operation {id: "Operation169"})
+ON CREATE SET
+  o10.date = date("2025-04-30"),
+  o10.shift = "Morning",
+  o10.duration = 106,
+  o10.oee = 0.88,
+  o10.quality = "Low"
+
+MERGE (o11:Operation {id: "Operation170"})
+ON CREATE SET
+  o11.date = date("2025-04-24"),
+  o11.shift = "Day",
+  o11.duration = 146,
+  o11.oee = 0.68,
+  o11.quality = "Medium"
+
+MERGE (o12:Operation {id: "Operation171"})
+ON CREATE SET
+  o12.date = date("2025-04-25"),
+  o12.shift = "Morning",
+  o12.duration = 40,
+  o12.oee = 0.75,
+  o12.quality = "Low"
+
+MERGE (o13:Operation {id: "Operation234"})
+ON CREATE SET
+  o13.date = date("2025-04-30"),
+  o13.shift = "Day",
+  o13.duration = 89,
+  o13.oee = 0.82,
+  o13.quality = "Low"
+
+MERGE (o14:Operation {id: "Operation3"})
+ON CREATE SET
+  o14.date = date("2025-04-26"),
+  o14.shift = "Morning",
+  o14.duration = 176,
+  o14.oee = 0.73,
+  o14.quality = "High"
+
+MERGE (o15:Operation {id: "Operation33"})
+ON CREATE SET
+  o15.date = date("2025-04-28"),
+  o15.shift = "Morning",
+  o15.duration = 178,
+  o15.oee = 0.69,
+  o15.quality = "Medium"
+
+MERGE (o16:Operation {id: "Operation36"})
+ON CREATE SET
+  o16.date = date("2025-04-25"),
+  o16.shift = "Night",
+  o16.duration = 45,
+  o16.oee = 0.94,
+  o16.quality = "Low"
+
+MERGE (o17:Operation {id: "Operation77"})
+ON CREATE SET
+  o17.date = date("2025-04-27"),
+  o17.shift = "Day",
+  o17.duration = 165,
+  o17.oee = 0.8,
+  o17.quality = "High"
+
+MERGE (o18:Operation {id: "Operation115"})
+ON CREATE SET
+  o18.date = date("2025-04-30"),
+  o18.shift = "Night",
+  o18.duration = 65,
+  o18.oee = 0.9,
+  o18.quality = "Low"
+
+MERGE (o19:Operation {id: "Operation125"})
+ON CREATE SET
+  o19.date = date("2025-04-24"),
+  o19.shift = "Day",
+  o19.duration = 60,
+  o19.oee = 0.64,
+  o19.quality = "Medium"
+
+MERGE (o20:Operation {id: "Operation151"})
+ON CREATE SET
+  o20.date = date("2025-04-28"),
+  o20.shift = "Morning",
+  o20.duration = 117,
+  o20.oee = 0.72,
+  o20.quality = "High"
+
+MERGE (o21:Operation {id: "Operation161"})
+ON CREATE SET
+  o21.date = date("2025-04-27"),
+  o21.shift = "Day",
+  o21.duration = 39,
+  o21.oee = 0.68,
+  o21.quality = "High"
+
+MERGE (o22:Operation {id: "Operation167"})
+ON CREATE SET
+  o22.date = date("2025-04-25"),
+  o22.shift = "Morning",
+  o22.duration = 146,
+  o22.oee = 0.67,
+  o22.quality = "High"
+
+MERGE (o23:Operation {id: "Operation183"})
+ON CREATE SET
+  o23.date = date("2025-04-28"),
+  o23.shift = "Day",
+  o23.duration = 76,
+  o23.oee = 0.8,
+  o23.quality = "Low"
+
+MERGE (o24:Operation {id: "Operation194"})
+ON CREATE SET
+  o24.date = date("2025-04-24"),
+  o24.shift = "Day",
+  o24.duration = 171,
+  o24.oee = 0.87,
+  o24.quality = "Medium"
+
+MERGE (o25:Operation {id: "Operation225"})
+ON CREATE SET
+  o25.date = date("2025-04-27"),
+  o25.shift = "Night",
+  o25.duration = 169,
+  o25.oee = 0.85,
+  o25.quality = "High"
+
+MERGE (o26:Operation {id: "Operation228"})
+ON CREATE SET
+  o26.date = date("2025-04-27"),
+  o26.shift = "Day",
+  o26.duration = 58,
+  o26.oee = 0.95,
+  o26.quality = "Medium"
+
+MERGE (o27:Operation {id: "Operation242"})
+ON CREATE SET
+  o27.date = date("2025-04-28"),
+  o27.shift = "Day",
+  o27.duration = 158,
+  o27.oee = 0.62,
+  o27.quality = "High"
+
+MERGE (o28:Operation {id: "Operation7"})
+ON CREATE SET
+  o28.date = date("2025-04-27"),
+  o28.shift = "Night",
+  o28.duration = 59,
+  o28.oee = 0.76,
+  o28.quality = "Medium"
+
+MERGE (o29:Operation {id: "Operation13"})
+ON CREATE SET
+  o29.date = date("2025-04-24"),
+  o29.shift = "Morning",
+  o29.duration = 120,
+  o29.oee = 0.88,
+  o29.quality = "Medium"
+
+MERGE (o30:Operation {id: "Operation21"})
+ON CREATE SET
+  o30.date = date("2025-04-26"),
+  o30.shift = "Night",
+  o30.duration = 96,
+  o30.oee = 0.79,
+  o30.quality = "Medium"
+
+MERGE (o31:Operation {id: "Operation26"})
+ON CREATE SET
+  o31.date = date("2025-04-27"),
+  o31.shift = "Night",
+  o31.duration = 98,
+  o31.oee = 0.79,
+  o31.quality = "High"
+
+MERGE (o32:Operation {id: "Operation84"})
+ON CREATE SET
+  o32.date = date("2025-04-24"),
+  o32.shift = "Night",
+  o32.duration = 106,
+  o32.oee = 0.95,
+  o32.quality = "Medium"
+
+MERGE (o33:Operation {id: "Operation100"})
+ON CREATE SET
+  o33.date = date("2025-04-26"),
+  o33.shift = "Day",
+  o33.duration = 131,
+  o33.oee = 0.71,
+  o33.quality = "High"
+
+MERGE (o34:Operation {id: "Operation114"})
+ON CREATE SET
+  o34.date = date("2025-04-24"),
+  o34.shift = "Day",
+  o34.duration = 92,
+  o34.oee = 0.81,
+  o34.quality = "Medium"
+
+MERGE (o35:Operation {id: "Operation123"})
+ON CREATE SET
+  o35.date = date("2025-04-24"),
+  o35.shift = "Day",
+  o35.duration = 73,
+  o35.oee = 0.83,
+  o35.quality = "Low"
+
+MERGE (o36:Operation {id: "Operation172"})
+ON CREATE SET
+  o36.date = date("2025-04-26"),
+  o36.shift = "Day",
+  o36.duration = 102,
+  o36.oee = 0.64,
+  o36.quality = "High"
+
+MERGE (o37:Operation {id: "Operation175"})
+ON CREATE SET
+  o37.date = date("2025-04-29"),
+  o37.shift = "Night",
+  o37.duration = 44,
+  o37.oee = 0.64,
+  o37.quality = "High"
+
+MERGE (o38:Operation {id: "Operation191"})
+ON CREATE SET
+  o38.date = date("2025-04-26"),
+  o38.shift = "Night",
+  o38.duration = 88,
+  o38.oee = 0.81,
+  o38.quality = "Medium"
+
+MERGE (o39:Operation {id: "Operation201"})
+ON CREATE SET
+  o39.date = date("2025-04-30"),
+  o39.shift = "Night",
+  o39.duration = 74,
+  o39.oee = 0.72,
+  o39.quality = "Low"
+
+MERGE (o40:Operation {id: "Operation202"})
+ON CREATE SET
+  o40.date = date("2025-04-30"),
+  o40.shift = "Night",
+  o40.duration = 51,
+  o40.oee = 0.87,
+  o40.quality = "Medium"
+
+MERGE (o41:Operation {id: "Operation204"})
+ON CREATE SET
+  o41.date = date("2025-04-24"),
+  o41.shift = "Day",
+  o41.duration = 141,
+  o41.oee = 0.87,
+  o41.quality = "Medium"
+
+MERGE (o42:Operation {id: "Operation236"})
+ON CREATE SET
+  o42.date = date("2025-04-24"),
+  o42.shift = "Day",
+  o42.duration = 27,
+  o42.oee = 0.74,
+  o42.quality = "Medium"
+
+MERGE (o43:Operation {id: "Operation2"})
+ON CREATE SET
+  o43.date = date("2025-04-30"),
+  o43.shift = "Morning",
+  o43.duration = 77,
+  o43.oee = 0.72,
+  o43.quality = "Medium"
+
+MERGE (o44:Operation {id: "Operation29"})
+ON CREATE SET
+  o44.date = date("2025-04-30"),
+  o44.shift = "Night",
+  o44.duration = 74,
+  o44.oee = 0.9,
+  o44.quality = "Low"
+
+MERGE (o45:Operation {id: "Operation71"})
+ON CREATE SET
+  o45.date = date("2025-04-25"),
+  o45.shift = "Day",
+  o45.duration = 127,
+  o45.oee = 0.95,
+  o45.quality = "High"
+
+MERGE (o46:Operation {id: "Operation88"})
+ON CREATE SET
+  o46.date = date("2025-04-25"),
+  o46.shift = "Morning",
+  o46.duration = 113,
+  o46.oee = 0.93,
+  o46.quality = "High"
+
+MERGE (o47:Operation {id: "Operation90"})
+ON CREATE SET
+  o47.date = date("2025-04-24"),
+  o47.shift = "Morning",
+  o47.duration = 147,
+  o47.oee = 0.8,
+  o47.quality = "Low"
+
+MERGE (o48:Operation {id: "Operation138"})
+ON CREATE SET
+  o48.date = date("2025-04-28"),
+  o48.shift = "Night",
+  o48.duration = 166,
+  o48.oee = 0.61,
+  o48.quality = "Low"
+
+MERGE (o49:Operation {id: "Operation165"})
+ON CREATE SET
+  o49.date = date("2025-04-29"),
+  o49.shift = "Night",
+  o49.duration = 77,
+  o49.oee = 0.74,
+  o49.quality = "Low"
+
+MERGE (o50:Operation {id: "Operation166"})
+ON CREATE SET
+  o50.date = date("2025-04-30"),
+  o50.shift = "Night",
+  o50.duration = 54,
+  o50.oee = 0.82,
+  o50.quality = "Low"
+
+MERGE (o51:Operation {id: "Operation182"})
+ON CREATE SET
+  o51.date = date("2025-04-24"),
+  o51.shift = "Night",
+  o51.duration = 171,
+  o51.oee = 0.75,
+  o51.quality = "High"
+
+MERGE (o52:Operation {id: "Operation226"})
+ON CREATE SET
+  o52.date = date("2025-04-28"),
+  o52.shift = "Morning",
+  o52.duration = 64,
+  o52.oee = 0.92,
+  o52.quality = "Low"
+
+MERGE (o53:Operation {id: "Operation238"})
+ON CREATE SET
+  o53.date = date("2025-04-26"),
+  o53.shift = "Morning",
+  o53.duration = 76,
+  o53.oee = 0.72,
+  o53.quality = "High"
+
+MERGE (o54:Operation {id: "Operation76"})
+ON CREATE SET
+  o54.date = date("2025-04-24"),
+  o54.shift = "Day",
+  o54.duration = 85,
+  o54.oee = 0.79,
+  o54.quality = "Medium"
+
+MERGE (o55:Operation {id: "Operation82"})
+ON CREATE SET
+  o55.date = date("2025-04-27"),
+  o55.shift = "Morning",
+  o55.duration = 62,
+  o55.oee = 0.71,
+  o55.quality = "Medium"
+
+MERGE (o56:Operation {id: "Operation93"})
+ON CREATE SET
+  o56.date = date("2025-04-25"),
+  o56.shift = "Night",
+  o56.duration = 103,
+  o56.oee = 0.83,
+  o56.quality = "High"
+
+MERGE (o57:Operation {id: "Operation107"})
+ON CREATE SET
+  o57.date = date("2025-04-30"),
+  o57.shift = "Morning",
+  o57.duration = 112,
+  o57.oee = 0.76,
+  o57.quality = "Medium"
+
+MERGE (o58:Operation {id: "Operation162"})
+ON CREATE SET
+  o58.date = date("2025-04-29"),
+  o58.shift = "Day",
+  o58.duration = 127,
+  o58.oee = 0.86,
+  o58.quality = "High"
+
+MERGE (o59:Operation {id: "Operation184"})
+ON CREATE SET
+  o59.date = date("2025-04-27"),
+  o59.shift = "Morning",
+  o59.duration = 76,
+  o59.oee = 0.79,
+  o59.quality = "Low"
+
+MERGE (o60:Operation {id: "Operation203"})
+ON CREATE SET
+  o60.date = date("2025-04-25"),
+  o60.shift = "Morning",
+  o60.duration = 61,
+  o60.oee = 0.66,
+  o60.quality = "Low"
+
+MERGE (o61:Operation {id: "Operation230"})
+ON CREATE SET
+  o61.date = date("2025-04-27"),
+  o61.shift = "Day",
+  o61.duration = 131,
+  o61.oee = 0.65,
+  o61.quality = "High"
+
+MERGE (o62:Operation {id: "Operation232"})
+ON CREATE SET
+  o62.date = date("2025-04-24"),
+  o62.shift = "Day",
+  o62.duration = 58,
+  o62.oee = 0.64,
+  o62.quality = "Low"
+
+MERGE (o63:Operation {id: "Operation6"})
+ON CREATE SET
+  o63.date = date("2025-04-28"),
+  o63.shift = "Morning",
+  o63.duration = 127,
+  o63.oee = 0.85,
+  o63.quality = "High"
+
+MERGE (o64:Operation {id: "Operation37"})
+ON CREATE SET
+  o64.date = date("2025-04-30"),
+  o64.shift = "Morning",
+  o64.duration = 128,
+  o64.oee = 0.68,
+  o64.quality = "Low"
+
+MERGE (o65:Operation {id: "Operation53"})
+ON CREATE SET
+  o65.date = date("2025-04-25"),
+  o65.shift = "Morning",
+  o65.duration = 138,
+  o65.oee = 0.72,
+  o65.quality = "Medium"
+
+MERGE (o66:Operation {id: "Operation58"})
+ON CREATE SET
+  o66.date = date("2025-04-27"),
+  o66.shift = "Morning",
+  o66.duration = 115,
+  o66.oee = 0.72,
+  o66.quality = "Medium"
+
+MERGE (o67:Operation {id: "Operation66"})
+ON CREATE SET
+  o67.date = date("2025-04-30"),
+  o67.shift = "Night",
+  o67.duration = 126,
+  o67.oee = 0.82,
+  o67.quality = "Low"
+
+MERGE (o68:Operation {id: "Operation129"})
+ON CREATE SET
+  o68.date = date("2025-04-29"),
+  o68.shift = "Morning",
+  o68.duration = 108,
+  o68.oee = 0.63,
+  o68.quality = "Low"
+
+MERGE (o69:Operation {id: "Operation145"})
+ON CREATE SET
+  o69.date = date("2025-04-28"),
+  o69.shift = "Morning",
+  o69.duration = 118,
+  o69.oee = 0.73,
+  o69.quality = "High"
+
+MERGE (o70:Operation {id: "Operation239"})
+ON CREATE SET
+  o70.date = date("2025-04-30"),
+  o70.shift = "Night",
+  o70.duration = 49,
+  o70.oee = 0.65,
+  o70.quality = "High"
+
+MERGE (o71:Operation {id: "Operation30"})
+ON CREATE SET
+  o71.date = date("2025-04-30"),
+  o71.shift = "Day",
+  o71.duration = 42,
+  o71.oee = 0.66,
+  o71.quality = "Medium"
+
+MERGE (o72:Operation {id: "Operation35"})
+ON CREATE SET
+  o72.date = date("2025-04-26"),
+  o72.shift = "Night",
+  o72.duration = 107,
+  o72.oee = 0.86,
+  o72.quality = "Low"
+
+MERGE (o73:Operation {id: "Operation46"})
+ON CREATE SET
+  o73.date = date("2025-04-28"),
+  o73.shift = "Night",
+  o73.duration = 121,
+  o73.oee = 0.69,
+  o73.quality = "Medium"
+
+MERGE (o74:Operation {id: "Operation103"})
+ON CREATE SET
+  o74.date = date("2025-04-27"),
+  o74.shift = "Night",
+  o74.duration = 106,
+  o74.oee = 0.87,
+  o74.quality = "Low"
+
+MERGE (o75:Operation {id: "Operation104"})
+ON CREATE SET
+  o75.date = date("2025-04-28"),
+  o75.shift = "Day",
+  o75.duration = 136,
+  o75.oee = 0.94,
+  o75.quality = "High"
+
+MERGE (o76:Operation {id: "Operation113"})
+ON CREATE SET
+  o76.date = date("2025-04-28"),
+  o76.shift = "Night",
+  o76.duration = 33,
+  o76.oee = 0.68,
+  o76.quality = "High"
+
+MERGE (o77:Operation {id: "Operation132"})
+ON CREATE SET
+  o77.date = date("2025-04-25"),
+  o77.shift = "Day",
+  o77.duration = 144,
+  o77.oee = 0.9,
+  o77.quality = "Medium"
+
+MERGE (o78:Operation {id: "Operation152"})
+ON CREATE SET
+  o78.date = date("2025-04-25"),
+  o78.shift = "Night",
+  o78.duration = 36,
+  o78.oee = 0.82,
+  o78.quality = "Low"
+
+MERGE (o79:Operation {id: "Operation168"})
+ON CREATE SET
+  o79.date = date("2025-04-24"),
+  o79.shift = "Day",
+  o79.duration = 144,
+  o79.oee = 0.88,
+  o79.quality = "High"
+
+MERGE (o80:Operation {id: "Operation178"})
+ON CREATE SET
+  o80.date = date("2025-04-28"),
+  o80.shift = "Morning",
+  o80.duration = 86,
+  o80.oee = 0.89,
+  o80.quality = "Medium"
+
+MERGE (o81:Operation {id: "Operation218"})
+ON CREATE SET
+  o81.date = date("2025-04-30"),
+  o81.shift = "Morning",
+  o81.duration = 56,
+  o81.oee = 0.65,
+  o81.quality = "Low"
+
+MERGE (o82:Operation {id: "Operation223"})
+ON CREATE SET
+  o82.date = date("2025-04-27"),
+  o82.shift = "Day",
+  o82.duration = 94,
+  o82.oee = 0.7,
+  o82.quality = "Medium"
+
+MERGE (o83:Operation {id: "Operation20"})
+ON CREATE SET
+  o83.date = date("2025-04-27"),
+  o83.shift = "Night",
+  o83.duration = 172,
+  o83.oee = 0.63,
+  o83.quality = "Medium"
+
+MERGE (o84:Operation {id: "Operation24"})
+ON CREATE SET
+  o84.date = date("2025-04-29"),
+  o84.shift = "Morning",
+  o84.duration = 114,
+  o84.oee = 0.68,
+  o84.quality = "Low"
+
+MERGE (o85:Operation {id: "Operation31"})
+ON CREATE SET
+  o85.date = date("2025-04-27"),
+  o85.shift = "Night",
+  o85.duration = 36,
+  o85.oee = 0.83,
+  o85.quality = "High"
+
+MERGE (o86:Operation {id: "Operation54"})
+ON CREATE SET
+  o86.date = date("2025-04-30"),
+  o86.shift = "Night",
+  o86.duration = 37,
+  o86.oee = 0.91,
+  o86.quality = "Medium"
+
+MERGE (o87:Operation {id: "Operation55"})
+ON CREATE SET
+  o87.date = date("2025-04-27"),
+  o87.shift = "Day",
+  o87.duration = 69,
+  o87.oee = 0.88,
+  o87.quality = "Low"
+
+MERGE (o88:Operation {id: "Operation56"})
+ON CREATE SET
+  o88.date = date("2025-04-28"),
+  o88.shift = "Day",
+  o88.duration = 73,
+  o88.oee = 0.9,
+  o88.quality = "Medium"
+
+MERGE (o89:Operation {id: "Operation67"})
+ON CREATE SET
+  o89.date = date("2025-04-25"),
+  o89.shift = "Morning",
+  o89.duration = 44,
+  o89.oee = 0.62,
+  o89.quality = "Medium"
+
+MERGE (o90:Operation {id: "Operation85"})
+ON CREATE SET
+  o90.date = date("2025-04-26"),
+  o90.shift = "Morning",
+  o90.duration = 172,
+  o90.oee = 0.67,
+  o90.quality = "Low"
+
+MERGE (o91:Operation {id: "Operation95"})
+ON CREATE SET
+  o91.date = date("2025-04-30"),
+  o91.shift = "Day",
+  o91.duration = 59,
+  o91.oee = 0.76,
+  o91.quality = "High"
+
+MERGE (o92:Operation {id: "Operation116"})
+ON CREATE SET
+  o92.date = date("2025-04-26"),
+  o92.shift = "Night",
+  o92.duration = 149,
+  o92.oee = 0.67,
+  o92.quality = "Low"
+
+MERGE (o93:Operation {id: "Operation136"})
+ON CREATE SET
+  o93.date = date("2025-04-26"),
+  o93.shift = "Day",
+  o93.duration = 139,
+  o93.oee = 0.85,
+  o93.quality = "Medium"
+
+MERGE (o94:Operation {id: "Operation142"})
+ON CREATE SET
+  o94.date = date("2025-04-29"),
+  o94.shift = "Morning",
+  o94.duration = 142,
+  o94.oee = 0.85,
+  o94.quality = "Low"
+
+MERGE (o95:Operation {id: "Operation146"})
+ON CREATE SET
+  o95.date = date("2025-04-29"),
+  o95.shift = "Morning",
+  o95.duration = 57,
+  o95.oee = 0.82,
+  o95.quality = "Medium"
+
+MERGE (o96:Operation {id: "Operation159"})
+ON CREATE SET
+  o96.date = date("2025-04-29"),
+  o96.shift = "Night",
+  o96.duration = 161,
+  o96.oee = 0.8,
+  o96.quality = "High"
+
+MERGE (o97:Operation {id: "Operation160"})
+ON CREATE SET
+  o97.date = date("2025-04-26"),
+  o97.shift = "Night",
+  o97.duration = 68,
+  o97.oee = 0.74,
+  o97.quality = "Low"
+
+MERGE (o98:Operation {id: "Operation173"})
+ON CREATE SET
+  o98.date = date("2025-04-26"),
+  o98.shift = "Day",
+  o98.duration = 93,
+  o98.oee = 0.94,
+  o98.quality = "Low"
+
+MERGE (o99:Operation {id: "Operation211"})
+ON CREATE SET
+  o99.date = date("2025-04-28"),
+  o99.shift = "Night",
+  o99.duration = 104,
+  o99.oee = 0.66,
+  o99.quality = "Medium"
+
+MERGE (o100:Operation {id: "Operation229"})
+ON CREATE SET
+  o100.date = date("2025-04-29"),
+  o100.shift = "Morning",
+  o100.duration = 154,
+  o100.oee = 0.83,
+  o100.quality = "Low"
+
+MERGE (o101:Operation {id: "Operation11"})
+ON CREATE SET
+  o101.date = date("2025-04-24"),
+  o101.shift = "Night",
+  o101.duration = 110,
+  o101.oee = 0.69,
+  o101.quality = "High"
+
+MERGE (o102:Operation {id: "Operation17"})
+ON CREATE SET
+  o102.date = date("2025-04-24"),
+  o102.shift = "Morning",
+  o102.duration = 159,
+  o102.oee = 0.7,
+  o102.quality = "High"
+
+MERGE (o103:Operation {id: "Operation45"})
+ON CREATE SET
+  o103.date = date("2025-04-24"),
+  o103.shift = "Night",
+  o103.duration = 109,
+  o103.oee = 0.7,
+  o103.quality = "High"
+
+MERGE (o104:Operation {id: "Operation47"})
+ON CREATE SET
+  o104.date = date("2025-04-28"),
+  o104.shift = "Night",
+  o104.duration = 88,
+  o104.oee = 0.7,
+  o104.quality = "Low"
+
+MERGE (o105:Operation {id: "Operation74"})
+ON CREATE SET
+  o105.date = date("2025-04-30"),
+  o105.shift = "Day",
+  o105.duration = 90,
+  o105.oee = 0.85,
+  o105.quality = "Low"
+
+MERGE (o106:Operation {id: "Operation75"})
+ON CREATE SET
+  o106.date = date("2025-04-30"),
+  o106.shift = "Night",
+  o106.duration = 33,
+  o106.oee = 0.65,
+  o106.quality = "Medium"
+
+MERGE (o107:Operation {id: "Operation119"})
+ON CREATE SET
+  o107.date = date("2025-04-24"),
+  o107.shift = "Morning",
+  o107.duration = 116,
+  o107.oee = 0.91,
+  o107.quality = "High"
+
+MERGE (o108:Operation {id: "Operation131"})
+ON CREATE SET
+  o108.date = date("2025-04-30"),
+  o108.shift = "Day",
+  o108.duration = 59,
+  o108.oee = 0.79,
+  o108.quality = "Medium"
+
+MERGE (o109:Operation {id: "Operation147"})
+ON CREATE SET
+  o109.date = date("2025-04-24"),
+  o109.shift = "Day",
+  o109.duration = 128,
+  o109.oee = 0.66,
+  o109.quality = "Medium"
+
+MERGE (o110:Operation {id: "Operation164"})
+ON CREATE SET
+  o110.date = date("2025-04-24"),
+  o110.shift = "Morning",
+  o110.duration = 91,
+  o110.oee = 0.93,
+  o110.quality = "Medium"
+
+MERGE (o111:Operation {id: "Operation185"})
+ON CREATE SET
+  o111.date = date("2025-04-29"),
+  o111.shift = "Night",
+  o111.duration = 176,
+  o111.oee = 0.89,
+  o111.quality = "High"
+
+MERGE (o112:Operation {id: "Operation187"})
+ON CREATE SET
+  o112.date = date("2025-04-29"),
+  o112.shift = "Day",
+  o112.duration = 21,
+  o112.oee = 0.9,
+  o112.quality = "High"
+
+MERGE (o113:Operation {id: "Operation192"})
+ON CREATE SET
+  o113.date = date("2025-04-27"),
+  o113.shift = "Morning",
+  o113.duration = 75,
+  o113.oee = 0.64,
+  o113.quality = "High"
+
+MERGE (o114:Operation {id: "Operation237"})
+ON CREATE SET
+  o114.date = date("2025-04-30"),
+  o114.shift = "Morning",
+  o114.duration = 75,
+  o114.oee = 0.86,
+  o114.quality = "High"
+
+MERGE (o115:Operation {id: "Operation245"})
+ON CREATE SET
+  o115.date = date("2025-04-28"),
+  o115.shift = "Morning",
+  o115.duration = 89,
+  o115.oee = 0.95,
+  o115.quality = "Low"
+
+MERGE (o116:Operation {id: "Operation4"})
+ON CREATE SET
+  o116.date = date("2025-04-25"),
+  o116.shift = "Morning",
+  o116.duration = 133,
+  o116.oee = 0.62,
+  o116.quality = "Low"
+
+MERGE (o117:Operation {id: "Operation5"})
+ON CREATE SET
+  o117.date = date("2025-04-29"),
+  o117.shift = "Morning",
+  o117.duration = 81,
+  o117.oee = 0.76,
+  o117.quality = "Medium"
+
+MERGE (o118:Operation {id: "Operation23"})
+ON CREATE SET
+  o118.date = date("2025-04-28"),
+  o118.shift = "Day",
+  o118.duration = 164,
+  o118.oee = 0.76,
+  o118.quality = "Low"
+
+MERGE (o119:Operation {id: "Operation34"})
+ON CREATE SET
+  o119.date = date("2025-04-28"),
+  o119.shift = "Night",
+  o119.duration = 135,
+  o119.oee = 0.65,
+  o119.quality = "Medium"
+
+MERGE (o120:Operation {id: "Operation43"})
+ON CREATE SET
+  o120.date = date("2025-04-25"),
+  o120.shift = "Night",
+  o120.duration = 133,
+  o120.oee = 0.81,
+  o120.quality = "High"
+
+MERGE (o121:Operation {id: "Operation51"})
+ON CREATE SET
+  o121.date = date("2025-04-30"),
+  o121.shift = "Day",
+  o121.duration = 54,
+  o121.oee = 0.69,
+  o121.quality = "Low"
+
+MERGE (o122:Operation {id: "Operation64"})
+ON CREATE SET
+  o122.date = date("2025-04-30"),
+  o122.shift = "Day",
+  o122.duration = 146,
+  o122.oee = 0.81,
+  o122.quality = "Medium"
+
+MERGE (o123:Operation {id: "Operation118"})
+ON CREATE SET
+  o123.date = date("2025-04-24"),
+  o123.shift = "Morning",
+  o123.duration = 95,
+  o123.oee = 0.71,
+  o123.quality = "Medium"
+
+MERGE (o124:Operation {id: "Operation150"})
+ON CREATE SET
+  o124.date = date("2025-04-28"),
+  o124.shift = "Day",
+  o124.duration = 21,
+  o124.oee = 0.9,
+  o124.quality = "High"
+
+MERGE (o125:Operation {id: "Operation153"})
+ON CREATE SET
+  o125.date = date("2025-04-27"),
+  o125.shift = "Night",
+  o125.duration = 78,
+  o125.oee = 0.65,
+  o125.quality = "Medium"
+
+MERGE (o126:Operation {id: "Operation195"})
+ON CREATE SET
+  o126.date = date("2025-04-30"),
+  o126.shift = "Morning",
+  o126.duration = 100,
+  o126.oee = 0.75,
+  o126.quality = "Low"
+
+MERGE (o127:Operation {id: "Operation206"})
+ON CREATE SET
+  o127.date = date("2025-04-24"),
+  o127.shift = "Morning",
+  o127.duration = 76,
+  o127.oee = 0.63,
+  o127.quality = "Medium"
+
+MERGE (o128:Operation {id: "Operation212"})
+ON CREATE SET
+  o128.date = date("2025-04-25"),
+  o128.shift = "Day",
+  o128.duration = 129,
+  o128.oee = 0.62,
+  o128.quality = "High"
+
+MERGE (o129:Operation {id: "Operation215"})
+ON CREATE SET
+  o129.date = date("2025-04-24"),
+  o129.shift = "Night",
+  o129.duration = 133,
+  o129.oee = 0.63,
+  o129.quality = "High"
+
+MERGE (o130:Operation {id: "Operation219"})
+ON CREATE SET
+  o130.date = date("2025-04-30"),
+  o130.shift = "Night",
+  o130.duration = 154,
+  o130.oee = 0.91,
+  o130.quality = "Low"
+
+MERGE (o131:Operation {id: "Operation10"})
+ON CREATE SET
+  o131.date = date("2025-04-27"),
+  o131.shift = "Day",
+  o131.duration = 162,
+  o131.oee = 0.82,
+  o131.quality = "Low"
+
+MERGE (o132:Operation {id: "Operation16"})
+ON CREATE SET
+  o132.date = date("2025-04-27"),
+  o132.shift = "Day",
+  o132.duration = 45,
+  o132.oee = 0.6,
+  o132.quality = "High"
+
+MERGE (o133:Operation {id: "Operation48"})
+ON CREATE SET
+  o133.date = date("2025-04-29"),
+  o133.shift = "Morning",
+  o133.duration = 139,
+  o133.oee = 0.79,
+  o133.quality = "Medium"
+
+MERGE (o134:Operation {id: "Operation72"})
+ON CREATE SET
+  o134.date = date("2025-04-28"),
+  o134.shift = "Night",
+  o134.duration = 163,
+  o134.oee = 0.75,
+  o134.quality = "High"
+
+MERGE (o135:Operation {id: "Operation80"})
+ON CREATE SET
+  o135.date = date("2025-04-25"),
+  o135.shift = "Day",
+  o135.duration = 167,
+  o135.oee = 0.94,
+  o135.quality = "High"
+
+MERGE (o136:Operation {id: "Operation83"})
+ON CREATE SET
+  o136.date = date("2025-04-26"),
+  o136.shift = "Day",
+  o136.duration = 140,
+  o136.oee = 0.89,
+  o136.quality = "Medium"
+
+MERGE (o137:Operation {id: "Operation102"})
+ON CREATE SET
+  o137.date = date("2025-04-26"),
+  o137.shift = "Day",
+  o137.duration = 69,
+  o137.oee = 0.68,
+  o137.quality = "High"
+
+MERGE (o138:Operation {id: "Operation108"})
+ON CREATE SET
+  o138.date = date("2025-04-29"),
+  o138.shift = "Day",
+  o138.duration = 171,
+  o138.oee = 0.77,
+  o138.quality = "Low"
+
+MERGE (o139:Operation {id: "Operation120"})
+ON CREATE SET
+  o139.date = date("2025-04-24"),
+  o139.shift = "Morning",
+  o139.duration = 57,
+  o139.oee = 0.84,
+  o139.quality = "High"
+
+MERGE (o140:Operation {id: "Operation124"})
+ON CREATE SET
+  o140.date = date("2025-04-28"),
+  o140.shift = "Day",
+  o140.duration = 126,
+  o140.oee = 0.74,
+  o140.quality = "High"
+
+MERGE (o141:Operation {id: "Operation154"})
+ON CREATE SET
+  o141.date = date("2025-04-26"),
+  o141.shift = "Morning",
+  o141.duration = 41,
+  o141.oee = 0.79,
+  o141.quality = "Medium"
+
+MERGE (o142:Operation {id: "Operation156"})
+ON CREATE SET
+  o142.date = date("2025-04-30"),
+  o142.shift = "Morning",
+  o142.duration = 43,
+  o142.oee = 0.94,
+  o142.quality = "High"
+
+MERGE (o143:Operation {id: "Operation190"})
+ON CREATE SET
+  o143.date = date("2025-04-25"),
+  o143.shift = "Morning",
+  o143.duration = 45,
+  o143.oee = 0.82,
+  o143.quality = "High"
+
+MERGE (o144:Operation {id: "Operation213"})
+ON CREATE SET
+  o144.date = date("2025-04-30"),
+  o144.shift = "Morning",
+  o144.duration = 109,
+  o144.oee = 0.74,
+  o144.quality = "Medium"
+
+MERGE (o145:Operation {id: "Operation220"})
+ON CREATE SET
+  o145.date = date("2025-04-27"),
+  o145.shift = "Day",
+  o145.duration = 45,
+  o145.oee = 0.66,
+  o145.quality = "High"
+
+MERGE (o146:Operation {id: "Operation241"})
+ON CREATE SET
+  o146.date = date("2025-04-25"),
+  o146.shift = "Day",
+  o146.duration = 178,
+  o146.oee = 0.79,
+  o146.quality = "Medium"
+
+MERGE (o147:Operation {id: "Operation243"})
+ON CREATE SET
+  o147.date = date("2025-04-24"),
+  o147.shift = "Day",
+  o147.duration = 90,
+  o147.oee = 0.74,
+  o147.quality = "Medium"
+
+MERGE (o148:Operation {id: "Operation52"})
+ON CREATE SET
+  o148.date = date("2025-04-24"),
+  o148.shift = "Night",
+  o148.duration = 45,
+  o148.oee = 0.93,
+  o148.quality = "Low"
+
+MERGE (o149:Operation {id: "Operation57"})
+ON CREATE SET
+  o149.date = date("2025-04-25"),
+  o149.shift = "Day",
+  o149.duration = 170,
+  o149.oee = 0.64,
+  o149.quality = "Medium"
+
+MERGE (o150:Operation {id: "Operation91"})
+ON CREATE SET
+  o150.date = date("2025-04-30"),
+  o150.shift = "Morning",
+  o150.duration = 101,
+  o150.oee = 0.72,
+  o150.quality = "Medium"
+
+MERGE (o151:Operation {id: "Operation97"})
+ON CREATE SET
+  o151.date = date("2025-04-27"),
+  o151.shift = "Day",
+  o151.duration = 161,
+  o151.oee = 0.85,
+  o151.quality = "Medium"
+
+MERGE (o152:Operation {id: "Operation101"})
+ON CREATE SET
+  o152.date = date("2025-04-30"),
+  o152.shift = "Night",
+  o152.duration = 75,
+  o152.oee = 0.95,
+  o152.quality = "High"
+
+MERGE (o153:Operation {id: "Operation144"})
+ON CREATE SET
+  o153.date = date("2025-04-29"),
+  o153.shift = "Morning",
+  o153.duration = 59,
+  o153.oee = 0.74,
+  o153.quality = "High"
+
+MERGE (o154:Operation {id: "Operation148"})
+ON CREATE SET
+  o154.date = date("2025-04-25"),
+  o154.shift = "Night",
+  o154.duration = 60,
+  o154.oee = 0.9,
+  o154.quality = "Low"
+
+MERGE (o155:Operation {id: "Operation158"})
+ON CREATE SET
+  o155.date = date("2025-04-25"),
+  o155.shift = "Day",
+  o155.duration = 152,
+  o155.oee = 0.93,
+  o155.quality = "Low"
+
+MERGE (o156:Operation {id: "Operation181"})
+ON CREATE SET
+  o156.date = date("2025-04-28"),
+  o156.shift = "Morning",
+  o156.duration = 114,
+  o156.oee = 0.8,
+  o156.quality = "Medium"
+
+MERGE (o157:Operation {id: "Operation200"})
+ON CREATE SET
+  o157.date = date("2025-04-29"),
+  o157.shift = "Morning",
+  o157.duration = 59,
+  o157.oee = 0.81,
+  o157.quality = "High"
+
+MERGE (o158:Operation {id: "Operation248"})
+ON CREATE SET
+  o158.date = date("2025-04-29"),
+  o158.shift = "Night",
+  o158.duration = 177,
+  o158.oee = 0.93,
+  o158.quality = "Low"
+
+MERGE (o159:Operation {id: "Operation9"})
+ON CREATE SET
+  o159.date = date("2025-04-26"),
+  o159.shift = "Morning",
+  o159.duration = 166,
+  o159.oee = 0.8,
+  o159.quality = "High"
+
+MERGE (o160:Operation {id: "Operation40"})
+ON CREATE SET
+  o160.date = date("2025-04-24"),
+  o160.shift = "Day",
+  o160.duration = 71,
+  o160.oee = 0.86,
+  o160.quality = "Low"
+
+MERGE (o161:Operation {id: "Operation63"})
+ON CREATE SET
+  o161.date = date("2025-04-27"),
+  o161.shift = "Night",
+  o161.duration = 68,
+  o161.oee = 0.79,
+  o161.quality = "Low"
+
+MERGE (o162:Operation {id: "Operation69"})
+ON CREATE SET
+  o162.date = date("2025-04-30"),
+  o162.shift = "Morning",
+  o162.duration = 44,
+  o162.oee = 0.84,
+  o162.quality = "Low"
+
+MERGE (o163:Operation {id: "Operation89"})
+ON CREATE SET
+  o163.date = date("2025-04-29"),
+  o163.shift = "Morning",
+  o163.duration = 115,
+  o163.oee = 0.89,
+  o163.quality = "Low"
+
+MERGE (o164:Operation {id: "Operation96"})
+ON CREATE SET
+  o164.date = date("2025-04-26"),
+  o164.shift = "Day",
+  o164.duration = 156,
+  o164.oee = 0.66,
+  o164.quality = "Low"
+
+MERGE (o165:Operation {id: "Operation109"})
+ON CREATE SET
+  o165.date = date("2025-04-25"),
+  o165.shift = "Night",
+  o165.duration = 121,
+  o165.oee = 0.62,
+  o165.quality = "Low"
+
+MERGE (o166:Operation {id: "Operation135"})
+ON CREATE SET
+  o166.date = date("2025-04-29"),
+  o166.shift = "Morning",
+  o166.duration = 177,
+  o166.oee = 0.68,
+  o166.quality = "Medium"
+
+MERGE (o167:Operation {id: "Operation137"})
+ON CREATE SET
+  o167.date = date("2025-04-29"),
+  o167.shift = "Morning",
+  o167.duration = 40,
+  o167.oee = 0.94,
+  o167.quality = "Medium"
+
+MERGE (o168:Operation {id: "Operation140"})
+ON CREATE SET
+  o168.date = date("2025-04-25"),
+  o168.shift = "Night",
+  o168.duration = 157,
+  o168.oee = 0.73,
+  o168.quality = "Medium"
+
+MERGE (o169:Operation {id: "Operation149"})
+ON CREATE SET
+  o169.date = date("2025-04-24"),
+  o169.shift = "Morning",
+  o169.duration = 81,
+  o169.oee = 0.73,
+  o169.quality = "Medium"
+
+MERGE (o170:Operation {id: "Operation157"})
+ON CREATE SET
+  o170.date = date("2025-04-29"),
+  o170.shift = "Day",
+  o170.duration = 22,
+  o170.oee = 0.79,
+  o170.quality = "Medium"
+
+MERGE (o171:Operation {id: "Operation188"})
+ON CREATE SET
+  o171.date = date("2025-04-30"),
+  o171.shift = "Night",
+  o171.duration = 121,
+  o171.oee = 0.61,
+  o171.quality = "High"
+
+MERGE (o172:Operation {id: "Operation196"})
+ON CREATE SET
+  o172.date = date("2025-04-24"),
+  o172.shift = "Night",
+  o172.duration = 153,
+  o172.oee = 0.88,
+  o172.quality = "Low"
+
+MERGE (o173:Operation {id: "Operation197"})
+ON CREATE SET
+  o173.date = date("2025-04-27"),
+  o173.shift = "Morning",
+  o173.duration = 94,
+  o173.oee = 0.63,
+  o173.quality = "Medium"
+
+MERGE (o174:Operation {id: "Operation199"})
+ON CREATE SET
+  o174.date = date("2025-04-24"),
+  o174.shift = "Morning",
+  o174.duration = 148,
+  o174.oee = 0.82,
+  o174.quality = "High"
+
+MERGE (o175:Operation {id: "Operation216"})
+ON CREATE SET
+  o175.date = date("2025-04-24"),
+  o175.shift = "Night",
+  o175.duration = 132,
+  o175.oee = 0.93,
+  o175.quality = "High"
+
+MERGE (o176:Operation {id: "Operation244"})
+ON CREATE SET
+  o176.date = date("2025-04-26"),
+  o176.shift = "Day",
+  o176.duration = 131,
+  o176.oee = 0.73,
+  o176.quality = "High"
+
+MERGE (o177:Operation {id: "Operation249"})
+ON CREATE SET
+  o177.date = date("2025-04-30"),
+  o177.shift = "Night",
+  o177.duration = 129,
+  o177.oee = 0.93,
+  o177.quality = "Low"
+
+MERGE (o178:Operation {id: "Operation12"})
+ON CREATE SET
+  o178.date = date("2025-04-26"),
+  o178.shift = "Morning",
+  o178.duration = 180,
+  o178.oee = 0.65,
+  o178.quality = "Medium"
+
+MERGE (o179:Operation {id: "Operation28"})
+ON CREATE SET
+  o179.date = date("2025-04-26"),
+  o179.shift = "Day",
+  o179.duration = 95,
+  o179.oee = 0.86,
+  o179.quality = "High"
+
+MERGE (o180:Operation {id: "Operation59"})
+ON CREATE SET
+  o180.date = date("2025-04-29"),
+  o180.shift = "Night",
+  o180.duration = 50,
+  o180.oee = 0.62,
+  o180.quality = "Medium"
+
+MERGE (o181:Operation {id: "Operation62"})
+ON CREATE SET
+  o181.date = date("2025-04-24"),
+  o181.shift = "Night",
+  o181.duration = 67,
+  o181.oee = 0.64,
+  o181.quality = "Medium"
+
+MERGE (o182:Operation {id: "Operation70"})
+ON CREATE SET
+  o182.date = date("2025-04-26"),
+  o182.shift = "Night",
+  o182.duration = 103,
+  o182.oee = 0.62,
+  o182.quality = "Low"
+
+MERGE (o183:Operation {id: "Operation79"})
+ON CREATE SET
+  o183.date = date("2025-04-24"),
+  o183.shift = "Morning",
+  o183.duration = 64,
+  o183.oee = 0.77,
+  o183.quality = "Medium"
+
+MERGE (o184:Operation {id: "Operation112"})
+ON CREATE SET
+  o184.date = date("2025-04-24"),
+  o184.shift = "Night",
+  o184.duration = 30,
+  o184.oee = 0.94,
+  o184.quality = "Low"
+
+MERGE (o185:Operation {id: "Operation139"})
+ON CREATE SET
+  o185.date = date("2025-04-26"),
+  o185.shift = "Day",
+  o185.duration = 145,
+  o185.oee = 0.69,
+  o185.quality = "High"
+
+MERGE (o186:Operation {id: "Operation163"})
+ON CREATE SET
+  o186.date = date("2025-04-27"),
+  o186.shift = "Night",
+  o186.duration = 36,
+  o186.oee = 0.77,
+  o186.quality = "Medium"
+
+MERGE (o187:Operation {id: "Operation177"})
+ON CREATE SET
+  o187.date = date("2025-04-26"),
+  o187.shift = "Night",
+  o187.duration = 124,
+  o187.oee = 0.87,
+  o187.quality = "High"
+
+MERGE (o188:Operation {id: "Operation179"})
+ON CREATE SET
+  o188.date = date("2025-04-24"),
+  o188.shift = "Day",
+  o188.duration = 70,
+  o188.oee = 0.69,
+  o188.quality = "Low"
+
+MERGE (o189:Operation {id: "Operation227"})
+ON CREATE SET
+  o189.date = date("2025-04-25"),
+  o189.shift = "Day",
+  o189.duration = 162,
+  o189.oee = 0.93,
+  o189.quality = "Medium"
+
+MERGE (o190:Operation {id: "Operation233"})
+ON CREATE SET
+  o190.date = date("2025-04-29"),
+  o190.shift = "Morning",
+  o190.duration = 154,
+  o190.oee = 0.77,
+  o190.quality = "High"
+
+MERGE (o191:Operation {id: "Operation65"})
+ON CREATE SET
+  o191.date = date("2025-04-26"),
+  o191.shift = "Night",
+  o191.duration = 54,
+  o191.oee = 0.77,
+  o191.quality = "High"
+
+MERGE (o192:Operation {id: "Operation73"})
+ON CREATE SET
+  o192.date = date("2025-04-25"),
+  o192.shift = "Day",
+  o192.duration = 61,
+  o192.oee = 0.69,
+  o192.quality = "High"
+
+MERGE (o193:Operation {id: "Operation87"})
+ON CREATE SET
+  o193.date = date("2025-04-24"),
+  o193.shift = "Morning",
+  o193.duration = 117,
+  o193.oee = 0.94,
+  o193.quality = "High"
+
+MERGE (o194:Operation {id: "Operation128"})
+ON CREATE SET
+  o194.date = date("2025-04-27"),
+  o194.shift = "Morning",
+  o194.duration = 176,
+  o194.oee = 0.81,
+  o194.quality = "Low"
+
+MERGE (o195:Operation {id: "Operation130"})
+ON CREATE SET
+  o195.date = date("2025-04-26"),
+  o195.shift = "Day",
+  o195.duration = 169,
+  o195.oee = 0.7,
+  o195.quality = "High"
+
+MERGE (o196:Operation {id: "Operation143"})
+ON CREATE SET
+  o196.date = date("2025-04-28"),
+  o196.shift = "Morning",
+  o196.duration = 27,
+  o196.oee = 0.88,
+  o196.quality = "Medium"
+
+MERGE (o197:Operation {id: "Operation207"})
+ON CREATE SET
+  o197.date = date("2025-04-26"),
+  o197.shift = "Day",
+  o197.duration = 153,
+  o197.oee = 0.63,
+  o197.quality = "Low"
+
+MERGE (o198:Operation {id: "Operation209"})
+ON CREATE SET
+  o198.date = date("2025-04-24"),
+  o198.shift = "Night",
+  o198.duration = 96,
+  o198.oee = 0.65,
+  o198.quality = "Low"
+
+MERGE (o199:Operation {id: "Operation210"})
+ON CREATE SET
+  o199.date = date("2025-04-26"),
+  o199.shift = "Night",
+  o199.duration = 33,
+  o199.oee = 0.83,
+  o199.quality = "Low"
+
+MERGE (o200:Operation {id: "Operation222"})
+ON CREATE SET
+  o200.date = date("2025-04-26"),
+  o200.shift = "Morning",
+  o200.duration = 105,
+  o200.oee = 0.71,
+  o200.quality = "Medium"
+
+MERGE (o201:Operation {id: "Operation240"})
+ON CREATE SET
+  o201.date = date("2025-04-27"),
+  o201.shift = "Morning",
+  o201.duration = 27,
+  o201.oee = 0.67,
+  o201.quality = "Low"
+
+MERGE (o202:Operation {id: "Operation247"})
+ON CREATE SET
+  o202.date = date("2025-04-25"),
+  o202.shift = "Night",
+  o202.duration = 91,
+  o202.oee = 0.76,
+  o202.quality = "High"
+
+MERGE (o203:Operation {id: "Operation92"})
+ON CREATE SET
+  o203.date = date("2025-04-25"),
+  o203.shift = "Day",
+  o203.duration = 122,
+  o203.oee = 0.89,
+  o203.quality = "High"
+
+MERGE (o204:Operation {id: "Operation134"})
+ON CREATE SET
+  o204.date = date("2025-04-30"),
+  o204.shift = "Night",
+  o204.duration = 97,
+  o204.oee = 0.72,
+  o204.quality = "High"
+
+MERGE (o205:Operation {id: "Operation141"})
+ON CREATE SET
+  o205.date = date("2025-04-25"),
+  o205.shift = "Morning",
+  o205.duration = 58,
+  o205.oee = 0.84,
+  o205.quality = "Medium"
+
+MERGE (o206:Operation {id: "Operation174"})
+ON CREATE SET
+  o206.date = date("2025-04-28"),
+  o206.shift = "Night",
+  o206.duration = 37,
+  o206.oee = 0.85,
+  o206.quality = "Medium"
+
+MERGE (o207:Operation {id: "Operation180"})
+ON CREATE SET
+  o207.date = date("2025-04-25"),
+  o207.shift = "Morning",
+  o207.duration = 35,
+  o207.oee = 0.63,
+  o207.quality = "High"
+
+MERGE (o208:Operation {id: "Operation231"})
+ON CREATE SET
+  o208.date = date("2025-04-24"),
+  o208.shift = "Morning",
+  o208.duration = 165,
+  o208.oee = 0.61,
+  o208.quality = "Low"
+
+MERGE (o209:Operation {id: "Operation18"})
+ON CREATE SET
+  o209.date = date("2025-04-26"),
+  o209.shift = "Day",
+  o209.duration = 142,
+  o209.oee = 0.79,
+  o209.quality = "High"
+
+MERGE (o210:Operation {id: "Operation22"})
+ON CREATE SET
+  o210.date = date("2025-04-30"),
+  o210.shift = "Night",
+  o210.duration = 141,
+  o210.oee = 0.84,
+  o210.quality = "High"
+
+MERGE (o211:Operation {id: "Operation42"})
+ON CREATE SET
+  o211.date = date("2025-04-25"),
+  o211.shift = "Day",
+  o211.duration = 161,
+  o211.oee = 0.91,
+  o211.quality = "Medium"
+
+MERGE (o212:Operation {id: "Operation44"})
+ON CREATE SET
+  o212.date = date("2025-04-29"),
+  o212.shift = "Day",
+  o212.duration = 169,
+  o212.oee = 0.64,
+  o212.quality = "Low"
+
+MERGE (o213:Operation {id: "Operation122"})
+ON CREATE SET
+  o213.date = date("2025-04-24"),
+  o213.shift = "Morning",
+  o213.duration = 180,
+  o213.oee = 0.75,
+  o213.quality = "Medium"
+
+MERGE (o214:Operation {id: "Operation126"})
+ON CREATE SET
+  o214.date = date("2025-04-30"),
+  o214.shift = "Day",
+  o214.duration = 86,
+  o214.oee = 0.67,
+  o214.quality = "Medium"
+
+MERGE (o215:Operation {id: "Operation133"})
+ON CREATE SET
+  o215.date = date("2025-04-30"),
+  o215.shift = "Day",
+  o215.duration = 136,
+  o215.oee = 0.89,
+  o215.quality = "High"
+
+MERGE (o216:Operation {id: "Operation155"})
+ON CREATE SET
+  o216.date = date("2025-04-26"),
+  o216.shift = "Day",
+  o216.duration = 166,
+  o216.oee = 0.93,
+  o216.quality = "Medium"
+
+MERGE (o217:Operation {id: "Operation189"})
+ON CREATE SET
+  o217.date = date("2025-04-29"),
+  o217.shift = "Day",
+  o217.duration = 93,
+  o217.oee = 0.66,
+  o217.quality = "Medium"
+
+MERGE (o218:Operation {id: "Operation217"})
+ON CREATE SET
+  o218.date = date("2025-04-29"),
+  o218.shift = "Night",
+  o218.duration = 78,
+  o218.oee = 0.73,
+  o218.quality = "Low"
+
+MERGE (o219:Operation {id: "Operation224"})
+ON CREATE SET
+  o219.date = date("2025-04-26"),
+  o219.shift = "Morning",
+  o219.duration = 148,
+  o219.oee = 0.65,
+  o219.quality = "Medium"
+
+MERGE (o220:Operation {id: "Operation8"})
+ON CREATE SET
+  o220.date = date("2025-04-30"),
+  o220.shift = "Morning",
+  o220.duration = 57,
+  o220.oee = 0.61,
+  o220.quality = "Medium"
+
+MERGE (o221:Operation {id: "Operation15"})
+ON CREATE SET
+  o221.date = date("2025-04-28"),
+  o221.shift = "Night",
+  o221.duration = 162,
+  o221.oee = 0.86,
+  o221.quality = "High"
+
+MERGE (o222:Operation {id: "Operation49"})
+ON CREATE SET
+  o222.date = date("2025-04-30"),
+  o222.shift = "Morning",
+  o222.duration = 171,
+  o222.oee = 0.84,
+  o222.quality = "Low"
+
+MERGE (o223:Operation {id: "Operation50"})
+ON CREATE SET
+  o223.date = date("2025-04-27"),
+  o223.shift = "Night",
+  o223.duration = 108,
+  o223.oee = 0.75,
+  o223.quality = "Low"
+
+MERGE (o224:Operation {id: "Operation94"})
+ON CREATE SET
+  o224.date = date("2025-04-29"),
+  o224.shift = "Day",
+  o224.duration = 152,
+  o224.oee = 0.81,
+  o224.quality = "Medium"
+
+MERGE (o225:Operation {id: "Operation98"})
+ON CREATE SET
+  o225.date = date("2025-04-30"),
+  o225.shift = "Morning",
+  o225.duration = 34,
+  o225.oee = 0.85,
+  o225.quality = "Medium"
+
+MERGE (o226:Operation {id: "Operation99"})
+ON CREATE SET
+  o226.date = date("2025-04-29"),
+  o226.shift = "Night",
+  o226.duration = 134,
+  o226.oee = 0.76,
+  o226.quality = "Low"
+
+MERGE (o227:Operation {id: "Operation117"})
+ON CREATE SET
+  o227.date = date("2025-04-26"),
+  o227.shift = "Day",
+  o227.duration = 152,
+  o227.oee = 0.62,
+  o227.quality = "Low"
+
+MERGE (o228:Operation {id: "Operation186"})
+ON CREATE SET
+  o228.date = date("2025-04-27"),
+  o228.shift = "Night",
+  o228.duration = 153,
+  o228.oee = 0.69,
+  o228.quality = "Low"
+
+MERGE (o229:Operation {id: "Operation246"})
+ON CREATE SET
+  o229.date = date("2025-04-27"),
+  o229.shift = "Morning",
+  o229.duration = 33,
+  o229.oee = 0.83,
+  o229.quality = "Medium"
+
+MERGE (o230:Operation {id: "Operation27"})
+ON CREATE SET
+  o230.date = date("2025-04-25"),
+  o230.shift = "Day",
+  o230.duration = 149,
+  o230.oee = 0.67,
+  o230.quality = "Low"
+
+MERGE (o231:Operation {id: "Operation38"})
+ON CREATE SET
+  o231.date = date("2025-04-29"),
+  o231.shift = "Night",
+  o231.duration = 26,
+  o231.oee = 0.63,
+  o231.quality = "High"
+
+MERGE (o232:Operation {id: "Operation39"})
+ON CREATE SET
+  o232.date = date("2025-04-25"),
+  o232.shift = "Morning",
+  o232.duration = 127,
+  o232.oee = 0.71,
+  o232.quality = "Medium"
+
+MERGE (o233:Operation {id: "Operation110"})
+ON CREATE SET
+  o233.date = date("2025-04-27"),
+  o233.shift = "Morning",
+  o233.duration = 39,
+  o233.oee = 0.87,
+  o233.quality = "High"
+
+MERGE (o234:Operation {id: "Operation121"})
+ON CREATE SET
+  o234.date = date("2025-04-26"),
+  o234.shift = "Night",
+  o234.duration = 26,
+  o234.oee = 0.86,
+  o234.quality = "Medium"
+
+MERGE (o235:Operation {id: "Operation176"})
+ON CREATE SET
+  o235.date = date("2025-04-29"),
+  o235.shift = "Night",
+  o235.duration = 105,
+  o235.oee = 0.76,
+  o235.quality = "High"
+
+MERGE (o236:Operation {id: "Operation193"})
+ON CREATE SET
+  o236.date = date("2025-04-26"),
+  o236.shift = "Night",
+  o236.duration = 69,
+  o236.oee = 0.68,
+  o236.quality = "High"
+
+MERGE (o237:Operation {id: "Operation198"})
+ON CREATE SET
+  o237.date = date("2025-04-24"),
+  o237.shift = "Day",
+  o237.duration = 134,
+  o237.oee = 0.75,
+  o237.quality = "Low"
+
+MERGE (o238:Operation {id: "Operation205"})
+ON CREATE SET
+  o238.date = date("2025-04-30"),
+  o238.shift = "Morning",
+  o238.duration = 90,
+  o238.oee = 0.76,
+  o238.quality = "High"
+
+MERGE (o239:Operation {id: "Operation235"})
+ON CREATE SET
+  o239.date = date("2025-04-25"),
+  o239.shift = "Night",
+  o239.duration = 127,
+  o239.oee = 0.78,
+  o239.quality = "Medium"
+
+MERGE (o240:Operation {id: "Operation14"})
+ON CREATE SET
+  o240.date = date("2025-04-27"),
+  o240.shift = "Day",
+  o240.duration = 115,
+  o240.oee = 0.76,
+  o240.quality = "Medium"
+
+MERGE (o241:Operation {id: "Operation61"})
+ON CREATE SET
+  o241.date = date("2025-04-29"),
+  o241.shift = "Night",
+  o241.duration = 164,
+  o241.oee = 0.78,
+  o241.quality = "High"
+
+MERGE (o242:Operation {id: "Operation68"})
+ON CREATE SET
+  o242.date = date("2025-04-27"),
+  o242.shift = "Day",
+  o242.duration = 162,
+  o242.oee = 0.8,
+  o242.quality = "High"
+
+MERGE (o243:Operation {id: "Operation86"})
+ON CREATE SET
+  o243.date = date("2025-04-30"),
+  o243.shift = "Morning",
+  o243.duration = 96,
+  o243.oee = 0.64,
+  o243.quality = "Low"
+
+MERGE (o244:Operation {id: "Operation105"})
+ON CREATE SET
+  o244.date = date("2025-04-28"),
+  o244.shift = "Morning",
+  o244.duration = 67,
+  o244.oee = 0.73,
+  o244.quality = "Medium"
+
+MERGE (o245:Operation {id: "Operation111"})
+ON CREATE SET
+  o245.date = date("2025-04-26"),
+  o245.shift = "Day",
+  o245.duration = 92,
+  o245.oee = 0.75,
+  o245.quality = "High"
+
+MERGE (o246:Operation {id: "Operation127"})
+ON CREATE SET
+  o246.date = date("2025-04-26"),
+  o246.shift = "Morning",
+  o246.duration = 53,
+  o246.oee = 0.79,
+  o246.quality = "Medium"
+
+MERGE (o247:Operation {id: "Operation208"})
+ON CREATE SET
+  o247.date = date("2025-04-24"),
+  o247.shift = "Night",
+  o247.duration = 109,
+  o247.oee = 0.88,
+  o247.quality = "Low"
+
+MERGE (o248:Operation {id: "Operation214"})
+ON CREATE SET
+  o248.date = date("2025-04-26"),
+  o248.shift = "Morning",
+  o248.duration = 113,
+  o248.oee = 0.65,
+  o248.quality = "Medium"
+
+MERGE (o249:Operation {id: "Operation221"})
+ON CREATE SET
+  o249.date = date("2025-04-27"),
+  o249.shift = "Morning",
+  o249.duration = 86,
+  o249.oee = 0.84,
+  o249.quality = "Low"
+
+MERGE (o250:Operation {id: "Operation250"})
+ON CREATE SET
+  o250.date = date("2025-04-27"),
+  o250.shift = "Morning",
+  o250.duration = 31,
+  o250.oee = 0.87,
+  o250.quality = "Medium"
+
+
+
+
+
+
+
+CALL () {
+MATCH (e1:Employee {id: "Employee1"})
+MATCH (o1:Operation {id: "Operation1"})
+MATCH (m1:Machine {name: "M2"})
+MATCH (p1:Part {name: "Piston"})
+MERGE (e1)-[:PERFORMED]->(o1)
+MERGE (o1)-[:USED]->(m1)
+MERGE (o1)-[:PRODUCED]->(p1)
+} 
+
+CALL () {
+MATCH (e2:Employee {id: "Employee1"})
+MATCH (o2:Operation {id: "Operation19"})
+MATCH (m2:Machine {name: "M3"})
+MATCH (p2:Part {name: "Piston"})
+MERGE (e2)-[:PERFORMED]->(o2)
+MERGE (o2)-[:USED]->(m2)
+MERGE (o2)-[:PRODUCED]->(p2)
+} 
+
+CALL () {
+MATCH (e3:Employee {id: "Employee1"})
+MATCH (o3:Operation {id: "Operation25"})
+MATCH (m3:Machine {name: "M1"})
+MATCH (p3:Part {name: "Gearbox"})
+MERGE (e3)-[:PERFORMED]->(o3)
+MERGE (o3)-[:USED]->(m3)
+MERGE (o3)-[:PRODUCED]->(p3)
+} 
+
+CALL () {
+MATCH (e4:Employee {id: "Employee1"})
+MATCH (o4:Operation {id: "Operation32"})
+MATCH (m4:Machine {name: "M1"})
+MATCH (p4:Part {name: "Shaft"})
+MERGE (e4)-[:PERFORMED]->(o4)
+MERGE (o4)-[:USED]->(m4)
+MERGE (o4)-[:PRODUCED]->(p4)
+} 
+
+CALL () {
+MATCH (e5:Employee {id: "Employee1"})
+MATCH (o5:Operation {id: "Operation41"})
+MATCH (m5:Machine {name: "M4"})
+MATCH (p5:Part {name: "Bearing"})
+MERGE (e5)-[:PERFORMED]->(o5)
+MERGE (o5)-[:USED]->(m5)
+MERGE (o5)-[:PRODUCED]->(p5)
+} 
+
+CALL () {
+MATCH (e6:Employee {id: "Employee1"})
+MATCH (o6:Operation {id: "Operation60"})
+MATCH (m6:Machine {name: "M2"})
+MATCH (p6:Part {name: "Valve"})
+MERGE (e6)-[:PERFORMED]->(o6)
+MERGE (o6)-[:USED]->(m6)
+MERGE (o6)-[:PRODUCED]->(p6)
+} 
+
+CALL () {
+MATCH (e7:Employee {id: "Employee1"})
+MATCH (o7:Operation {id: "Operation78"})
+MATCH (m7:Machine {name: "M4"})
+MATCH (p7:Part {name: "Piston"})
+MERGE (e7)-[:PERFORMED]->(o7)
+MERGE (o7)-[:USED]->(m7)
+MERGE (o7)-[:PRODUCED]->(p7)
+} 
+
+CALL () {
+MATCH (e8:Employee {id: "Employee1"})
+MATCH (o8:Operation {id: "Operation81"})
+MATCH (m8:Machine {name: "M4"})
+MATCH (p8:Part {name: "Bearing"})
+MERGE (e8)-[:PERFORMED]->(o8)
+MERGE (o8)-[:USED]->(m8)
+MERGE (o8)-[:PRODUCED]->(p8)
+} 
+
+CALL () {
+MATCH (e9:Employee {id: "Employee1"})
+MATCH (o9:Operation {id: "Operation106"})
+MATCH (m9:Machine {name: "M2"})
+MATCH (p9:Part {name: "Valve"})
+MERGE (e9)-[:PERFORMED]->(o9)
+MERGE (o9)-[:USED]->(m9)
+MERGE (o9)-[:PRODUCED]->(p9)
+} 
+
+CALL () {
+MATCH (e10:Employee {id: "Employee1"})
+MATCH (o10:Operation {id: "Operation169"})
+MATCH (m10:Machine {name: "M3"})
+MATCH (p10:Part {name: "Shaft"})
+MERGE (e10)-[:PERFORMED]->(o10)
+MERGE (o10)-[:USED]->(m10)
+MERGE (o10)-[:PRODUCED]->(p10)
+} 
+
+CALL () {
+MATCH (e11:Employee {id: "Employee1"})
+MATCH (o11:Operation {id: "Operation170"})
+MATCH (m11:Machine {name: "M2"})
+MATCH (p11:Part {name: "Gearbox"})
+MERGE (e11)-[:PERFORMED]->(o11)
+MERGE (o11)-[:USED]->(m11)
+MERGE (o11)-[:PRODUCED]->(p11)
+} 
+
+CALL () {
+MATCH (e12:Employee {id: "Employee1"})
+MATCH (o12:Operation {id: "Operation171"})
+MATCH (m12:Machine {name: "M2"})
+MATCH (p12:Part {name: "Valve"})
+MERGE (e12)-[:PERFORMED]->(o12)
+MERGE (o12)-[:USED]->(m12)
+MERGE (o12)-[:PRODUCED]->(p12)
+} 
+
+CALL () {
+MATCH (e13:Employee {id: "Employee1"})
+MATCH (o13:Operation {id: "Operation234"})
+MATCH (m13:Machine {name: "M2"})
+MATCH (p13:Part {name: "Shaft"})
+MERGE (e13)-[:PERFORMED]->(o13)
+MERGE (o13)-[:USED]->(m13)
+MERGE (o13)-[:PRODUCED]->(p13)
+} 
+
+CALL () {
+MATCH (e14:Employee {id: "Employee2"})
+MATCH (o14:Operation {id: "Operation3"})
+MATCH (m14:Machine {name: "M4"})
+MATCH (p14:Part {name: "Bearing"})
+MERGE (e14)-[:PERFORMED]->(o14)
+MERGE (o14)-[:USED]->(m14)
+MERGE (o14)-[:PRODUCED]->(p14)
+} 
+
+CALL () {
+MATCH (e15:Employee {id: "Employee2"})
+MATCH (o15:Operation {id: "Operation33"})
+MATCH (m15:Machine {name: "M2"})
+MATCH (p15:Part {name: "Piston"})
+MERGE (e15)-[:PERFORMED]->(o15)
+MERGE (o15)-[:USED]->(m15)
+MERGE (o15)-[:PRODUCED]->(p15)
+} 
+
+CALL () {
+MATCH (e16:Employee {id: "Employee2"})
+MATCH (o16:Operation {id: "Operation36"})
+MATCH (m16:Machine {name: "M4"})
+MATCH (p16:Part {name: "Bearing"})
+MERGE (e16)-[:PERFORMED]->(o16)
+MERGE (o16)-[:USED]->(m16)
+MERGE (o16)-[:PRODUCED]->(p16)
+} 
+
+CALL () {
+MATCH (e17:Employee {id: "Employee2"})
+MATCH (o17:Operation {id: "Operation77"})
+MATCH (m17:Machine {name: "M2"})
+MATCH (p17:Part {name: "Piston"})
+MERGE (e17)-[:PERFORMED]->(o17)
+MERGE (o17)-[:USED]->(m17)
+MERGE (o17)-[:PRODUCED]->(p17)
+} 
+
+CALL () {
+MATCH (e18:Employee {id: "Employee2"})
+MATCH (o18:Operation {id: "Operation115"})
+MATCH (m18:Machine {name: "M2"})
+MATCH (p18:Part {name: "Valve"})
+MERGE (e18)-[:PERFORMED]->(o18)
+MERGE (o18)-[:USED]->(m18)
+MERGE (o18)-[:PRODUCED]->(p18)
+} 
+
+CALL () {
+MATCH (e19:Employee {id: "Employee2"})
+MATCH (o19:Operation {id: "Operation125"})
+MATCH (m19:Machine {name: "M4"})
+MATCH (p19:Part {name: "Gearbox"})
+MERGE (e19)-[:PERFORMED]->(o19)
+MERGE (o19)-[:USED]->(m19)
+MERGE (o19)-[:PRODUCED]->(p19)
+} 
+
+CALL () {
+MATCH (e20:Employee {id: "Employee2"})
+MATCH (o20:Operation {id: "Operation151"})
+MATCH (m20:Machine {name: "M4"})
+MATCH (p20:Part {name: "Valve"})
+MERGE (e20)-[:PERFORMED]->(o20)
+MERGE (o20)-[:USED]->(m20)
+MERGE (o20)-[:PRODUCED]->(p20)
+} 
+
+CALL () {
+MATCH (e21:Employee {id: "Employee2"})
+MATCH (o21:Operation {id: "Operation161"})
+MATCH (m21:Machine {name: "M1"})
+MATCH (p21:Part {name: "Valve"})
+MERGE (e21)-[:PERFORMED]->(o21)
+MERGE (o21)-[:USED]->(m21)
+MERGE (o21)-[:PRODUCED]->(p21)
+} 
+
+CALL () {
+MATCH (e22:Employee {id: "Employee2"})
+MATCH (o22:Operation {id: "Operation167"})
+MATCH (m22:Machine {name: "M3"})
+MATCH (p22:Part {name: "Shaft"})
+MERGE (e22)-[:PERFORMED]->(o22)
+MERGE (o22)-[:USED]->(m22)
+MERGE (o22)-[:PRODUCED]->(p22)
+} 
+
+CALL () {
+MATCH (e23:Employee {id: "Employee2"})
+MATCH (o23:Operation {id: "Operation183"})
+MATCH (m23:Machine {name: "M3"})
+MATCH (p23:Part {name: "Bearing"})
+MERGE (e23)-[:PERFORMED]->(o23)
+MERGE (o23)-[:USED]->(m23)
+MERGE (o23)-[:PRODUCED]->(p23)
+} 
+
+CALL () {
+MATCH (e24:Employee {id: "Employee2"})
+MATCH (o24:Operation {id: "Operation194"})
+MATCH (m24:Machine {name: "M1"})
+MATCH (p24:Part {name: "Shaft"})
+MERGE (e24)-[:PERFORMED]->(o24)
+MERGE (o24)-[:USED]->(m24)
+MERGE (o24)-[:PRODUCED]->(p24)
+} 
+
+CALL () {
+MATCH (e25:Employee {id: "Employee2"})
+MATCH (o25:Operation {id: "Operation225"})
+MATCH (m25:Machine {name: "M4"})
+MATCH (p25:Part {name: "Valve"})
+MERGE (e25)-[:PERFORMED]->(o25)
+MERGE (o25)-[:USED]->(m25)
+MERGE (o25)-[:PRODUCED]->(p25)
+} 
+
+CALL () {
+MATCH (e26:Employee {id: "Employee2"})
+MATCH (o26:Operation {id: "Operation228"})
+MATCH (m26:Machine {name: "M4"})
+MATCH (p26:Part {name: "Bearing"})
+MERGE (e26)-[:PERFORMED]->(o26)
+MERGE (o26)-[:USED]->(m26)
+MERGE (o26)-[:PRODUCED]->(p26)
+} 
+
+CALL () {
+MATCH (e27:Employee {id: "Employee2"})
+MATCH (o27:Operation {id: "Operation242"})
+MATCH (m27:Machine {name: "M2"})
+MATCH (p27:Part {name: "Valve"})
+MERGE (e27)-[:PERFORMED]->(o27)
+MERGE (o27)-[:USED]->(m27)
+MERGE (o27)-[:PRODUCED]->(p27)
+} 
+
+CALL () {
+MATCH (e28:Employee {id: "Employee3"})
+MATCH (o28:Operation {id: "Operation7"})
+MATCH (m28:Machine {name: "M2"})
+MATCH (p28:Part {name: "Bearing"})
+MERGE (e28)-[:PERFORMED]->(o28)
+MERGE (o28)-[:USED]->(m28)
+MERGE (o28)-[:PRODUCED]->(p28)
+} 
+
+CALL () {
+MATCH (e29:Employee {id: "Employee3"})
+MATCH (o29:Operation {id: "Operation13"})
+MATCH (m29:Machine {name: "M1"})
+MATCH (p29:Part {name: "Gearbox"})
+MERGE (e29)-[:PERFORMED]->(o29)
+MERGE (o29)-[:USED]->(m29)
+MERGE (o29)-[:PRODUCED]->(p29)
+} 
+
+CALL () {
+MATCH (e30:Employee {id: "Employee3"})
+MATCH (o30:Operation {id: "Operation21"})
+MATCH (m30:Machine {name: "M2"})
+MATCH (p30:Part {name: "Shaft"})
+MERGE (e30)-[:PERFORMED]->(o30)
+MERGE (o30)-[:USED]->(m30)
+MERGE (o30)-[:PRODUCED]->(p30)
+} 
+
+CALL () {
+MATCH (e31:Employee {id: "Employee3"})
+MATCH (o31:Operation {id: "Operation26"})
+MATCH (m31:Machine {name: "M2"})
+MATCH (p31:Part {name: "Valve"})
+MERGE (e31)-[:PERFORMED]->(o31)
+MERGE (o31)-[:USED]->(m31)
+MERGE (o31)-[:PRODUCED]->(p31)
+} 
+
+CALL () {
+MATCH (e32:Employee {id: "Employee3"})
+MATCH (o32:Operation {id: "Operation84"})
+MATCH (m32:Machine {name: "M4"})
+MATCH (p32:Part {name: "Gearbox"})
+MERGE (e32)-[:PERFORMED]->(o32)
+MERGE (o32)-[:USED]->(m32)
+MERGE (o32)-[:PRODUCED]->(p32)
+} 
+
+CALL () {
+MATCH (e33:Employee {id: "Employee3"})
+MATCH (o33:Operation {id: "Operation100"})
+MATCH (m33:Machine {name: "M3"})
+MATCH (p33:Part {name: "Shaft"})
+MERGE (e33)-[:PERFORMED]->(o33)
+MERGE (o33)-[:USED]->(m33)
+MERGE (o33)-[:PRODUCED]->(p33)
+} 
+
+CALL () {
+MATCH (e34:Employee {id: "Employee3"})
+MATCH (o34:Operation {id: "Operation114"})
+MATCH (m34:Machine {name: "M2"})
+MATCH (p34:Part {name: "Gearbox"})
+MERGE (e34)-[:PERFORMED]->(o34)
+MERGE (o34)-[:USED]->(m34)
+MERGE (o34)-[:PRODUCED]->(p34)
+} 
+
+CALL () {
+MATCH (e35:Employee {id: "Employee3"})
+MATCH (o35:Operation {id: "Operation123"})
+MATCH (m35:Machine {name: "M4"})
+MATCH (p35:Part {name: "Valve"})
+MERGE (e35)-[:PERFORMED]->(o35)
+MERGE (o35)-[:USED]->(m35)
+MERGE (o35)-[:PRODUCED]->(p35)
+} 
+
+CALL () {
+MATCH (e36:Employee {id: "Employee3"})
+MATCH (o36:Operation {id: "Operation172"})
+MATCH (m36:Machine {name: "M4"})
+MATCH (p36:Part {name: "Piston"})
+MERGE (e36)-[:PERFORMED]->(o36)
+MERGE (o36)-[:USED]->(m36)
+MERGE (o36)-[:PRODUCED]->(p36)
+} 
+
+CALL () {
+MATCH (e37:Employee {id: "Employee3"})
+MATCH (o37:Operation {id: "Operation175"})
+MATCH (m37:Machine {name: "M1"})
+MATCH (p37:Part {name: "Valve"})
+MERGE (e37)-[:PERFORMED]->(o37)
+MERGE (o37)-[:USED]->(m37)
+MERGE (o37)-[:PRODUCED]->(p37)
+} 
+
+CALL () {
+MATCH (e38:Employee {id: "Employee3"})
+MATCH (o38:Operation {id: "Operation191"})
+MATCH (m38:Machine {name: "M3"})
+MATCH (p38:Part {name: "Piston"})
+MERGE (e38)-[:PERFORMED]->(o38)
+MERGE (o38)-[:USED]->(m38)
+MERGE (o38)-[:PRODUCED]->(p38)
+} 
+
+CALL () {
+MATCH (e39:Employee {id: "Employee3"})
+MATCH (o39:Operation {id: "Operation201"})
+MATCH (m39:Machine {name: "M4"})
+MATCH (p39:Part {name: "Valve"})
+MERGE (e39)-[:PERFORMED]->(o39)
+MERGE (o39)-[:USED]->(m39)
+MERGE (o39)-[:PRODUCED]->(p39)
+} 
+
+CALL () {
+MATCH (e40:Employee {id: "Employee3"})
+MATCH (o40:Operation {id: "Operation202"})
+MATCH (m40:Machine {name: "M1"})
+MATCH (p40:Part {name: "Bearing"})
+MERGE (e40)-[:PERFORMED]->(o40)
+MERGE (o40)-[:USED]->(m40)
+MERGE (o40)-[:PRODUCED]->(p40)
+} 
+
+CALL () {
+MATCH (e41:Employee {id: "Employee3"})
+MATCH (o41:Operation {id: "Operation204"})
+MATCH (m41:Machine {name: "M2"})
+MATCH (p41:Part {name: "Piston"})
+MERGE (e41)-[:PERFORMED]->(o41)
+MERGE (o41)-[:USED]->(m41)
+MERGE (o41)-[:PRODUCED]->(p41)
+} 
+
+CALL () {
+MATCH (e42:Employee {id: "Employee3"})
+MATCH (o42:Operation {id: "Operation236"})
+MATCH (m42:Machine {name: "M1"})
+MATCH (p42:Part {name: "Piston"})
+MERGE (e42)-[:PERFORMED]->(o42)
+MERGE (o42)-[:USED]->(m42)
+MERGE (o42)-[:PRODUCED]->(p42)
+} 
+
+CALL () {
+MATCH (e43:Employee {id: "Employee4"})
+MATCH (o43:Operation {id: "Operation2"})
+MATCH (m43:Machine {name: "M1"})
+MATCH (p43:Part {name: "Piston"})
+MERGE (e43)-[:PERFORMED]->(o43)
+MERGE (o43)-[:USED]->(m43)
+MERGE (o43)-[:PRODUCED]->(p43)
+} 
+
+CALL () {
+MATCH (e44:Employee {id: "Employee4"})
+MATCH (o44:Operation {id: "Operation29"})
+MATCH (m44:Machine {name: "M1"})
+MATCH (p44:Part {name: "Piston"})
+MERGE (e44)-[:PERFORMED]->(o44)
+MERGE (o44)-[:USED]->(m44)
+MERGE (o44)-[:PRODUCED]->(p44)
+} 
+
+CALL () {
+MATCH (e45:Employee {id: "Employee4"})
+MATCH (o45:Operation {id: "Operation71"})
+MATCH (m45:Machine {name: "M4"})
+MATCH (p45:Part {name: "Shaft"})
+MERGE (e45)-[:PERFORMED]->(o45)
+MERGE (o45)-[:USED]->(m45)
+MERGE (o45)-[:PRODUCED]->(p45)
+} 
+
+CALL () {
+MATCH (e46:Employee {id: "Employee4"})
+MATCH (o46:Operation {id: "Operation88"})
+MATCH (m46:Machine {name: "M2"})
+MATCH (p46:Part {name: "Valve"})
+MERGE (e46)-[:PERFORMED]->(o46)
+MERGE (o46)-[:USED]->(m46)
+MERGE (o46)-[:PRODUCED]->(p46)
+} 
+
+CALL () {
+MATCH (e47:Employee {id: "Employee4"})
+MATCH (o47:Operation {id: "Operation90"})
+MATCH (m47:Machine {name: "M3"})
+MATCH (p47:Part {name: "Bearing"})
+MERGE (e47)-[:PERFORMED]->(o47)
+MERGE (o47)-[:USED]->(m47)
+MERGE (o47)-[:PRODUCED]->(p47)
+} 
+
+CALL () {
+MATCH (e48:Employee {id: "Employee4"})
+MATCH (o48:Operation {id: "Operation138"})
+MATCH (m48:Machine {name: "M4"})
+MATCH (p48:Part {name: "Gearbox"})
+MERGE (e48)-[:PERFORMED]->(o48)
+MERGE (o48)-[:USED]->(m48)
+MERGE (o48)-[:PRODUCED]->(p48)
+} 
+
+CALL () {
+MATCH (e49:Employee {id: "Employee4"})
+MATCH (o49:Operation {id: "Operation165"})
+MATCH (m49:Machine {name: "M3"})
+MATCH (p49:Part {name: "Bearing"})
+MERGE (e49)-[:PERFORMED]->(o49)
+MERGE (o49)-[:USED]->(m49)
+MERGE (o49)-[:PRODUCED]->(p49)
+} 
+
+CALL () {
+MATCH (e50:Employee {id: "Employee4"})
+MATCH (o50:Operation {id: "Operation166"})
+MATCH (m50:Machine {name: "M4"})
+MATCH (p50:Part {name: "Gearbox"})
+MERGE (e50)-[:PERFORMED]->(o50)
+MERGE (o50)-[:USED]->(m50)
+MERGE (o50)-[:PRODUCED]->(p50)
+} 
+
+CALL () {
+MATCH (e51:Employee {id: "Employee4"})
+MATCH (o51:Operation {id: "Operation182"})
+MATCH (m51:Machine {name: "M4"})
+MATCH (p51:Part {name: "Valve"})
+MERGE (e51)-[:PERFORMED]->(o51)
+MERGE (o51)-[:USED]->(m51)
+MERGE (o51)-[:PRODUCED]->(p51)
+} 
+
+CALL () {
+MATCH (e52:Employee {id: "Employee4"})
+MATCH (o52:Operation {id: "Operation226"})
+MATCH (m52:Machine {name: "M3"})
+MATCH (p52:Part {name: "Gearbox"})
+MERGE (e52)-[:PERFORMED]->(o52)
+MERGE (o52)-[:USED]->(m52)
+MERGE (o52)-[:PRODUCED]->(p52)
+} 
+
+CALL () {
+MATCH (e53:Employee {id: "Employee4"})
+MATCH (o53:Operation {id: "Operation238"})
+MATCH (m53:Machine {name: "M3"})
+MATCH (p53:Part {name: "Shaft"})
+MERGE (e53)-[:PERFORMED]->(o53)
+MERGE (o53)-[:USED]->(m53)
+MERGE (o53)-[:PRODUCED]->(p53)
+} 
+
+CALL () {
+MATCH (e54:Employee {id: "Employee5"})
+MATCH (o54:Operation {id: "Operation76"})
+MATCH (m54:Machine {name: "M2"})
+MATCH (p54:Part {name: "Gearbox"})
+MERGE (e54)-[:PERFORMED]->(o54)
+MERGE (o54)-[:USED]->(m54)
+MERGE (o54)-[:PRODUCED]->(p54)
+} 
+
+CALL () {
+MATCH (e55:Employee {id: "Employee5"})
+MATCH (o55:Operation {id: "Operation82"})
+MATCH (m55:Machine {name: "M4"})
+MATCH (p55:Part {name: "Shaft"})
+MERGE (e55)-[:PERFORMED]->(o55)
+MERGE (o55)-[:USED]->(m55)
+MERGE (o55)-[:PRODUCED]->(p55)
+} 
+
+CALL () {
+MATCH (e56:Employee {id: "Employee5"})
+MATCH (o56:Operation {id: "Operation93"})
+MATCH (m56:Machine {name: "M4"})
+MATCH (p56:Part {name: "Shaft"})
+MERGE (e56)-[:PERFORMED]->(o56)
+MERGE (o56)-[:USED]->(m56)
+MERGE (o56)-[:PRODUCED]->(p56)
+} 
+
+CALL () {
+MATCH (e57:Employee {id: "Employee5"})
+MATCH (o57:Operation {id: "Operation107"})
+MATCH (m57:Machine {name: "M4"})
+MATCH (p57:Part {name: "Gearbox"})
+MERGE (e57)-[:PERFORMED]->(o57)
+MERGE (o57)-[:USED]->(m57)
+MERGE (o57)-[:PRODUCED]->(p57)
+} 
+
+CALL () {
+MATCH (e58:Employee {id: "Employee5"})
+MATCH (o58:Operation {id: "Operation162"})
+MATCH (m58:Machine {name: "M4"})
+MATCH (p58:Part {name: "Piston"})
+MERGE (e58)-[:PERFORMED]->(o58)
+MERGE (o58)-[:USED]->(m58)
+MERGE (o58)-[:PRODUCED]->(p58)
+} 
+
+CALL () {
+MATCH (e59:Employee {id: "Employee5"})
+MATCH (o59:Operation {id: "Operation184"})
+MATCH (m59:Machine {name: "M4"})
+MATCH (p59:Part {name: "Shaft"})
+MERGE (e59)-[:PERFORMED]->(o59)
+MERGE (o59)-[:USED]->(m59)
+MERGE (o59)-[:PRODUCED]->(p59)
+} 
+
+CALL () {
+MATCH (e60:Employee {id: "Employee5"})
+MATCH (o60:Operation {id: "Operation203"})
+MATCH (m60:Machine {name: "M2"})
+MATCH (p60:Part {name: "Gearbox"})
+MERGE (e60)-[:PERFORMED]->(o60)
+MERGE (o60)-[:USED]->(m60)
+MERGE (o60)-[:PRODUCED]->(p60)
+} 
+
+CALL () {
+MATCH (e61:Employee {id: "Employee5"})
+MATCH (o61:Operation {id: "Operation230"})
+MATCH (m61:Machine {name: "M1"})
+MATCH (p61:Part {name: "Valve"})
+MERGE (e61)-[:PERFORMED]->(o61)
+MERGE (o61)-[:USED]->(m61)
+MERGE (o61)-[:PRODUCED]->(p61)
+} 
+
+CALL () {
+MATCH (e62:Employee {id: "Employee5"})
+MATCH (o62:Operation {id: "Operation232"})
+MATCH (m62:Machine {name: "M4"})
+MATCH (p62:Part {name: "Gearbox"})
+MERGE (e62)-[:PERFORMED]->(o62)
+MERGE (o62)-[:USED]->(m62)
+MERGE (o62)-[:PRODUCED]->(p62)
+} 
+
+CALL () {
+MATCH (e63:Employee {id: "Employee6"})
+MATCH (o63:Operation {id: "Operation6"})
+MATCH (m63:Machine {name: "M3"})
+MATCH (p63:Part {name: "Valve"})
+MERGE (e63)-[:PERFORMED]->(o63)
+MERGE (o63)-[:USED]->(m63)
+MERGE (o63)-[:PRODUCED]->(p63)
+} 
+
+CALL () {
+MATCH (e64:Employee {id: "Employee6"})
+MATCH (o64:Operation {id: "Operation37"})
+MATCH (m64:Machine {name: "M1"})
+MATCH (p64:Part {name: "Bearing"})
+MERGE (e64)-[:PERFORMED]->(o64)
+MERGE (o64)-[:USED]->(m64)
+MERGE (o64)-[:PRODUCED]->(p64)
+} 
+
+CALL () {
+MATCH (e65:Employee {id: "Employee6"})
+MATCH (o65:Operation {id: "Operation53"})
+MATCH (m65:Machine {name: "M4"})
+MATCH (p65:Part {name: "Gearbox"})
+MERGE (e65)-[:PERFORMED]->(o65)
+MERGE (o65)-[:USED]->(m65)
+MERGE (o65)-[:PRODUCED]->(p65)
+} 
+
+CALL () {
+MATCH (e66:Employee {id: "Employee6"})
+MATCH (o66:Operation {id: "Operation58"})
+MATCH (m66:Machine {name: "M3"})
+MATCH (p66:Part {name: "Gearbox"})
+MERGE (e66)-[:PERFORMED]->(o66)
+MERGE (o66)-[:USED]->(m66)
+MERGE (o66)-[:PRODUCED]->(p66)
+} 
+
+CALL () {
+MATCH (e67:Employee {id: "Employee6"})
+MATCH (o67:Operation {id: "Operation66"})
+MATCH (m67:Machine {name: "M1"})
+MATCH (p67:Part {name: "Valve"})
+MERGE (e67)-[:PERFORMED]->(o67)
+MERGE (o67)-[:USED]->(m67)
+MERGE (o67)-[:PRODUCED]->(p67)
+} 
+
+CALL () {
+MATCH (e68:Employee {id: "Employee6"})
+MATCH (o68:Operation {id: "Operation129"})
+MATCH (m68:Machine {name: "M3"})
+MATCH (p68:Part {name: "Bearing"})
+MERGE (e68)-[:PERFORMED]->(o68)
+MERGE (o68)-[:USED]->(m68)
+MERGE (o68)-[:PRODUCED]->(p68)
+} 
+
+CALL () {
+MATCH (e69:Employee {id: "Employee6"})
+MATCH (o69:Operation {id: "Operation145"})
+MATCH (m69:Machine {name: "M2"})
+MATCH (p69:Part {name: "Shaft"})
+MERGE (e69)-[:PERFORMED]->(o69)
+MERGE (o69)-[:USED]->(m69)
+MERGE (o69)-[:PRODUCED]->(p69)
+} 
+
+CALL () {
+MATCH (e70:Employee {id: "Employee6"})
+MATCH (o70:Operation {id: "Operation239"})
+MATCH (m70:Machine {name: "M4"})
+MATCH (p70:Part {name: "Piston"})
+MERGE (e70)-[:PERFORMED]->(o70)
+MERGE (o70)-[:USED]->(m70)
+MERGE (o70)-[:PRODUCED]->(p70)
+} 
+
+CALL () {
+MATCH (e71:Employee {id: "Employee7"})
+MATCH (o71:Operation {id: "Operation30"})
+MATCH (m71:Machine {name: "M2"})
+MATCH (p71:Part {name: "Bearing"})
+MERGE (e71)-[:PERFORMED]->(o71)
+MERGE (o71)-[:USED]->(m71)
+MERGE (o71)-[:PRODUCED]->(p71)
+} 
+
+CALL () {
+MATCH (e72:Employee {id: "Employee7"})
+MATCH (o72:Operation {id: "Operation35"})
+MATCH (m72:Machine {name: "M1"})
+MATCH (p72:Part {name: "Bearing"})
+MERGE (e72)-[:PERFORMED]->(o72)
+MERGE (o72)-[:USED]->(m72)
+MERGE (o72)-[:PRODUCED]->(p72)
+} 
+
+CALL () {
+MATCH (e73:Employee {id: "Employee7"})
+MATCH (o73:Operation {id: "Operation46"})
+MATCH (m73:Machine {name: "M3"})
+MATCH (p73:Part {name: "Shaft"})
+MERGE (e73)-[:PERFORMED]->(o73)
+MERGE (o73)-[:USED]->(m73)
+MERGE (o73)-[:PRODUCED]->(p73)
+} 
+
+CALL () {
+MATCH (e74:Employee {id: "Employee7"})
+MATCH (o74:Operation {id: "Operation103"})
+MATCH (m74:Machine {name: "M3"})
+MATCH (p74:Part {name: "Gearbox"})
+MERGE (e74)-[:PERFORMED]->(o74)
+MERGE (o74)-[:USED]->(m74)
+MERGE (o74)-[:PRODUCED]->(p74)
+} 
+
+CALL () {
+MATCH (e75:Employee {id: "Employee7"})
+MATCH (o75:Operation {id: "Operation104"})
+MATCH (m75:Machine {name: "M2"})
+MATCH (p75:Part {name: "Piston"})
+MERGE (e75)-[:PERFORMED]->(o75)
+MERGE (o75)-[:USED]->(m75)
+MERGE (o75)-[:PRODUCED]->(p75)
+} 
+
+CALL () {
+MATCH (e76:Employee {id: "Employee7"})
+MATCH (o76:Operation {id: "Operation113"})
+MATCH (m76:Machine {name: "M2"})
+MATCH (p76:Part {name: "Valve"})
+MERGE (e76)-[:PERFORMED]->(o76)
+MERGE (o76)-[:USED]->(m76)
+MERGE (o76)-[:PRODUCED]->(p76)
+} 
+
+CALL () {
+MATCH (e77:Employee {id: "Employee7"})
+MATCH (o77:Operation {id: "Operation132"})
+MATCH (m77:Machine {name: "M2"})
+MATCH (p77:Part {name: "Gearbox"})
+MERGE (e77)-[:PERFORMED]->(o77)
+MERGE (o77)-[:USED]->(m77)
+MERGE (o77)-[:PRODUCED]->(p77)
+} 
+
+CALL () {
+MATCH (e78:Employee {id: "Employee7"})
+MATCH (o78:Operation {id: "Operation152"})
+MATCH (m78:Machine {name: "M3"})
+MATCH (p78:Part {name: "Shaft"})
+MERGE (e78)-[:PERFORMED]->(o78)
+MERGE (o78)-[:USED]->(m78)
+MERGE (o78)-[:PRODUCED]->(p78)
+} 
+
+CALL () {
+MATCH (e79:Employee {id: "Employee7"})
+MATCH (o79:Operation {id: "Operation168"})
+MATCH (m79:Machine {name: "M2"})
+MATCH (p79:Part {name: "Shaft"})
+MERGE (e79)-[:PERFORMED]->(o79)
+MERGE (o79)-[:USED]->(m79)
+MERGE (o79)-[:PRODUCED]->(p79)
+} 
+
+CALL () {
+MATCH (e80:Employee {id: "Employee7"})
+MATCH (o80:Operation {id: "Operation178"})
+MATCH (m80:Machine {name: "M4"})
+MATCH (p80:Part {name: "Piston"})
+MERGE (e80)-[:PERFORMED]->(o80)
+MERGE (o80)-[:USED]->(m80)
+MERGE (o80)-[:PRODUCED]->(p80)
+} 
+
+CALL () {
+MATCH (e81:Employee {id: "Employee7"})
+MATCH (o81:Operation {id: "Operation218"})
+MATCH (m81:Machine {name: "M3"})
+MATCH (p81:Part {name: "Piston"})
+MERGE (e81)-[:PERFORMED]->(o81)
+MERGE (o81)-[:USED]->(m81)
+MERGE (o81)-[:PRODUCED]->(p81)
+} 
+
+CALL () {
+MATCH (e82:Employee {id: "Employee7"})
+MATCH (o82:Operation {id: "Operation223"})
+MATCH (m82:Machine {name: "M3"})
+MATCH (p82:Part {name: "Bearing"})
+MERGE (e82)-[:PERFORMED]->(o82)
+MERGE (o82)-[:USED]->(m82)
+MERGE (o82)-[:PRODUCED]->(p82)
+} 
+
+CALL () {
+MATCH (e83:Employee {id: "Employee8"})
+MATCH (o83:Operation {id: "Operation20"})
+MATCH (m83:Machine {name: "M1"})
+MATCH (p83:Part {name: "Shaft"})
+MERGE (e83)-[:PERFORMED]->(o83)
+MERGE (o83)-[:USED]->(m83)
+MERGE (o83)-[:PRODUCED]->(p83)
+} 
+
+CALL () {
+MATCH (e84:Employee {id: "Employee8"})
+MATCH (o84:Operation {id: "Operation24"})
+MATCH (m84:Machine {name: "M1"})
+MATCH (p84:Part {name: "Valve"})
+MERGE (e84)-[:PERFORMED]->(o84)
+MERGE (o84)-[:USED]->(m84)
+MERGE (o84)-[:PRODUCED]->(p84)
+} 
+
+CALL () {
+MATCH (e85:Employee {id: "Employee8"})
+MATCH (o85:Operation {id: "Operation31"})
+MATCH (m85:Machine {name: "M1"})
+MATCH (p85:Part {name: "Piston"})
+MERGE (e85)-[:PERFORMED]->(o85)
+MERGE (o85)-[:USED]->(m85)
+MERGE (o85)-[:PRODUCED]->(p85)
+} 
+
+CALL () {
+MATCH (e86:Employee {id: "Employee8"})
+MATCH (o86:Operation {id: "Operation54"})
+MATCH (m86:Machine {name: "M3"})
+MATCH (p86:Part {name: "Shaft"})
+MERGE (e86)-[:PERFORMED]->(o86)
+MERGE (o86)-[:USED]->(m86)
+MERGE (o86)-[:PRODUCED]->(p86)
+} 
+
+CALL () {
+MATCH (e87:Employee {id: "Employee8"})
+MATCH (o87:Operation {id: "Operation55"})
+MATCH (m87:Machine {name: "M2"})
+MATCH (p87:Part {name: "Piston"})
+MERGE (e87)-[:PERFORMED]->(o87)
+MERGE (o87)-[:USED]->(m87)
+MERGE (o87)-[:PRODUCED]->(p87)
+} 
+
+CALL () {
+MATCH (e88:Employee {id: "Employee8"})
+MATCH (o88:Operation {id: "Operation56"})
+MATCH (m88:Machine {name: "M1"})
+MATCH (p88:Part {name: "Shaft"})
+MERGE (e88)-[:PERFORMED]->(o88)
+MERGE (o88)-[:USED]->(m88)
+MERGE (o88)-[:PRODUCED]->(p88)
+} 
+
+CALL () {
+MATCH (e89:Employee {id: "Employee8"})
+MATCH (o89:Operation {id: "Operation67"})
+MATCH (m89:Machine {name: "M3"})
+MATCH (p89:Part {name: "Shaft"})
+MERGE (e89)-[:PERFORMED]->(o89)
+MERGE (o89)-[:USED]->(m89)
+MERGE (o89)-[:PRODUCED]->(p89)
+} 
+
+CALL () {
+MATCH (e90:Employee {id: "Employee8"})
+MATCH (o90:Operation {id: "Operation85"})
+MATCH (m90:Machine {name: "M1"})
+MATCH (p90:Part {name: "Gearbox"})
+MERGE (e90)-[:PERFORMED]->(o90)
+MERGE (o90)-[:USED]->(m90)
+MERGE (o90)-[:PRODUCED]->(p90)
+} 
+
+CALL () {
+MATCH (e91:Employee {id: "Employee8"})
+MATCH (o91:Operation {id: "Operation95"})
+MATCH (m91:Machine {name: "M1"})
+MATCH (p91:Part {name: "Valve"})
+MERGE (e91)-[:PERFORMED]->(o91)
+MERGE (o91)-[:USED]->(m91)
+MERGE (o91)-[:PRODUCED]->(p91)
+} 
+
+CALL () {
+MATCH (e92:Employee {id: "Employee8"})
+MATCH (o92:Operation {id: "Operation116"})
+MATCH (m92:Machine {name: "M3"})
+MATCH (p92:Part {name: "Bearing"})
+MERGE (e92)-[:PERFORMED]->(o92)
+MERGE (o92)-[:USED]->(m92)
+MERGE (o92)-[:PRODUCED]->(p92)
+} 
+
+CALL () {
+MATCH (e93:Employee {id: "Employee8"})
+MATCH (o93:Operation {id: "Operation136"})
+MATCH (m93:Machine {name: "M4"})
+MATCH (p93:Part {name: "Gearbox"})
+MERGE (e93)-[:PERFORMED]->(o93)
+MERGE (o93)-[:USED]->(m93)
+MERGE (o93)-[:PRODUCED]->(p93)
+} 
+
+CALL () {
+MATCH (e94:Employee {id: "Employee8"})
+MATCH (o94:Operation {id: "Operation142"})
+MATCH (m94:Machine {name: "M1"})
+MATCH (p94:Part {name: "Piston"})
+MERGE (e94)-[:PERFORMED]->(o94)
+MERGE (o94)-[:USED]->(m94)
+MERGE (o94)-[:PRODUCED]->(p94)
+} 
+
+CALL () {
+MATCH (e95:Employee {id: "Employee8"})
+MATCH (o95:Operation {id: "Operation146"})
+MATCH (m95:Machine {name: "M4"})
+MATCH (p95:Part {name: "Bearing"})
+MERGE (e95)-[:PERFORMED]->(o95)
+MERGE (o95)-[:USED]->(m95)
+MERGE (o95)-[:PRODUCED]->(p95)
+} 
+
+CALL () {
+MATCH (e96:Employee {id: "Employee8"})
+MATCH (o96:Operation {id: "Operation159"})
+MATCH (m96:Machine {name: "M4"})
+MATCH (p96:Part {name: "Gearbox"})
+MERGE (e96)-[:PERFORMED]->(o96)
+MERGE (o96)-[:USED]->(m96)
+MERGE (o96)-[:PRODUCED]->(p96)
+} 
+
+CALL () {
+MATCH (e97:Employee {id: "Employee8"})
+MATCH (o97:Operation {id: "Operation160"})
+MATCH (m97:Machine {name: "M1"})
+MATCH (p97:Part {name: "Piston"})
+MERGE (e97)-[:PERFORMED]->(o97)
+MERGE (o97)-[:USED]->(m97)
+MERGE (o97)-[:PRODUCED]->(p97)
+} 
+
+CALL () {
+MATCH (e98:Employee {id: "Employee8"})
+MATCH (o98:Operation {id: "Operation173"})
+MATCH (m98:Machine {name: "M1"})
+MATCH (p98:Part {name: "Bearing"})
+MERGE (e98)-[:PERFORMED]->(o98)
+MERGE (o98)-[:USED]->(m98)
+MERGE (o98)-[:PRODUCED]->(p98)
+} 
+
+CALL () {
+MATCH (e99:Employee {id: "Employee8"})
+MATCH (o99:Operation {id: "Operation211"})
+MATCH (m99:Machine {name: "M4"})
+MATCH (p99:Part {name: "Piston"})
+MERGE (e99)-[:PERFORMED]->(o99)
+MERGE (o99)-[:USED]->(m99)
+MERGE (o99)-[:PRODUCED]->(p99)
+} 
+
+CALL () {
+MATCH (e100:Employee {id: "Employee8"})
+MATCH (o100:Operation {id: "Operation229"})
+MATCH (m100:Machine {name: "M1"})
+MATCH (p100:Part {name: "Valve"})
+MERGE (e100)-[:PERFORMED]->(o100)
+MERGE (o100)-[:USED]->(m100)
+MERGE (o100)-[:PRODUCED]->(p100)
+} 
+
+CALL () {
+MATCH (e101:Employee {id: "Employee9"})
+MATCH (o101:Operation {id: "Operation11"})
+MATCH (m101:Machine {name: "M2"})
+MATCH (p101:Part {name: "Shaft"})
+MERGE (e101)-[:PERFORMED]->(o101)
+MERGE (o101)-[:USED]->(m101)
+MERGE (o101)-[:PRODUCED]->(p101)
+} 
+
+CALL () {
+MATCH (e102:Employee {id: "Employee9"})
+MATCH (o102:Operation {id: "Operation17"})
+MATCH (m102:Machine {name: "M2"})
+MATCH (p102:Part {name: "Bearing"})
+MERGE (e102)-[:PERFORMED]->(o102)
+MERGE (o102)-[:USED]->(m102)
+MERGE (o102)-[:PRODUCED]->(p102)
+} 
+
+CALL () {
+MATCH (e103:Employee {id: "Employee9"})
+MATCH (o103:Operation {id: "Operation45"})
+MATCH (m103:Machine {name: "M1"})
+MATCH (p103:Part {name: "Gearbox"})
+MERGE (e103)-[:PERFORMED]->(o103)
+MERGE (o103)-[:USED]->(m103)
+MERGE (o103)-[:PRODUCED]->(p103)
+} 
+
+CALL () {
+MATCH (e104:Employee {id: "Employee9"})
+MATCH (o104:Operation {id: "Operation47"})
+MATCH (m104:Machine {name: "M1"})
+MATCH (p104:Part {name: "Gearbox"})
+MERGE (e104)-[:PERFORMED]->(o104)
+MERGE (o104)-[:USED]->(m104)
+MERGE (o104)-[:PRODUCED]->(p104)
+} 
+
+CALL () {
+MATCH (e105:Employee {id: "Employee9"})
+MATCH (o105:Operation {id: "Operation74"})
+MATCH (m105:Machine {name: "M4"})
+MATCH (p105:Part {name: "Shaft"})
+MERGE (e105)-[:PERFORMED]->(o105)
+MERGE (o105)-[:USED]->(m105)
+MERGE (o105)-[:PRODUCED]->(p105)
+} 
+
+CALL () {
+MATCH (e106:Employee {id: "Employee9"})
+MATCH (o106:Operation {id: "Operation75"})
+MATCH (m106:Machine {name: "M3"})
+MATCH (p106:Part {name: "Valve"})
+MERGE (e106)-[:PERFORMED]->(o106)
+MERGE (o106)-[:USED]->(m106)
+MERGE (o106)-[:PRODUCED]->(p106)
+} 
+
+CALL () {
+MATCH (e107:Employee {id: "Employee9"})
+MATCH (o107:Operation {id: "Operation119"})
+MATCH (m107:Machine {name: "M4"})
+MATCH (p107:Part {name: "Piston"})
+MERGE (e107)-[:PERFORMED]->(o107)
+MERGE (o107)-[:USED]->(m107)
+MERGE (o107)-[:PRODUCED]->(p107)
+} 
+
+CALL () {
+MATCH (e108:Employee {id: "Employee9"})
+MATCH (o108:Operation {id: "Operation131"})
+MATCH (m108:Machine {name: "M4"})
+MATCH (p108:Part {name: "Piston"})
+MERGE (e108)-[:PERFORMED]->(o108)
+MERGE (o108)-[:USED]->(m108)
+MERGE (o108)-[:PRODUCED]->(p108)
+} 
+
+CALL () {
+MATCH (e109:Employee {id: "Employee9"})
+MATCH (o109:Operation {id: "Operation147"})
+MATCH (m109:Machine {name: "M1"})
+MATCH (p109:Part {name: "Piston"})
+MERGE (e109)-[:PERFORMED]->(o109)
+MERGE (o109)-[:USED]->(m109)
+MERGE (o109)-[:PRODUCED]->(p109)
+} 
+
+CALL () {
+MATCH (e110:Employee {id: "Employee9"})
+MATCH (o110:Operation {id: "Operation164"})
+MATCH (m110:Machine {name: "M1"})
+MATCH (p110:Part {name: "Valve"})
+MERGE (e110)-[:PERFORMED]->(o110)
+MERGE (o110)-[:USED]->(m110)
+MERGE (o110)-[:PRODUCED]->(p110)
+} 
+
+CALL () {
+MATCH (e111:Employee {id: "Employee9"})
+MATCH (o111:Operation {id: "Operation185"})
+MATCH (m111:Machine {name: "M2"})
+MATCH (p111:Part {name: "Piston"})
+MERGE (e111)-[:PERFORMED]->(o111)
+MERGE (o111)-[:USED]->(m111)
+MERGE (o111)-[:PRODUCED]->(p111)
+} 
+
+CALL () {
+MATCH (e112:Employee {id: "Employee9"})
+MATCH (o112:Operation {id: "Operation187"})
+MATCH (m112:Machine {name: "M3"})
+MATCH (p112:Part {name: "Valve"})
+MERGE (e112)-[:PERFORMED]->(o112)
+MERGE (o112)-[:USED]->(m112)
+MERGE (o112)-[:PRODUCED]->(p112)
+} 
+
+CALL () {
+MATCH (e113:Employee {id: "Employee9"})
+MATCH (o113:Operation {id: "Operation192"})
+MATCH (m113:Machine {name: "M2"})
+MATCH (p113:Part {name: "Bearing"})
+MERGE (e113)-[:PERFORMED]->(o113)
+MERGE (o113)-[:USED]->(m113)
+MERGE (o113)-[:PRODUCED]->(p113)
+} 
+
+CALL () {
+MATCH (e114:Employee {id: "Employee9"})
+MATCH (o114:Operation {id: "Operation237"})
+MATCH (m114:Machine {name: "M1"})
+MATCH (p114:Part {name: "Valve"})
+MERGE (e114)-[:PERFORMED]->(o114)
+MERGE (o114)-[:USED]->(m114)
+MERGE (o114)-[:PRODUCED]->(p114)
+} 
+
+CALL () {
+MATCH (e115:Employee {id: "Employee9"})
+MATCH (o115:Operation {id: "Operation245"})
+MATCH (m115:Machine {name: "M1"})
+MATCH (p115:Part {name: "Piston"})
+MERGE (e115)-[:PERFORMED]->(o115)
+MERGE (o115)-[:USED]->(m115)
+MERGE (o115)-[:PRODUCED]->(p115)
+} 
+
+CALL () {
+MATCH (e116:Employee {id: "Employee10"})
+MATCH (o116:Operation {id: "Operation4"})
+MATCH (m116:Machine {name: "M3"})
+MATCH (p116:Part {name: "Bearing"})
+MERGE (e116)-[:PERFORMED]->(o116)
+MERGE (o116)-[:USED]->(m116)
+MERGE (o116)-[:PRODUCED]->(p116)
+} 
+
+CALL () {
+MATCH (e117:Employee {id: "Employee10"})
+MATCH (o117:Operation {id: "Operation5"})
+MATCH (m117:Machine {name: "M1"})
+MATCH (p117:Part {name: "Shaft"})
+MERGE (e117)-[:PERFORMED]->(o117)
+MERGE (o117)-[:USED]->(m117)
+MERGE (o117)-[:PRODUCED]->(p117)
+} 
+
+CALL () {
+MATCH (e118:Employee {id: "Employee10"})
+MATCH (o118:Operation {id: "Operation23"})
+MATCH (m118:Machine {name: "M4"})
+MATCH (p118:Part {name: "Valve"})
+MERGE (e118)-[:PERFORMED]->(o118)
+MERGE (o118)-[:USED]->(m118)
+MERGE (o118)-[:PRODUCED]->(p118)
+} 
+
+CALL () {
+MATCH (e119:Employee {id: "Employee10"})
+MATCH (o119:Operation {id: "Operation34"})
+MATCH (m119:Machine {name: "M4"})
+MATCH (p119:Part {name: "Bearing"})
+MERGE (e119)-[:PERFORMED]->(o119)
+MERGE (o119)-[:USED]->(m119)
+MERGE (o119)-[:PRODUCED]->(p119)
+} 
+
+CALL () {
+MATCH (e120:Employee {id: "Employee10"})
+MATCH (o120:Operation {id: "Operation43"})
+MATCH (m120:Machine {name: "M2"})
+MATCH (p120:Part {name: "Piston"})
+MERGE (e120)-[:PERFORMED]->(o120)
+MERGE (o120)-[:USED]->(m120)
+MERGE (o120)-[:PRODUCED]->(p120)
+} 
+
+CALL () {
+MATCH (e121:Employee {id: "Employee10"})
+MATCH (o121:Operation {id: "Operation51"})
+MATCH (m121:Machine {name: "M3"})
+MATCH (p121:Part {name: "Gearbox"})
+MERGE (e121)-[:PERFORMED]->(o121)
+MERGE (o121)-[:USED]->(m121)
+MERGE (o121)-[:PRODUCED]->(p121)
+} 
+
+CALL () {
+MATCH (e122:Employee {id: "Employee10"})
+MATCH (o122:Operation {id: "Operation64"})
+MATCH (m122:Machine {name: "M3"})
+MATCH (p122:Part {name: "Shaft"})
+MERGE (e122)-[:PERFORMED]->(o122)
+MERGE (o122)-[:USED]->(m122)
+MERGE (o122)-[:PRODUCED]->(p122)
+} 
+
+CALL () {
+MATCH (e123:Employee {id: "Employee10"})
+MATCH (o123:Operation {id: "Operation118"})
+MATCH (m123:Machine {name: "M3"})
+MATCH (p123:Part {name: "Piston"})
+MERGE (e123)-[:PERFORMED]->(o123)
+MERGE (o123)-[:USED]->(m123)
+MERGE (o123)-[:PRODUCED]->(p123)
+} 
+
+CALL () {
+MATCH (e124:Employee {id: "Employee10"})
+MATCH (o124:Operation {id: "Operation150"})
+MATCH (m124:Machine {name: "M1"})
+MATCH (p124:Part {name: "Piston"})
+MERGE (e124)-[:PERFORMED]->(o124)
+MERGE (o124)-[:USED]->(m124)
+MERGE (o124)-[:PRODUCED]->(p124)
+} 
+
+CALL () {
+MATCH (e125:Employee {id: "Employee10"})
+MATCH (o125:Operation {id: "Operation153"})
+MATCH (m125:Machine {name: "M4"})
+MATCH (p125:Part {name: "Gearbox"})
+MERGE (e125)-[:PERFORMED]->(o125)
+MERGE (o125)-[:USED]->(m125)
+MERGE (o125)-[:PRODUCED]->(p125)
+} 
+
+CALL () {
+MATCH (e126:Employee {id: "Employee10"})
+MATCH (o126:Operation {id: "Operation195"})
+MATCH (m126:Machine {name: "M3"})
+MATCH (p126:Part {name: "Gearbox"})
+MERGE (e126)-[:PERFORMED]->(o126)
+MERGE (o126)-[:USED]->(m126)
+MERGE (o126)-[:PRODUCED]->(p126)
+} 
+
+CALL () {
+MATCH (e127:Employee {id: "Employee10"})
+MATCH (o127:Operation {id: "Operation206"})
+MATCH (m127:Machine {name: "M3"})
+MATCH (p127:Part {name: "Bearing"})
+MERGE (e127)-[:PERFORMED]->(o127)
+MERGE (o127)-[:USED]->(m127)
+MERGE (o127)-[:PRODUCED]->(p127)
+} 
+
+CALL () {
+MATCH (e128:Employee {id: "Employee10"})
+MATCH (o128:Operation {id: "Operation212"})
+MATCH (m128:Machine {name: "M4"})
+MATCH (p128:Part {name: "Piston"})
+MERGE (e128)-[:PERFORMED]->(o128)
+MERGE (o128)-[:USED]->(m128)
+MERGE (o128)-[:PRODUCED]->(p128)
+} 
+
+CALL () {
+MATCH (e129:Employee {id: "Employee10"})
+MATCH (o129:Operation {id: "Operation215"})
+MATCH (m129:Machine {name: "M4"})
+MATCH (p129:Part {name: "Shaft"})
+MERGE (e129)-[:PERFORMED]->(o129)
+MERGE (o129)-[:USED]->(m129)
+MERGE (o129)-[:PRODUCED]->(p129)
+} 
+
+CALL () {
+MATCH (e130:Employee {id: "Employee10"})
+MATCH (o130:Operation {id: "Operation219"})
+MATCH (m130:Machine {name: "M1"})
+MATCH (p130:Part {name: "Bearing"})
+MERGE (e130)-[:PERFORMED]->(o130)
+MERGE (o130)-[:USED]->(m130)
+MERGE (o130)-[:PRODUCED]->(p130)
+} 
+
+CALL () {
+MATCH (e131:Employee {id: "Employee11"})
+MATCH (o131:Operation {id: "Operation10"})
+MATCH (m131:Machine {name: "M2"})
+MATCH (p131:Part {name: "Piston"})
+MERGE (e131)-[:PERFORMED]->(o131)
+MERGE (o131)-[:USED]->(m131)
+MERGE (o131)-[:PRODUCED]->(p131)
+} 
+
+CALL () {
+MATCH (e132:Employee {id: "Employee11"})
+MATCH (o132:Operation {id: "Operation16"})
+MATCH (m132:Machine {name: "M1"})
+MATCH (p132:Part {name: "Valve"})
+MERGE (e132)-[:PERFORMED]->(o132)
+MERGE (o132)-[:USED]->(m132)
+MERGE (o132)-[:PRODUCED]->(p132)
+} 
+
+CALL () {
+MATCH (e133:Employee {id: "Employee11"})
+MATCH (o133:Operation {id: "Operation48"})
+MATCH (m133:Machine {name: "M2"})
+MATCH (p133:Part {name: "Valve"})
+MERGE (e133)-[:PERFORMED]->(o133)
+MERGE (o133)-[:USED]->(m133)
+MERGE (o133)-[:PRODUCED]->(p133)
+} 
+
+CALL () {
+MATCH (e134:Employee {id: "Employee11"})
+MATCH (o134:Operation {id: "Operation72"})
+MATCH (m134:Machine {name: "M4"})
+MATCH (p134:Part {name: "Bearing"})
+MERGE (e134)-[:PERFORMED]->(o134)
+MERGE (o134)-[:USED]->(m134)
+MERGE (o134)-[:PRODUCED]->(p134)
+} 
+
+CALL () {
+MATCH (e135:Employee {id: "Employee11"})
+MATCH (o135:Operation {id: "Operation80"})
+MATCH (m135:Machine {name: "M4"})
+MATCH (p135:Part {name: "Shaft"})
+MERGE (e135)-[:PERFORMED]->(o135)
+MERGE (o135)-[:USED]->(m135)
+MERGE (o135)-[:PRODUCED]->(p135)
+} 
+
+CALL () {
+MATCH (e136:Employee {id: "Employee11"})
+MATCH (o136:Operation {id: "Operation83"})
+MATCH (m136:Machine {name: "M3"})
+MATCH (p136:Part {name: "Piston"})
+MERGE (e136)-[:PERFORMED]->(o136)
+MERGE (o136)-[:USED]->(m136)
+MERGE (o136)-[:PRODUCED]->(p136)
+} 
+
+CALL () {
+MATCH (e137:Employee {id: "Employee11"})
+MATCH (o137:Operation {id: "Operation102"})
+MATCH (m137:Machine {name: "M3"})
+MATCH (p137:Part {name: "Piston"})
+MERGE (e137)-[:PERFORMED]->(o137)
+MERGE (o137)-[:USED]->(m137)
+MERGE (o137)-[:PRODUCED]->(p137)
+} 
+
+CALL () {
+MATCH (e138:Employee {id: "Employee11"})
+MATCH (o138:Operation {id: "Operation108"})
+MATCH (m138:Machine {name: "M2"})
+MATCH (p138:Part {name: "Gearbox"})
+MERGE (e138)-[:PERFORMED]->(o138)
+MERGE (o138)-[:USED]->(m138)
+MERGE (o138)-[:PRODUCED]->(p138)
+} 
+
+CALL () {
+MATCH (e139:Employee {id: "Employee11"})
+MATCH (o139:Operation {id: "Operation120"})
+MATCH (m139:Machine {name: "M3"})
+MATCH (p139:Part {name: "Gearbox"})
+MERGE (e139)-[:PERFORMED]->(o139)
+MERGE (o139)-[:USED]->(m139)
+MERGE (o139)-[:PRODUCED]->(p139)
+} 
+
+CALL () {
+MATCH (e140:Employee {id: "Employee11"})
+MATCH (o140:Operation {id: "Operation124"})
+MATCH (m140:Machine {name: "M4"})
+MATCH (p140:Part {name: "Piston"})
+MERGE (e140)-[:PERFORMED]->(o140)
+MERGE (o140)-[:USED]->(m140)
+MERGE (o140)-[:PRODUCED]->(p140)
+} 
+
+CALL () {
+MATCH (e141:Employee {id: "Employee11"})
+MATCH (o141:Operation {id: "Operation154"})
+MATCH (m141:Machine {name: "M4"})
+MATCH (p141:Part {name: "Shaft"})
+MERGE (e141)-[:PERFORMED]->(o141)
+MERGE (o141)-[:USED]->(m141)
+MERGE (o141)-[:PRODUCED]->(p141)
+} 
+
+CALL () {
+MATCH (e142:Employee {id: "Employee11"})
+MATCH (o142:Operation {id: "Operation156"})
+MATCH (m142:Machine {name: "M1"})
+MATCH (p142:Part {name: "Piston"})
+MERGE (e142)-[:PERFORMED]->(o142)
+MERGE (o142)-[:USED]->(m142)
+MERGE (o142)-[:PRODUCED]->(p142)
+} 
+
+CALL () {
+MATCH (e143:Employee {id: "Employee11"})
+MATCH (o143:Operation {id: "Operation190"})
+MATCH (m143:Machine {name: "M1"})
+MATCH (p143:Part {name: "Gearbox"})
+MERGE (e143)-[:PERFORMED]->(o143)
+MERGE (o143)-[:USED]->(m143)
+MERGE (o143)-[:PRODUCED]->(p143)
+} 
+
+CALL () {
+MATCH (e144:Employee {id: "Employee11"})
+MATCH (o144:Operation {id: "Operation213"})
+MATCH (m144:Machine {name: "M1"})
+MATCH (p144:Part {name: "Valve"})
+MERGE (e144)-[:PERFORMED]->(o144)
+MERGE (o144)-[:USED]->(m144)
+MERGE (o144)-[:PRODUCED]->(p144)
+} 
+
+CALL () {
+MATCH (e145:Employee {id: "Employee11"})
+MATCH (o145:Operation {id: "Operation220"})
+MATCH (m145:Machine {name: "M2"})
+MATCH (p145:Part {name: "Bearing"})
+MERGE (e145)-[:PERFORMED]->(o145)
+MERGE (o145)-[:USED]->(m145)
+MERGE (o145)-[:PRODUCED]->(p145)
+} 
+
+CALL () {
+MATCH (e146:Employee {id: "Employee11"})
+MATCH (o146:Operation {id: "Operation241"})
+MATCH (m146:Machine {name: "M3"})
+MATCH (p146:Part {name: "Bearing"})
+MERGE (e146)-[:PERFORMED]->(o146)
+MERGE (o146)-[:USED]->(m146)
+MERGE (o146)-[:PRODUCED]->(p146)
+} 
+
+CALL () {
+MATCH (e147:Employee {id: "Employee11"})
+MATCH (o147:Operation {id: "Operation243"})
+MATCH (m147:Machine {name: "M3"})
+MATCH (p147:Part {name: "Gearbox"})
+MERGE (e147)-[:PERFORMED]->(o147)
+MERGE (o147)-[:USED]->(m147)
+MERGE (o147)-[:PRODUCED]->(p147)
+} 
+
+CALL () {
+MATCH (e148:Employee {id: "Employee12"})
+MATCH (o148:Operation {id: "Operation52"})
+MATCH (m148:Machine {name: "M4"})
+MATCH (p148:Part {name: "Bearing"})
+MERGE (e148)-[:PERFORMED]->(o148)
+MERGE (o148)-[:USED]->(m148)
+MERGE (o148)-[:PRODUCED]->(p148)
+} 
+
+CALL () {
+MATCH (e149:Employee {id: "Employee12"})
+MATCH (o149:Operation {id: "Operation57"})
+MATCH (m149:Machine {name: "M4"})
+MATCH (p149:Part {name: "Bearing"})
+MERGE (e149)-[:PERFORMED]->(o149)
+MERGE (o149)-[:USED]->(m149)
+MERGE (o149)-[:PRODUCED]->(p149)
+} 
+
+CALL () {
+MATCH (e150:Employee {id: "Employee12"})
+MATCH (o150:Operation {id: "Operation91"})
+MATCH (m150:Machine {name: "M4"})
+MATCH (p150:Part {name: "Valve"})
+MERGE (e150)-[:PERFORMED]->(o150)
+MERGE (o150)-[:USED]->(m150)
+MERGE (o150)-[:PRODUCED]->(p150)
+} 
+
+CALL () {
+MATCH (e151:Employee {id: "Employee12"})
+MATCH (o151:Operation {id: "Operation97"})
+MATCH (m151:Machine {name: "M3"})
+MATCH (p151:Part {name: "Valve"})
+MERGE (e151)-[:PERFORMED]->(o151)
+MERGE (o151)-[:USED]->(m151)
+MERGE (o151)-[:PRODUCED]->(p151)
+} 
+
+CALL () {
+MATCH (e152:Employee {id: "Employee12"})
+MATCH (o152:Operation {id: "Operation101"})
+MATCH (m152:Machine {name: "M4"})
+MATCH (p152:Part {name: "Bearing"})
+MERGE (e152)-[:PERFORMED]->(o152)
+MERGE (o152)-[:USED]->(m152)
+MERGE (o152)-[:PRODUCED]->(p152)
+} 
+
+CALL () {
+MATCH (e153:Employee {id: "Employee12"})
+MATCH (o153:Operation {id: "Operation144"})
+MATCH (m153:Machine {name: "M3"})
+MATCH (p153:Part {name: "Piston"})
+MERGE (e153)-[:PERFORMED]->(o153)
+MERGE (o153)-[:USED]->(m153)
+MERGE (o153)-[:PRODUCED]->(p153)
+} 
+
+CALL () {
+MATCH (e154:Employee {id: "Employee12"})
+MATCH (o154:Operation {id: "Operation148"})
+MATCH (m154:Machine {name: "M3"})
+MATCH (p154:Part {name: "Piston"})
+MERGE (e154)-[:PERFORMED]->(o154)
+MERGE (o154)-[:USED]->(m154)
+MERGE (o154)-[:PRODUCED]->(p154)
+} 
+
+CALL () {
+MATCH (e155:Employee {id: "Employee12"})
+MATCH (o155:Operation {id: "Operation158"})
+MATCH (m155:Machine {name: "M3"})
+MATCH (p155:Part {name: "Bearing"})
+MERGE (e155)-[:PERFORMED]->(o155)
+MERGE (o155)-[:USED]->(m155)
+MERGE (o155)-[:PRODUCED]->(p155)
+} 
+
+CALL () {
+MATCH (e156:Employee {id: "Employee12"})
+MATCH (o156:Operation {id: "Operation181"})
+MATCH (m156:Machine {name: "M2"})
+MATCH (p156:Part {name: "Bearing"})
+MERGE (e156)-[:PERFORMED]->(o156)
+MERGE (o156)-[:USED]->(m156)
+MERGE (o156)-[:PRODUCED]->(p156)
+} 
+
+CALL () {
+MATCH (e157:Employee {id: "Employee12"})
+MATCH (o157:Operation {id: "Operation200"})
+MATCH (m157:Machine {name: "M1"})
+MATCH (p157:Part {name: "Piston"})
+MERGE (e157)-[:PERFORMED]->(o157)
+MERGE (o157)-[:USED]->(m157)
+MERGE (o157)-[:PRODUCED]->(p157)
+} 
+
+CALL () {
+MATCH (e158:Employee {id: "Employee12"})
+MATCH (o158:Operation {id: "Operation248"})
+MATCH (m158:Machine {name: "M4"})
+MATCH (p158:Part {name: "Valve"})
+MERGE (e158)-[:PERFORMED]->(o158)
+MERGE (o158)-[:USED]->(m158)
+MERGE (o158)-[:PRODUCED]->(p158)
+} 
+
+CALL () {
+MATCH (e159:Employee {id: "Employee13"})
+MATCH (o159:Operation {id: "Operation9"})
+MATCH (m159:Machine {name: "M3"})
+MATCH (p159:Part {name: "Gearbox"})
+MERGE (e159)-[:PERFORMED]->(o159)
+MERGE (o159)-[:USED]->(m159)
+MERGE (o159)-[:PRODUCED]->(p159)
+} 
+
+CALL () {
+MATCH (e160:Employee {id: "Employee13"})
+MATCH (o160:Operation {id: "Operation40"})
+MATCH (m160:Machine {name: "M2"})
+MATCH (p160:Part {name: "Valve"})
+MERGE (e160)-[:PERFORMED]->(o160)
+MERGE (o160)-[:USED]->(m160)
+MERGE (o160)-[:PRODUCED]->(p160)
+} 
+
+CALL () {
+MATCH (e161:Employee {id: "Employee13"})
+MATCH (o161:Operation {id: "Operation63"})
+MATCH (m161:Machine {name: "M2"})
+MATCH (p161:Part {name: "Bearing"})
+MERGE (e161)-[:PERFORMED]->(o161)
+MERGE (o161)-[:USED]->(m161)
+MERGE (o161)-[:PRODUCED]->(p161)
+} 
+
+CALL () {
+MATCH (e162:Employee {id: "Employee13"})
+MATCH (o162:Operation {id: "Operation69"})
+MATCH (m162:Machine {name: "M4"})
+MATCH (p162:Part {name: "Piston"})
+MERGE (e162)-[:PERFORMED]->(o162)
+MERGE (o162)-[:USED]->(m162)
+MERGE (o162)-[:PRODUCED]->(p162)
+} 
+
+CALL () {
+MATCH (e163:Employee {id: "Employee13"})
+MATCH (o163:Operation {id: "Operation89"})
+MATCH (m163:Machine {name: "M4"})
+MATCH (p163:Part {name: "Shaft"})
+MERGE (e163)-[:PERFORMED]->(o163)
+MERGE (o163)-[:USED]->(m163)
+MERGE (o163)-[:PRODUCED]->(p163)
+} 
+
+CALL () {
+MATCH (e164:Employee {id: "Employee13"})
+MATCH (o164:Operation {id: "Operation96"})
+MATCH (m164:Machine {name: "M3"})
+MATCH (p164:Part {name: "Gearbox"})
+MERGE (e164)-[:PERFORMED]->(o164)
+MERGE (o164)-[:USED]->(m164)
+MERGE (o164)-[:PRODUCED]->(p164)
+} 
+
+CALL () {
+MATCH (e165:Employee {id: "Employee13"})
+MATCH (o165:Operation {id: "Operation109"})
+MATCH (m165:Machine {name: "M4"})
+MATCH (p165:Part {name: "Gearbox"})
+MERGE (e165)-[:PERFORMED]->(o165)
+MERGE (o165)-[:USED]->(m165)
+MERGE (o165)-[:PRODUCED]->(p165)
+} 
+
+CALL () {
+MATCH (e166:Employee {id: "Employee13"})
+MATCH (o166:Operation {id: "Operation135"})
+MATCH (m166:Machine {name: "M4"})
+MATCH (p166:Part {name: "Valve"})
+MERGE (e166)-[:PERFORMED]->(o166)
+MERGE (o166)-[:USED]->(m166)
+MERGE (o166)-[:PRODUCED]->(p166)
+} 
+
+CALL () {
+MATCH (e167:Employee {id: "Employee13"})
+MATCH (o167:Operation {id: "Operation137"})
+MATCH (m167:Machine {name: "M2"})
+MATCH (p167:Part {name: "Piston"})
+MERGE (e167)-[:PERFORMED]->(o167)
+MERGE (o167)-[:USED]->(m167)
+MERGE (o167)-[:PRODUCED]->(p167)
+} 
+
+CALL () {
+MATCH (e168:Employee {id: "Employee13"})
+MATCH (o168:Operation {id: "Operation140"})
+MATCH (m168:Machine {name: "M1"})
+MATCH (p168:Part {name: "Valve"})
+MERGE (e168)-[:PERFORMED]->(o168)
+MERGE (o168)-[:USED]->(m168)
+MERGE (o168)-[:PRODUCED]->(p168)
+} 
+
+CALL () {
+MATCH (e169:Employee {id: "Employee13"})
+MATCH (o169:Operation {id: "Operation149"})
+MATCH (m169:Machine {name: "M4"})
+MATCH (p169:Part {name: "Gearbox"})
+MERGE (e169)-[:PERFORMED]->(o169)
+MERGE (o169)-[:USED]->(m169)
+MERGE (o169)-[:PRODUCED]->(p169)
+} 
+
+CALL () {
+MATCH (e170:Employee {id: "Employee13"})
+MATCH (o170:Operation {id: "Operation157"})
+MATCH (m170:Machine {name: "M3"})
+MATCH (p170:Part {name: "Gearbox"})
+MERGE (e170)-[:PERFORMED]->(o170)
+MERGE (o170)-[:USED]->(m170)
+MERGE (o170)-[:PRODUCED]->(p170)
+} 
+
+CALL () {
+MATCH (e171:Employee {id: "Employee13"})
+MATCH (o171:Operation {id: "Operation188"})
+MATCH (m171:Machine {name: "M1"})
+MATCH (p171:Part {name: "Shaft"})
+MERGE (e171)-[:PERFORMED]->(o171)
+MERGE (o171)-[:USED]->(m171)
+MERGE (o171)-[:PRODUCED]->(p171)
+} 
+
+CALL () {
+MATCH (e172:Employee {id: "Employee13"})
+MATCH (o172:Operation {id: "Operation196"})
+MATCH (m172:Machine {name: "M2"})
+MATCH (p172:Part {name: "Bearing"})
+MERGE (e172)-[:PERFORMED]->(o172)
+MERGE (o172)-[:USED]->(m172)
+MERGE (o172)-[:PRODUCED]->(p172)
+} 
+
+CALL () {
+MATCH (e173:Employee {id: "Employee13"})
+MATCH (o173:Operation {id: "Operation197"})
+MATCH (m173:Machine {name: "M1"})
+MATCH (p173:Part {name: "Piston"})
+MERGE (e173)-[:PERFORMED]->(o173)
+MERGE (o173)-[:USED]->(m173)
+MERGE (o173)-[:PRODUCED]->(p173)
+} 
+
+CALL () {
+MATCH (e174:Employee {id: "Employee13"})
+MATCH (o174:Operation {id: "Operation199"})
+MATCH (m174:Machine {name: "M1"})
+MATCH (p174:Part {name: "Valve"})
+MERGE (e174)-[:PERFORMED]->(o174)
+MERGE (o174)-[:USED]->(m174)
+MERGE (o174)-[:PRODUCED]->(p174)
+} 
+
+CALL () {
+MATCH (e175:Employee {id: "Employee13"})
+MATCH (o175:Operation {id: "Operation216"})
+MATCH (m175:Machine {name: "M3"})
+MATCH (p175:Part {name: "Shaft"})
+MERGE (e175)-[:PERFORMED]->(o175)
+MERGE (o175)-[:USED]->(m175)
+MERGE (o175)-[:PRODUCED]->(p175)
+} 
+
+CALL () {
+MATCH (e176:Employee {id: "Employee13"})
+MATCH (o176:Operation {id: "Operation244"})
+MATCH (m176:Machine {name: "M3"})
+MATCH (p176:Part {name: "Shaft"})
+MERGE (e176)-[:PERFORMED]->(o176)
+MERGE (o176)-[:USED]->(m176)
+MERGE (o176)-[:PRODUCED]->(p176)
+} 
+
+CALL () {
+MATCH (e177:Employee {id: "Employee13"})
+MATCH (o177:Operation {id: "Operation249"})
+MATCH (m177:Machine {name: "M3"})
+MATCH (p177:Part {name: "Bearing"})
+MERGE (e177)-[:PERFORMED]->(o177)
+MERGE (o177)-[:USED]->(m177)
+MERGE (o177)-[:PRODUCED]->(p177)
+} 
+
+CALL () {
+MATCH (e178:Employee {id: "Employee14"})
+MATCH (o178:Operation {id: "Operation12"})
+MATCH (m178:Machine {name: "M4"})
+MATCH (p178:Part {name: "Valve"})
+MERGE (e178)-[:PERFORMED]->(o178)
+MERGE (o178)-[:USED]->(m178)
+MERGE (o178)-[:PRODUCED]->(p178)
+} 
+
+CALL () {
+MATCH (e179:Employee {id: "Employee14"})
+MATCH (o179:Operation {id: "Operation28"})
+MATCH (m179:Machine {name: "M3"})
+MATCH (p179:Part {name: "Piston"})
+MERGE (e179)-[:PERFORMED]->(o179)
+MERGE (o179)-[:USED]->(m179)
+MERGE (o179)-[:PRODUCED]->(p179)
+} 
+
+CALL () {
+MATCH (e180:Employee {id: "Employee14"})
+MATCH (o180:Operation {id: "Operation59"})
+MATCH (m180:Machine {name: "M1"})
+MATCH (p180:Part {name: "Piston"})
+MERGE (e180)-[:PERFORMED]->(o180)
+MERGE (o180)-[:USED]->(m180)
+MERGE (o180)-[:PRODUCED]->(p180)
+} 
+
+CALL () {
+MATCH (e181:Employee {id: "Employee14"})
+MATCH (o181:Operation {id: "Operation62"})
+MATCH (m181:Machine {name: "M3"})
+MATCH (p181:Part {name: "Piston"})
+MERGE (e181)-[:PERFORMED]->(o181)
+MERGE (o181)-[:USED]->(m181)
+MERGE (o181)-[:PRODUCED]->(p181)
+} 
+
+CALL () {
+MATCH (e182:Employee {id: "Employee14"})
+MATCH (o182:Operation {id: "Operation70"})
+MATCH (m182:Machine {name: "M2"})
+MATCH (p182:Part {name: "Shaft"})
+MERGE (e182)-[:PERFORMED]->(o182)
+MERGE (o182)-[:USED]->(m182)
+MERGE (o182)-[:PRODUCED]->(p182)
+} 
+
+CALL () {
+MATCH (e183:Employee {id: "Employee14"})
+MATCH (o183:Operation {id: "Operation79"})
+MATCH (m183:Machine {name: "M2"})
+MATCH (p183:Part {name: "Piston"})
+MERGE (e183)-[:PERFORMED]->(o183)
+MERGE (o183)-[:USED]->(m183)
+MERGE (o183)-[:PRODUCED]->(p183)
+} 
+
+CALL () {
+MATCH (e184:Employee {id: "Employee14"})
+MATCH (o184:Operation {id: "Operation112"})
+MATCH (m184:Machine {name: "M3"})
+MATCH (p184:Part {name: "Bearing"})
+MERGE (e184)-[:PERFORMED]->(o184)
+MERGE (o184)-[:USED]->(m184)
+MERGE (o184)-[:PRODUCED]->(p184)
+} 
+
+CALL () {
+MATCH (e185:Employee {id: "Employee14"})
+MATCH (o185:Operation {id: "Operation139"})
+MATCH (m185:Machine {name: "M2"})
+MATCH (p185:Part {name: "Gearbox"})
+MERGE (e185)-[:PERFORMED]->(o185)
+MERGE (o185)-[:USED]->(m185)
+MERGE (o185)-[:PRODUCED]->(p185)
+} 
+
+CALL () {
+MATCH (e186:Employee {id: "Employee14"})
+MATCH (o186:Operation {id: "Operation163"})
+MATCH (m186:Machine {name: "M2"})
+MATCH (p186:Part {name: "Piston"})
+MERGE (e186)-[:PERFORMED]->(o186)
+MERGE (o186)-[:USED]->(m186)
+MERGE (o186)-[:PRODUCED]->(p186)
+} 
+
+CALL () {
+MATCH (e187:Employee {id: "Employee14"})
+MATCH (o187:Operation {id: "Operation177"})
+MATCH (m187:Machine {name: "M1"})
+MATCH (p187:Part {name: "Gearbox"})
+MERGE (e187)-[:PERFORMED]->(o187)
+MERGE (o187)-[:USED]->(m187)
+MERGE (o187)-[:PRODUCED]->(p187)
+} 
+
+CALL () {
+MATCH (e188:Employee {id: "Employee14"})
+MATCH (o188:Operation {id: "Operation179"})
+MATCH (m188:Machine {name: "M1"})
+MATCH (p188:Part {name: "Valve"})
+MERGE (e188)-[:PERFORMED]->(o188)
+MERGE (o188)-[:USED]->(m188)
+MERGE (o188)-[:PRODUCED]->(p188)
+} 
+
+CALL () {
+MATCH (e189:Employee {id: "Employee14"})
+MATCH (o189:Operation {id: "Operation227"})
+MATCH (m189:Machine {name: "M1"})
+MATCH (p189:Part {name: "Shaft"})
+MERGE (e189)-[:PERFORMED]->(o189)
+MERGE (o189)-[:USED]->(m189)
+MERGE (o189)-[:PRODUCED]->(p189)
+} 
+
+CALL () {
+MATCH (e190:Employee {id: "Employee14"})
+MATCH (o190:Operation {id: "Operation233"})
+MATCH (m190:Machine {name: "M4"})
+MATCH (p190:Part {name: "Gearbox"})
+MERGE (e190)-[:PERFORMED]->(o190)
+MERGE (o190)-[:USED]->(m190)
+MERGE (o190)-[:PRODUCED]->(p190)
+} 
+
+CALL () {
+MATCH (e191:Employee {id: "Employee15"})
+MATCH (o191:Operation {id: "Operation65"})
+MATCH (m191:Machine {name: "M4"})
+MATCH (p191:Part {name: "Piston"})
+MERGE (e191)-[:PERFORMED]->(o191)
+MERGE (o191)-[:USED]->(m191)
+MERGE (o191)-[:PRODUCED]->(p191)
+} 
+
+CALL () {
+MATCH (e192:Employee {id: "Employee15"})
+MATCH (o192:Operation {id: "Operation73"})
+MATCH (m192:Machine {name: "M2"})
+MATCH (p192:Part {name: "Piston"})
+MERGE (e192)-[:PERFORMED]->(o192)
+MERGE (o192)-[:USED]->(m192)
+MERGE (o192)-[:PRODUCED]->(p192)
+} 
+
+CALL () {
+MATCH (e193:Employee {id: "Employee15"})
+MATCH (o193:Operation {id: "Operation87"})
+MATCH (m193:Machine {name: "M3"})
+MATCH (p193:Part {name: "Valve"})
+MERGE (e193)-[:PERFORMED]->(o193)
+MERGE (o193)-[:USED]->(m193)
+MERGE (o193)-[:PRODUCED]->(p193)
+} 
+
+CALL () {
+MATCH (e194:Employee {id: "Employee15"})
+MATCH (o194:Operation {id: "Operation128"})
+MATCH (m194:Machine {name: "M4"})
+MATCH (p194:Part {name: "Gearbox"})
+MERGE (e194)-[:PERFORMED]->(o194)
+MERGE (o194)-[:USED]->(m194)
+MERGE (o194)-[:PRODUCED]->(p194)
+} 
+
+CALL () {
+MATCH (e195:Employee {id: "Employee15"})
+MATCH (o195:Operation {id: "Operation130"})
+MATCH (m195:Machine {name: "M1"})
+MATCH (p195:Part {name: "Shaft"})
+MERGE (e195)-[:PERFORMED]->(o195)
+MERGE (o195)-[:USED]->(m195)
+MERGE (o195)-[:PRODUCED]->(p195)
+} 
+
+CALL () {
+MATCH (e196:Employee {id: "Employee15"})
+MATCH (o196:Operation {id: "Operation143"})
+MATCH (m196:Machine {name: "M2"})
+MATCH (p196:Part {name: "Valve"})
+MERGE (e196)-[:PERFORMED]->(o196)
+MERGE (o196)-[:USED]->(m196)
+MERGE (o196)-[:PRODUCED]->(p196)
+} 
+
+CALL () {
+MATCH (e197:Employee {id: "Employee15"})
+MATCH (o197:Operation {id: "Operation207"})
+MATCH (m197:Machine {name: "M1"})
+MATCH (p197:Part {name: "Gearbox"})
+MERGE (e197)-[:PERFORMED]->(o197)
+MERGE (o197)-[:USED]->(m197)
+MERGE (o197)-[:PRODUCED]->(p197)
+} 
+
+CALL () {
+MATCH (e198:Employee {id: "Employee15"})
+MATCH (o198:Operation {id: "Operation209"})
+MATCH (m198:Machine {name: "M2"})
+MATCH (p198:Part {name: "Valve"})
+MERGE (e198)-[:PERFORMED]->(o198)
+MERGE (o198)-[:USED]->(m198)
+MERGE (o198)-[:PRODUCED]->(p198)
+} 
+
+CALL () {
+MATCH (e199:Employee {id: "Employee15"})
+MATCH (o199:Operation {id: "Operation210"})
+MATCH (m199:Machine {name: "M1"})
+MATCH (p199:Part {name: "Valve"})
+MERGE (e199)-[:PERFORMED]->(o199)
+MERGE (o199)-[:USED]->(m199)
+MERGE (o199)-[:PRODUCED]->(p199)
+} 
+
+CALL () {
+MATCH (e200:Employee {id: "Employee15"})
+MATCH (o200:Operation {id: "Operation222"})
+MATCH (m200:Machine {name: "M3"})
+MATCH (p200:Part {name: "Piston"})
+MERGE (e200)-[:PERFORMED]->(o200)
+MERGE (o200)-[:USED]->(m200)
+MERGE (o200)-[:PRODUCED]->(p200)
+} 
+
+CALL () {
+MATCH (e201:Employee {id: "Employee15"})
+MATCH (o201:Operation {id: "Operation240"})
+MATCH (m201:Machine {name: "M1"})
+MATCH (p201:Part {name: "Valve"})
+MERGE (e201)-[:PERFORMED]->(o201)
+MERGE (o201)-[:USED]->(m201)
+MERGE (o201)-[:PRODUCED]->(p201)
+} 
+
+CALL () {
+MATCH (e202:Employee {id: "Employee15"})
+MATCH (o202:Operation {id: "Operation247"})
+MATCH (m202:Machine {name: "M4"})
+MATCH (p202:Part {name: "Shaft"})
+MERGE (e202)-[:PERFORMED]->(o202)
+MERGE (o202)-[:USED]->(m202)
+MERGE (o202)-[:PRODUCED]->(p202)
+} 
+
+CALL () {
+MATCH (e203:Employee {id: "Employee16"})
+MATCH (o203:Operation {id: "Operation92"})
+MATCH (m203:Machine {name: "M1"})
+MATCH (p203:Part {name: "Piston"})
+MERGE (e203)-[:PERFORMED]->(o203)
+MERGE (o203)-[:USED]->(m203)
+MERGE (o203)-[:PRODUCED]->(p203)
+} 
+
+CALL () {
+MATCH (e204:Employee {id: "Employee16"})
+MATCH (o204:Operation {id: "Operation134"})
+MATCH (m204:Machine {name: "M2"})
+MATCH (p204:Part {name: "Piston"})
+MERGE (e204)-[:PERFORMED]->(o204)
+MERGE (o204)-[:USED]->(m204)
+MERGE (o204)-[:PRODUCED]->(p204)
+} 
+
+CALL () {
+MATCH (e205:Employee {id: "Employee16"})
+MATCH (o205:Operation {id: "Operation141"})
+MATCH (m205:Machine {name: "M1"})
+MATCH (p205:Part {name: "Bearing"})
+MERGE (e205)-[:PERFORMED]->(o205)
+MERGE (o205)-[:USED]->(m205)
+MERGE (o205)-[:PRODUCED]->(p205)
+} 
+
+CALL () {
+MATCH (e206:Employee {id: "Employee16"})
+MATCH (o206:Operation {id: "Operation174"})
+MATCH (m206:Machine {name: "M4"})
+MATCH (p206:Part {name: "Piston"})
+MERGE (e206)-[:PERFORMED]->(o206)
+MERGE (o206)-[:USED]->(m206)
+MERGE (o206)-[:PRODUCED]->(p206)
+} 
+
+CALL () {
+MATCH (e207:Employee {id: "Employee16"})
+MATCH (o207:Operation {id: "Operation180"})
+MATCH (m207:Machine {name: "M1"})
+MATCH (p207:Part {name: "Gearbox"})
+MERGE (e207)-[:PERFORMED]->(o207)
+MERGE (o207)-[:USED]->(m207)
+MERGE (o207)-[:PRODUCED]->(p207)
+} 
+
+CALL () {
+MATCH (e208:Employee {id: "Employee16"})
+MATCH (o208:Operation {id: "Operation231"})
+MATCH (m208:Machine {name: "M4"})
+MATCH (p208:Part {name: "Bearing"})
+MERGE (e208)-[:PERFORMED]->(o208)
+MERGE (o208)-[:USED]->(m208)
+MERGE (o208)-[:PRODUCED]->(p208)
+} 
+
+CALL () {
+MATCH (e209:Employee {id: "Employee17"})
+MATCH (o209:Operation {id: "Operation18"})
+MATCH (m209:Machine {name: "M2"})
+MATCH (p209:Part {name: "Shaft"})
+MERGE (e209)-[:PERFORMED]->(o209)
+MERGE (o209)-[:USED]->(m209)
+MERGE (o209)-[:PRODUCED]->(p209)
+} 
+
+CALL () {
+MATCH (e210:Employee {id: "Employee17"})
+MATCH (o210:Operation {id: "Operation22"})
+MATCH (m210:Machine {name: "M4"})
+MATCH (p210:Part {name: "Shaft"})
+MERGE (e210)-[:PERFORMED]->(o210)
+MERGE (o210)-[:USED]->(m210)
+MERGE (o210)-[:PRODUCED]->(p210)
+} 
+
+CALL () {
+MATCH (e211:Employee {id: "Employee17"})
+MATCH (o211:Operation {id: "Operation42"})
+MATCH (m211:Machine {name: "M3"})
+MATCH (p211:Part {name: "Shaft"})
+MERGE (e211)-[:PERFORMED]->(o211)
+MERGE (o211)-[:USED]->(m211)
+MERGE (o211)-[:PRODUCED]->(p211)
+} 
+
+CALL () {
+MATCH (e212:Employee {id: "Employee17"})
+MATCH (o212:Operation {id: "Operation44"})
+MATCH (m212:Machine {name: "M1"})
+MATCH (p212:Part {name: "Bearing"})
+MERGE (e212)-[:PERFORMED]->(o212)
+MERGE (o212)-[:USED]->(m212)
+MERGE (o212)-[:PRODUCED]->(p212)
+} 
+
+CALL () {
+MATCH (e213:Employee {id: "Employee17"})
+MATCH (o213:Operation {id: "Operation122"})
+MATCH (m213:Machine {name: "M4"})
+MATCH (p213:Part {name: "Valve"})
+MERGE (e213)-[:PERFORMED]->(o213)
+MERGE (o213)-[:USED]->(m213)
+MERGE (o213)-[:PRODUCED]->(p213)
+} 
+
+CALL () {
+MATCH (e214:Employee {id: "Employee17"})
+MATCH (o214:Operation {id: "Operation126"})
+MATCH (m214:Machine {name: "M1"})
+MATCH (p214:Part {name: "Bearing"})
+MERGE (e214)-[:PERFORMED]->(o214)
+MERGE (o214)-[:USED]->(m214)
+MERGE (o214)-[:PRODUCED]->(p214)
+} 
+
+CALL () {
+MATCH (e215:Employee {id: "Employee17"})
+MATCH (o215:Operation {id: "Operation133"})
+MATCH (m215:Machine {name: "M3"})
+MATCH (p215:Part {name: "Gearbox"})
+MERGE (e215)-[:PERFORMED]->(o215)
+MERGE (o215)-[:USED]->(m215)
+MERGE (o215)-[:PRODUCED]->(p215)
+} 
+
+CALL () {
+MATCH (e216:Employee {id: "Employee17"})
+MATCH (o216:Operation {id: "Operation155"})
+MATCH (m216:Machine {name: "M3"})
+MATCH (p216:Part {name: "Shaft"})
+MERGE (e216)-[:PERFORMED]->(o216)
+MERGE (o216)-[:USED]->(m216)
+MERGE (o216)-[:PRODUCED]->(p216)
+} 
+
+CALL () {
+MATCH (e217:Employee {id: "Employee17"})
+MATCH (o217:Operation {id: "Operation189"})
+MATCH (m217:Machine {name: "M2"})
+MATCH (p217:Part {name: "Piston"})
+MERGE (e217)-[:PERFORMED]->(o217)
+MERGE (o217)-[:USED]->(m217)
+MERGE (o217)-[:PRODUCED]->(p217)
+} 
+
+CALL () {
+MATCH (e218:Employee {id: "Employee17"})
+MATCH (o218:Operation {id: "Operation217"})
+MATCH (m218:Machine {name: "M1"})
+MATCH (p218:Part {name: "Piston"})
+MERGE (e218)-[:PERFORMED]->(o218)
+MERGE (o218)-[:USED]->(m218)
+MERGE (o218)-[:PRODUCED]->(p218)
+} 
+
+CALL () {
+MATCH (e219:Employee {id: "Employee17"})
+MATCH (o219:Operation {id: "Operation224"})
+MATCH (m219:Machine {name: "M4"})
+MATCH (p219:Part {name: "Shaft"})
+MERGE (e219)-[:PERFORMED]->(o219)
+MERGE (o219)-[:USED]->(m219)
+MERGE (o219)-[:PRODUCED]->(p219)
+} 
+
+CALL () {
+MATCH (e220:Employee {id: "Employee18"})
+MATCH (o220:Operation {id: "Operation8"})
+MATCH (m220:Machine {name: "M2"})
+MATCH (p220:Part {name: "Valve"})
+MERGE (e220)-[:PERFORMED]->(o220)
+MERGE (o220)-[:USED]->(m220)
+MERGE (o220)-[:PRODUCED]->(p220)
+} 
+
+CALL () {
+MATCH (e221:Employee {id: "Employee18"})
+MATCH (o221:Operation {id: "Operation15"})
+MATCH (m221:Machine {name: "M1"})
+MATCH (p221:Part {name: "Gearbox"})
+MERGE (e221)-[:PERFORMED]->(o221)
+MERGE (o221)-[:USED]->(m221)
+MERGE (o221)-[:PRODUCED]->(p221)
+} 
+
+CALL () {
+MATCH (e222:Employee {id: "Employee18"})
+MATCH (o222:Operation {id: "Operation49"})
+MATCH (m222:Machine {name: "M1"})
+MATCH (p222:Part {name: "Gearbox"})
+MERGE (e222)-[:PERFORMED]->(o222)
+MERGE (o222)-[:USED]->(m222)
+MERGE (o222)-[:PRODUCED]->(p222)
+} 
+
+CALL () {
+MATCH (e223:Employee {id: "Employee18"})
+MATCH (o223:Operation {id: "Operation50"})
+MATCH (m223:Machine {name: "M1"})
+MATCH (p223:Part {name: "Valve"})
+MERGE (e223)-[:PERFORMED]->(o223)
+MERGE (o223)-[:USED]->(m223)
+MERGE (o223)-[:PRODUCED]->(p223)
+} 
+
+CALL () {
+MATCH (e224:Employee {id: "Employee18"})
+MATCH (o224:Operation {id: "Operation94"})
+MATCH (m224:Machine {name: "M4"})
+MATCH (p224:Part {name: "Piston"})
+MERGE (e224)-[:PERFORMED]->(o224)
+MERGE (o224)-[:USED]->(m224)
+MERGE (o224)-[:PRODUCED]->(p224)
+} 
+
+CALL () {
+MATCH (e225:Employee {id: "Employee18"})
+MATCH (o225:Operation {id: "Operation98"})
+MATCH (m225:Machine {name: "M1"})
+MATCH (p225:Part {name: "Bearing"})
+MERGE (e225)-[:PERFORMED]->(o225)
+MERGE (o225)-[:USED]->(m225)
+MERGE (o225)-[:PRODUCED]->(p225)
+} 
+
+CALL () {
+MATCH (e226:Employee {id: "Employee18"})
+MATCH (o226:Operation {id: "Operation99"})
+MATCH (m226:Machine {name: "M2"})
+MATCH (p226:Part {name: "Piston"})
+MERGE (e226)-[:PERFORMED]->(o226)
+MERGE (o226)-[:USED]->(m226)
+MERGE (o226)-[:PRODUCED]->(p226)
+} 
+
+CALL () {
+MATCH (e227:Employee {id: "Employee18"})
+MATCH (o227:Operation {id: "Operation117"})
+MATCH (m227:Machine {name: "M2"})
+MATCH (p227:Part {name: "Shaft"})
+MERGE (e227)-[:PERFORMED]->(o227)
+MERGE (o227)-[:USED]->(m227)
+MERGE (o227)-[:PRODUCED]->(p227)
+} 
+
+CALL () {
+MATCH (e228:Employee {id: "Employee18"})
+MATCH (o228:Operation {id: "Operation186"})
+MATCH (m228:Machine {name: "M1"})
+MATCH (p228:Part {name: "Bearing"})
+MERGE (e228)-[:PERFORMED]->(o228)
+MERGE (o228)-[:USED]->(m228)
+MERGE (o228)-[:PRODUCED]->(p228)
+} 
+
+CALL () {
+MATCH (e229:Employee {id: "Employee18"})
+MATCH (o229:Operation {id: "Operation246"})
+MATCH (m229:Machine {name: "M3"})
+MATCH (p229:Part {name: "Valve"})
+MERGE (e229)-[:PERFORMED]->(o229)
+MERGE (o229)-[:USED]->(m229)
+MERGE (o229)-[:PRODUCED]->(p229)
+} 
+
+CALL () {
+MATCH (e230:Employee {id: "Employee19"})
+MATCH (o230:Operation {id: "Operation27"})
+MATCH (m230:Machine {name: "M4"})
+MATCH (p230:Part {name: "Shaft"})
+MERGE (e230)-[:PERFORMED]->(o230)
+MERGE (o230)-[:USED]->(m230)
+MERGE (o230)-[:PRODUCED]->(p230)
+} 
+
+CALL () {
+MATCH (e231:Employee {id: "Employee19"})
+MATCH (o231:Operation {id: "Operation38"})
+MATCH (m231:Machine {name: "M2"})
+MATCH (p231:Part {name: "Bearing"})
+MERGE (e231)-[:PERFORMED]->(o231)
+MERGE (o231)-[:USED]->(m231)
+MERGE (o231)-[:PRODUCED]->(p231)
+} 
+
+CALL () {
+MATCH (e232:Employee {id: "Employee19"})
+MATCH (o232:Operation {id: "Operation39"})
+MATCH (m232:Machine {name: "M3"})
+MATCH (p232:Part {name: "Valve"})
+MERGE (e232)-[:PERFORMED]->(o232)
+MERGE (o232)-[:USED]->(m232)
+MERGE (o232)-[:PRODUCED]->(p232)
+} 
+
+CALL () {
+MATCH (e233:Employee {id: "Employee19"})
+MATCH (o233:Operation {id: "Operation110"})
+MATCH (m233:Machine {name: "M3"})
+MATCH (p233:Part {name: "Gearbox"})
+MERGE (e233)-[:PERFORMED]->(o233)
+MERGE (o233)-[:USED]->(m233)
+MERGE (o233)-[:PRODUCED]->(p233)
+} 
+
+CALL () {
+MATCH (e234:Employee {id: "Employee19"})
+MATCH (o234:Operation {id: "Operation121"})
+MATCH (m234:Machine {name: "M1"})
+MATCH (p234:Part {name: "Valve"})
+MERGE (e234)-[:PERFORMED]->(o234)
+MERGE (o234)-[:USED]->(m234)
+MERGE (o234)-[:PRODUCED]->(p234)
+} 
+
+CALL () {
+MATCH (e235:Employee {id: "Employee19"})
+MATCH (o235:Operation {id: "Operation176"})
+MATCH (m235:Machine {name: "M3"})
+MATCH (p235:Part {name: "Piston"})
+MERGE (e235)-[:PERFORMED]->(o235)
+MERGE (o235)-[:USED]->(m235)
+MERGE (o235)-[:PRODUCED]->(p235)
+} 
+
+CALL () {
+MATCH (e236:Employee {id: "Employee19"})
+MATCH (o236:Operation {id: "Operation193"})
+MATCH (m236:Machine {name: "M4"})
+MATCH (p236:Part {name: "Bearing"})
+MERGE (e236)-[:PERFORMED]->(o236)
+MERGE (o236)-[:USED]->(m236)
+MERGE (o236)-[:PRODUCED]->(p236)
+} 
+
+CALL () {
+MATCH (e237:Employee {id: "Employee19"})
+MATCH (o237:Operation {id: "Operation198"})
+MATCH (m237:Machine {name: "M4"})
+MATCH (p237:Part {name: "Bearing"})
+MERGE (e237)-[:PERFORMED]->(o237)
+MERGE (o237)-[:USED]->(m237)
+MERGE (o237)-[:PRODUCED]->(p237)
+} 
+
+CALL () {
+MATCH (e238:Employee {id: "Employee19"})
+MATCH (o238:Operation {id: "Operation205"})
+MATCH (m238:Machine {name: "M3"})
+MATCH (p238:Part {name: "Valve"})
+MERGE (e238)-[:PERFORMED]->(o238)
+MERGE (o238)-[:USED]->(m238)
+MERGE (o238)-[:PRODUCED]->(p238)
+} 
+
+CALL () {
+MATCH (e239:Employee {id: "Employee19"})
+MATCH (o239:Operation {id: "Operation235"})
+MATCH (m239:Machine {name: "M4"})
+MATCH (p239:Part {name: "Shaft"})
+MERGE (e239)-[:PERFORMED]->(o239)
+MERGE (o239)-[:USED]->(m239)
+MERGE (o239)-[:PRODUCED]->(p239)
+} 
+
+CALL () {
+MATCH (e240:Employee {id: "Employee20"})
+MATCH (o240:Operation {id: "Operation14"})
+MATCH (m240:Machine {name: "M1"})
+MATCH (p240:Part {name: "Piston"})
+MERGE (e240)-[:PERFORMED]->(o240)
+MERGE (o240)-[:USED]->(m240)
+MERGE (o240)-[:PRODUCED]->(p240)
+} 
+
+CALL () {
+MATCH (e241:Employee {id: "Employee20"})
+MATCH (o241:Operation {id: "Operation61"})
+MATCH (m241:Machine {name: "M3"})
+MATCH (p241:Part {name: "Gearbox"})
+MERGE (e241)-[:PERFORMED]->(o241)
+MERGE (o241)-[:USED]->(m241)
+MERGE (o241)-[:PRODUCED]->(p241)
+} 
+
+CALL () {
+MATCH (e242:Employee {id: "Employee20"})
+MATCH (o242:Operation {id: "Operation68"})
+MATCH (m242:Machine {name: "M1"})
+MATCH (p242:Part {name: "Piston"})
+MERGE (e242)-[:PERFORMED]->(o242)
+MERGE (o242)-[:USED]->(m242)
+MERGE (o242)-[:PRODUCED]->(p242)
+} 
+
+CALL () {
+MATCH (e243:Employee {id: "Employee20"})
+MATCH (o243:Operation {id: "Operation86"})
+MATCH (m243:Machine {name: "M2"})
+MATCH (p243:Part {name: "Shaft"})
+MERGE (e243)-[:PERFORMED]->(o243)
+MERGE (o243)-[:USED]->(m243)
+MERGE (o243)-[:PRODUCED]->(p243)
+} 
+
+CALL () {
+MATCH (e244:Employee {id: "Employee20"})
+MATCH (o244:Operation {id: "Operation105"})
+MATCH (m244:Machine {name: "M3"})
+MATCH (p244:Part {name: "Gearbox"})
+MERGE (e244)-[:PERFORMED]->(o244)
+MERGE (o244)-[:USED]->(m244)
+MERGE (o244)-[:PRODUCED]->(p244)
+} 
+
+CALL () {
+MATCH (e245:Employee {id: "Employee20"})
+MATCH (o245:Operation {id: "Operation111"})
+MATCH (m245:Machine {name: "M2"})
+MATCH (p245:Part {name: "Bearing"})
+MERGE (e245)-[:PERFORMED]->(o245)
+MERGE (o245)-[:USED]->(m245)
+MERGE (o245)-[:PRODUCED]->(p245)
+} 
+
+CALL () {
+MATCH (e246:Employee {id: "Employee20"})
+MATCH (o246:Operation {id: "Operation127"})
+MATCH (m246:Machine {name: "M4"})
+MATCH (p246:Part {name: "Piston"})
+MERGE (e246)-[:PERFORMED]->(o246)
+MERGE (o246)-[:USED]->(m246)
+MERGE (o246)-[:PRODUCED]->(p246)
+} 
+
+CALL () {
+MATCH (e247:Employee {id: "Employee20"})
+MATCH (o247:Operation {id: "Operation208"})
+MATCH (m247:Machine {name: "M4"})
+MATCH (p247:Part {name: "Piston"})
+MERGE (e247)-[:PERFORMED]->(o247)
+MERGE (o247)-[:USED]->(m247)
+MERGE (o247)-[:PRODUCED]->(p247)
+} 
+
+CALL () {
+MATCH (e248:Employee {id: "Employee20"})
+MATCH (o248:Operation {id: "Operation214"})
+MATCH (m248:Machine {name: "M2"})
+MATCH (p248:Part {name: "Valve"})
+MERGE (e248)-[:PERFORMED]->(o248)
+MERGE (o248)-[:USED]->(m248)
+MERGE (o248)-[:PRODUCED]->(p248)
+} 
+
+CALL () {
+MATCH (e249:Employee {id: "Employee20"})
+MATCH (o249:Operation {id: "Operation221"})
+MATCH (m249:Machine {name: "M2"})
+MATCH (p249:Part {name: "Piston"})
+MERGE (e249)-[:PERFORMED]->(o249)
+MERGE (o249)-[:USED]->(m249)
+MERGE (o249)-[:PRODUCED]->(p249)
+} 
+
+CALL () {
+MATCH (e250:Employee {id: "Employee20"})
+MATCH (o250:Operation {id: "Operation250"})
+MATCH (m250:Machine {name: "M4"})
+MATCH (p250:Part {name: "Gearbox"})
+MERGE (e250)-[:PERFORMED]->(o250)
+MERGE (o250)-[:USED]->(m250)
+MERGE (o250)-[:PRODUCED]->(p250)
+} 
