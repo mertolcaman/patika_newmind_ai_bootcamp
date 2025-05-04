@@ -1,0 +1,10 @@
+// ADDING PART NODES
+MERGE (p1:Part {name: 'Gearbox'})
+
+MERGE (p2:Part {name: 'Shaft'})
+
+MERGE (p3:Part {name: 'Valve'})
+
+MERGE (p4:Part {name: 'Piston'})
+
+MERGE (p5:Part {name: 'Bearing'})

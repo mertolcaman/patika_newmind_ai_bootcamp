@@ -1,0 +1,16 @@
+// ADDING MACHINE NODES WITH PROPERTIES
+MERGE (m1:Machine {name: 'M1'})
+ON CREATE SET
+m1.process = 'Drilling'
+
+MERGE (m2:Machine {name: 'M2'})
+ON CREATE SET
+m2.process = 'Milling'
+
+MERGE (m3:Machine {name: 'M3'})
+ON CREATE SET
+m3.process = 'Assembly'
+
+MERGE (m4:Machine {name: 'M4'})
+ON CREATE SET
+m4.process = 'Painting'

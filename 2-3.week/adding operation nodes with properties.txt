@@ -1,0 +1,2000 @@
+// CREATING OPERATION NODES WITH DATE, SHIFT, DURATION, OEE, AND QUALITY
+MERGE (o1:Operation {id: "Operation1"})
+ON CREATE SET
+  o1.date = date("2025-04-26"),
+  o1.shift = "Day",
+  o1.duration = 64,
+  o1.oee = 0.68,
+  o1.quality = "Medium"
+
+MERGE (o2:Operation {id: "Operation19"})
+ON CREATE SET
+  o2.date = date("2025-04-30"),
+  o2.shift = "Morning",
+  o2.duration = 38,
+  o2.oee = 0.73,
+  o2.quality = "Medium"
+
+MERGE (o3:Operation {id: "Operation25"})
+ON CREATE SET
+  o3.date = date("2025-04-25"),
+  o3.shift = "Morning",
+  o3.duration = 31,
+  o3.oee = 0.61,
+  o3.quality = "Medium"
+
+MERGE (o4:Operation {id: "Operation32"})
+ON CREATE SET
+  o4.date = date("2025-04-29"),
+  o4.shift = "Morning",
+  o4.duration = 85,
+  o4.oee = 0.77,
+  o4.quality = "Medium"
+
+MERGE (o5:Operation {id: "Operation41"})
+ON CREATE SET
+  o5.date = date("2025-04-25"),
+  o5.shift = "Night",
+  o5.duration = 179,
+  o5.oee = 0.63,
+  o5.quality = "Low"
+
+MERGE (o6:Operation {id: "Operation60"})
+ON CREATE SET
+  o6.date = date("2025-04-25"),
+  o6.shift = "Day",
+  o6.duration = 31,
+  o6.oee = 0.83,
+  o6.quality = "Medium"
+
+MERGE (o7:Operation {id: "Operation78"})
+ON CREATE SET
+  o7.date = date("2025-04-29"),
+  o7.shift = "Morning",
+  o7.duration = 171,
+  o7.oee = 0.7,
+  o7.quality = "Medium"
+
+MERGE (o8:Operation {id: "Operation81"})
+ON CREATE SET
+  o8.date = date("2025-04-28"),
+  o8.shift = "Night",
+  o8.duration = 126,
+  o8.oee = 0.63,
+  o8.quality = "Medium"
+
+MERGE (o9:Operation {id: "Operation106"})
+ON CREATE SET
+  o9.date = date("2025-04-29"),
+  o9.shift = "Morning",
+  o9.duration = 176,
+  o9.oee = 0.79,
+  o9.quality = "High"
+
+MERGE (o10:Operation {id: "Operation169"})
+ON CREATE SET
+  o10.date = date("2025-04-30"),
+  o10.shift = "Morning",
+  o10.duration = 106,
+  o10.oee = 0.88,
+  o10.quality = "Low"
+
+MERGE (o11:Operation {id: "Operation170"})
+ON CREATE SET
+  o11.date = date("2025-04-24"),
+  o11.shift = "Day",
+  o11.duration = 146,
+  o11.oee = 0.68,
+  o11.quality = "Medium"
+
+MERGE (o12:Operation {id: "Operation171"})
+ON CREATE SET
+  o12.date = date("2025-04-25"),
+  o12.shift = "Morning",
+  o12.duration = 40,
+  o12.oee = 0.75,
+  o12.quality = "Low"
+
+MERGE (o13:Operation {id: "Operation234"})
+ON CREATE SET
+  o13.date = date("2025-04-30"),
+  o13.shift = "Day",
+  o13.duration = 89,
+  o13.oee = 0.82,
+  o13.quality = "Low"
+
+MERGE (o14:Operation {id: "Operation3"})
+ON CREATE SET
+  o14.date = date("2025-04-26"),
+  o14.shift = "Morning",
+  o14.duration = 176,
+  o14.oee = 0.73,
+  o14.quality = "High"
+
+MERGE (o15:Operation {id: "Operation33"})
+ON CREATE SET
+  o15.date = date("2025-04-28"),
+  o15.shift = "Morning",
+  o15.duration = 178,
+  o15.oee = 0.69,
+  o15.quality = "Medium"
+
+MERGE (o16:Operation {id: "Operation36"})
+ON CREATE SET
+  o16.date = date("2025-04-25"),
+  o16.shift = "Night",
+  o16.duration = 45,
+  o16.oee = 0.94,
+  o16.quality = "Low"
+
+MERGE (o17:Operation {id: "Operation77"})
+ON CREATE SET
+  o17.date = date("2025-04-27"),
+  o17.shift = "Day",
+  o17.duration = 165,
+  o17.oee = 0.8,
+  o17.quality = "High"
+
+MERGE (o18:Operation {id: "Operation115"})
+ON CREATE SET
+  o18.date = date("2025-04-30"),
+  o18.shift = "Night",
+  o18.duration = 65,
+  o18.oee = 0.9,
+  o18.quality = "Low"
+
+MERGE (o19:Operation {id: "Operation125"})
+ON CREATE SET
+  o19.date = date("2025-04-24"),
+  o19.shift = "Day",
+  o19.duration = 60,
+  o19.oee = 0.64,
+  o19.quality = "Medium"
+
+MERGE (o20:Operation {id: "Operation151"})
+ON CREATE SET
+  o20.date = date("2025-04-28"),
+  o20.shift = "Morning",
+  o20.duration = 117,
+  o20.oee = 0.72,
+  o20.quality = "High"
+
+MERGE (o21:Operation {id: "Operation161"})
+ON CREATE SET
+  o21.date = date("2025-04-27"),
+  o21.shift = "Day",
+  o21.duration = 39,
+  o21.oee = 0.68,
+  o21.quality = "High"
+
+MERGE (o22:Operation {id: "Operation167"})
+ON CREATE SET
+  o22.date = date("2025-04-25"),
+  o22.shift = "Morning",
+  o22.duration = 146,
+  o22.oee = 0.67,
+  o22.quality = "High"
+
+MERGE (o23:Operation {id: "Operation183"})
+ON CREATE SET
+  o23.date = date("2025-04-28"),
+  o23.shift = "Day",
+  o23.duration = 76,
+  o23.oee = 0.8,
+  o23.quality = "Low"
+
+MERGE (o24:Operation {id: "Operation194"})
+ON CREATE SET
+  o24.date = date("2025-04-24"),
+  o24.shift = "Day",
+  o24.duration = 171,
+  o24.oee = 0.87,
+  o24.quality = "Medium"
+
+MERGE (o25:Operation {id: "Operation225"})
+ON CREATE SET
+  o25.date = date("2025-04-27"),
+  o25.shift = "Night",
+  o25.duration = 169,
+  o25.oee = 0.85,
+  o25.quality = "High"
+
+MERGE (o26:Operation {id: "Operation228"})
+ON CREATE SET
+  o26.date = date("2025-04-27"),
+  o26.shift = "Day",
+  o26.duration = 58,
+  o26.oee = 0.95,
+  o26.quality = "Medium"
+
+MERGE (o27:Operation {id: "Operation242"})
+ON CREATE SET
+  o27.date = date("2025-04-28"),
+  o27.shift = "Day",
+  o27.duration = 158,
+  o27.oee = 0.62,
+  o27.quality = "High"
+
+MERGE (o28:Operation {id: "Operation7"})
+ON CREATE SET
+  o28.date = date("2025-04-27"),
+  o28.shift = "Night",
+  o28.duration = 59,
+  o28.oee = 0.76,
+  o28.quality = "Medium"
+
+MERGE (o29:Operation {id: "Operation13"})
+ON CREATE SET
+  o29.date = date("2025-04-24"),
+  o29.shift = "Morning",
+  o29.duration = 120,
+  o29.oee = 0.88,
+  o29.quality = "Medium"
+
+MERGE (o30:Operation {id: "Operation21"})
+ON CREATE SET
+  o30.date = date("2025-04-26"),
+  o30.shift = "Night",
+  o30.duration = 96,
+  o30.oee = 0.79,
+  o30.quality = "Medium"
+
+MERGE (o31:Operation {id: "Operation26"})
+ON CREATE SET
+  o31.date = date("2025-04-27"),
+  o31.shift = "Night",
+  o31.duration = 98,
+  o31.oee = 0.79,
+  o31.quality = "High"
+
+MERGE (o32:Operation {id: "Operation84"})
+ON CREATE SET
+  o32.date = date("2025-04-24"),
+  o32.shift = "Night",
+  o32.duration = 106,
+  o32.oee = 0.95,
+  o32.quality = "Medium"
+
+MERGE (o33:Operation {id: "Operation100"})
+ON CREATE SET
+  o33.date = date("2025-04-26"),
+  o33.shift = "Day",
+  o33.duration = 131,
+  o33.oee = 0.71,
+  o33.quality = "High"
+
+MERGE (o34:Operation {id: "Operation114"})
+ON CREATE SET
+  o34.date = date("2025-04-24"),
+  o34.shift = "Day",
+  o34.duration = 92,
+  o34.oee = 0.81,
+  o34.quality = "Medium"
+
+MERGE (o35:Operation {id: "Operation123"})
+ON CREATE SET
+  o35.date = date("2025-04-24"),
+  o35.shift = "Day",
+  o35.duration = 73,
+  o35.oee = 0.83,
+  o35.quality = "Low"
+
+MERGE (o36:Operation {id: "Operation172"})
+ON CREATE SET
+  o36.date = date("2025-04-26"),
+  o36.shift = "Day",
+  o36.duration = 102,
+  o36.oee = 0.64,
+  o36.quality = "High"
+
+MERGE (o37:Operation {id: "Operation175"})
+ON CREATE SET
+  o37.date = date("2025-04-29"),
+  o37.shift = "Night",
+  o37.duration = 44,
+  o37.oee = 0.64,
+  o37.quality = "High"
+
+MERGE (o38:Operation {id: "Operation191"})
+ON CREATE SET
+  o38.date = date("2025-04-26"),
+  o38.shift = "Night",
+  o38.duration = 88,
+  o38.oee = 0.81,
+  o38.quality = "Medium"
+
+MERGE (o39:Operation {id: "Operation201"})
+ON CREATE SET
+  o39.date = date("2025-04-30"),
+  o39.shift = "Night",
+  o39.duration = 74,
+  o39.oee = 0.72,
+  o39.quality = "Low"
+
+MERGE (o40:Operation {id: "Operation202"})
+ON CREATE SET
+  o40.date = date("2025-04-30"),
+  o40.shift = "Night",
+  o40.duration = 51,
+  o40.oee = 0.87,
+  o40.quality = "Medium"
+
+MERGE (o41:Operation {id: "Operation204"})
+ON CREATE SET
+  o41.date = date("2025-04-24"),
+  o41.shift = "Day",
+  o41.duration = 141,
+  o41.oee = 0.87,
+  o41.quality = "Medium"
+
+MERGE (o42:Operation {id: "Operation236"})
+ON CREATE SET
+  o42.date = date("2025-04-24"),
+  o42.shift = "Day",
+  o42.duration = 27,
+  o42.oee = 0.74,
+  o42.quality = "Medium"
+
+MERGE (o43:Operation {id: "Operation2"})
+ON CREATE SET
+  o43.date = date("2025-04-30"),
+  o43.shift = "Morning",
+  o43.duration = 77,
+  o43.oee = 0.72,
+  o43.quality = "Medium"
+
+MERGE (o44:Operation {id: "Operation29"})
+ON CREATE SET
+  o44.date = date("2025-04-30"),
+  o44.shift = "Night",
+  o44.duration = 74,
+  o44.oee = 0.9,
+  o44.quality = "Low"
+
+MERGE (o45:Operation {id: "Operation71"})
+ON CREATE SET
+  o45.date = date("2025-04-25"),
+  o45.shift = "Day",
+  o45.duration = 127,
+  o45.oee = 0.95,
+  o45.quality = "High"
+
+MERGE (o46:Operation {id: "Operation88"})
+ON CREATE SET
+  o46.date = date("2025-04-25"),
+  o46.shift = "Morning",
+  o46.duration = 113,
+  o46.oee = 0.93,
+  o46.quality = "High"
+
+MERGE (o47:Operation {id: "Operation90"})
+ON CREATE SET
+  o47.date = date("2025-04-24"),
+  o47.shift = "Morning",
+  o47.duration = 147,
+  o47.oee = 0.8,
+  o47.quality = "Low"
+
+MERGE (o48:Operation {id: "Operation138"})
+ON CREATE SET
+  o48.date = date("2025-04-28"),
+  o48.shift = "Night",
+  o48.duration = 166,
+  o48.oee = 0.61,
+  o48.quality = "Low"
+
+MERGE (o49:Operation {id: "Operation165"})
+ON CREATE SET
+  o49.date = date("2025-04-29"),
+  o49.shift = "Night",
+  o49.duration = 77,
+  o49.oee = 0.74,
+  o49.quality = "Low"
+
+MERGE (o50:Operation {id: "Operation166"})
+ON CREATE SET
+  o50.date = date("2025-04-30"),
+  o50.shift = "Night",
+  o50.duration = 54,
+  o50.oee = 0.82,
+  o50.quality = "Low"
+
+MERGE (o51:Operation {id: "Operation182"})
+ON CREATE SET
+  o51.date = date("2025-04-24"),
+  o51.shift = "Night",
+  o51.duration = 171,
+  o51.oee = 0.75,
+  o51.quality = "High"
+
+MERGE (o52:Operation {id: "Operation226"})
+ON CREATE SET
+  o52.date = date("2025-04-28"),
+  o52.shift = "Morning",
+  o52.duration = 64,
+  o52.oee = 0.92,
+  o52.quality = "Low"
+
+MERGE (o53:Operation {id: "Operation238"})
+ON CREATE SET
+  o53.date = date("2025-04-26"),
+  o53.shift = "Morning",
+  o53.duration = 76,
+  o53.oee = 0.72,
+  o53.quality = "High"
+
+MERGE (o54:Operation {id: "Operation76"})
+ON CREATE SET
+  o54.date = date("2025-04-24"),
+  o54.shift = "Day",
+  o54.duration = 85,
+  o54.oee = 0.79,
+  o54.quality = "Medium"
+
+MERGE (o55:Operation {id: "Operation82"})
+ON CREATE SET
+  o55.date = date("2025-04-27"),
+  o55.shift = "Morning",
+  o55.duration = 62,
+  o55.oee = 0.71,
+  o55.quality = "Medium"
+
+MERGE (o56:Operation {id: "Operation93"})
+ON CREATE SET
+  o56.date = date("2025-04-25"),
+  o56.shift = "Night",
+  o56.duration = 103,
+  o56.oee = 0.83,
+  o56.quality = "High"
+
+MERGE (o57:Operation {id: "Operation107"})
+ON CREATE SET
+  o57.date = date("2025-04-30"),
+  o57.shift = "Morning",
+  o57.duration = 112,
+  o57.oee = 0.76,
+  o57.quality = "Medium"
+
+MERGE (o58:Operation {id: "Operation162"})
+ON CREATE SET
+  o58.date = date("2025-04-29"),
+  o58.shift = "Day",
+  o58.duration = 127,
+  o58.oee = 0.86,
+  o58.quality = "High"
+
+MERGE (o59:Operation {id: "Operation184"})
+ON CREATE SET
+  o59.date = date("2025-04-27"),
+  o59.shift = "Morning",
+  o59.duration = 76,
+  o59.oee = 0.79,
+  o59.quality = "Low"
+
+MERGE (o60:Operation {id: "Operation203"})
+ON CREATE SET
+  o60.date = date("2025-04-25"),
+  o60.shift = "Morning",
+  o60.duration = 61,
+  o60.oee = 0.66,
+  o60.quality = "Low"
+
+MERGE (o61:Operation {id: "Operation230"})
+ON CREATE SET
+  o61.date = date("2025-04-27"),
+  o61.shift = "Day",
+  o61.duration = 131,
+  o61.oee = 0.65,
+  o61.quality = "High"
+
+MERGE (o62:Operation {id: "Operation232"})
+ON CREATE SET
+  o62.date = date("2025-04-24"),
+  o62.shift = "Day",
+  o62.duration = 58,
+  o62.oee = 0.64,
+  o62.quality = "Low"
+
+MERGE (o63:Operation {id: "Operation6"})
+ON CREATE SET
+  o63.date = date("2025-04-28"),
+  o63.shift = "Morning",
+  o63.duration = 127,
+  o63.oee = 0.85,
+  o63.quality = "High"
+
+MERGE (o64:Operation {id: "Operation37"})
+ON CREATE SET
+  o64.date = date("2025-04-30"),
+  o64.shift = "Morning",
+  o64.duration = 128,
+  o64.oee = 0.68,
+  o64.quality = "Low"
+
+MERGE (o65:Operation {id: "Operation53"})
+ON CREATE SET
+  o65.date = date("2025-04-25"),
+  o65.shift = "Morning",
+  o65.duration = 138,
+  o65.oee = 0.72,
+  o65.quality = "Medium"
+
+MERGE (o66:Operation {id: "Operation58"})
+ON CREATE SET
+  o66.date = date("2025-04-27"),
+  o66.shift = "Morning",
+  o66.duration = 115,
+  o66.oee = 0.72,
+  o66.quality = "Medium"
+
+MERGE (o67:Operation {id: "Operation66"})
+ON CREATE SET
+  o67.date = date("2025-04-30"),
+  o67.shift = "Night",
+  o67.duration = 126,
+  o67.oee = 0.82,
+  o67.quality = "Low"
+
+MERGE (o68:Operation {id: "Operation129"})
+ON CREATE SET
+  o68.date = date("2025-04-29"),
+  o68.shift = "Morning",
+  o68.duration = 108,
+  o68.oee = 0.63,
+  o68.quality = "Low"
+
+MERGE (o69:Operation {id: "Operation145"})
+ON CREATE SET
+  o69.date = date("2025-04-28"),
+  o69.shift = "Morning",
+  o69.duration = 118,
+  o69.oee = 0.73,
+  o69.quality = "High"
+
+MERGE (o70:Operation {id: "Operation239"})
+ON CREATE SET
+  o70.date = date("2025-04-30"),
+  o70.shift = "Night",
+  o70.duration = 49,
+  o70.oee = 0.65,
+  o70.quality = "High"
+
+MERGE (o71:Operation {id: "Operation30"})
+ON CREATE SET
+  o71.date = date("2025-04-30"),
+  o71.shift = "Day",
+  o71.duration = 42,
+  o71.oee = 0.66,
+  o71.quality = "Medium"
+
+MERGE (o72:Operation {id: "Operation35"})
+ON CREATE SET
+  o72.date = date("2025-04-26"),
+  o72.shift = "Night",
+  o72.duration = 107,
+  o72.oee = 0.86,
+  o72.quality = "Low"
+
+MERGE (o73:Operation {id: "Operation46"})
+ON CREATE SET
+  o73.date = date("2025-04-28"),
+  o73.shift = "Night",
+  o73.duration = 121,
+  o73.oee = 0.69,
+  o73.quality = "Medium"
+
+MERGE (o74:Operation {id: "Operation103"})
+ON CREATE SET
+  o74.date = date("2025-04-27"),
+  o74.shift = "Night",
+  o74.duration = 106,
+  o74.oee = 0.87,
+  o74.quality = "Low"
+
+MERGE (o75:Operation {id: "Operation104"})
+ON CREATE SET
+  o75.date = date("2025-04-28"),
+  o75.shift = "Day",
+  o75.duration = 136,
+  o75.oee = 0.94,
+  o75.quality = "High"
+
+MERGE (o76:Operation {id: "Operation113"})
+ON CREATE SET
+  o76.date = date("2025-04-28"),
+  o76.shift = "Night",
+  o76.duration = 33,
+  o76.oee = 0.68,
+  o76.quality = "High"
+
+MERGE (o77:Operation {id: "Operation132"})
+ON CREATE SET
+  o77.date = date("2025-04-25"),
+  o77.shift = "Day",
+  o77.duration = 144,
+  o77.oee = 0.9,
+  o77.quality = "Medium"
+
+MERGE (o78:Operation {id: "Operation152"})
+ON CREATE SET
+  o78.date = date("2025-04-25"),
+  o78.shift = "Night",
+  o78.duration = 36,
+  o78.oee = 0.82,
+  o78.quality = "Low"
+
+MERGE (o79:Operation {id: "Operation168"})
+ON CREATE SET
+  o79.date = date("2025-04-24"),
+  o79.shift = "Day",
+  o79.duration = 144,
+  o79.oee = 0.88,
+  o79.quality = "High"
+
+MERGE (o80:Operation {id: "Operation178"})
+ON CREATE SET
+  o80.date = date("2025-04-28"),
+  o80.shift = "Morning",
+  o80.duration = 86,
+  o80.oee = 0.89,
+  o80.quality = "Medium"
+
+MERGE (o81:Operation {id: "Operation218"})
+ON CREATE SET
+  o81.date = date("2025-04-30"),
+  o81.shift = "Morning",
+  o81.duration = 56,
+  o81.oee = 0.65,
+  o81.quality = "Low"
+
+MERGE (o82:Operation {id: "Operation223"})
+ON CREATE SET
+  o82.date = date("2025-04-27"),
+  o82.shift = "Day",
+  o82.duration = 94,
+  o82.oee = 0.7,
+  o82.quality = "Medium"
+
+MERGE (o83:Operation {id: "Operation20"})
+ON CREATE SET
+  o83.date = date("2025-04-27"),
+  o83.shift = "Night",
+  o83.duration = 172,
+  o83.oee = 0.63,
+  o83.quality = "Medium"
+
+MERGE (o84:Operation {id: "Operation24"})
+ON CREATE SET
+  o84.date = date("2025-04-29"),
+  o84.shift = "Morning",
+  o84.duration = 114,
+  o84.oee = 0.68,
+  o84.quality = "Low"
+
+MERGE (o85:Operation {id: "Operation31"})
+ON CREATE SET
+  o85.date = date("2025-04-27"),
+  o85.shift = "Night",
+  o85.duration = 36,
+  o85.oee = 0.83,
+  o85.quality = "High"
+
+MERGE (o86:Operation {id: "Operation54"})
+ON CREATE SET
+  o86.date = date("2025-04-30"),
+  o86.shift = "Night",
+  o86.duration = 37,
+  o86.oee = 0.91,
+  o86.quality = "Medium"
+
+MERGE (o87:Operation {id: "Operation55"})
+ON CREATE SET
+  o87.date = date("2025-04-27"),
+  o87.shift = "Day",
+  o87.duration = 69,
+  o87.oee = 0.88,
+  o87.quality = "Low"
+
+MERGE (o88:Operation {id: "Operation56"})
+ON CREATE SET
+  o88.date = date("2025-04-28"),
+  o88.shift = "Day",
+  o88.duration = 73,
+  o88.oee = 0.9,
+  o88.quality = "Medium"
+
+MERGE (o89:Operation {id: "Operation67"})
+ON CREATE SET
+  o89.date = date("2025-04-25"),
+  o89.shift = "Morning",
+  o89.duration = 44,
+  o89.oee = 0.62,
+  o89.quality = "Medium"
+
+MERGE (o90:Operation {id: "Operation85"})
+ON CREATE SET
+  o90.date = date("2025-04-26"),
+  o90.shift = "Morning",
+  o90.duration = 172,
+  o90.oee = 0.67,
+  o90.quality = "Low"
+
+MERGE (o91:Operation {id: "Operation95"})
+ON CREATE SET
+  o91.date = date("2025-04-30"),
+  o91.shift = "Day",
+  o91.duration = 59,
+  o91.oee = 0.76,
+  o91.quality = "High"
+
+MERGE (o92:Operation {id: "Operation116"})
+ON CREATE SET
+  o92.date = date("2025-04-26"),
+  o92.shift = "Night",
+  o92.duration = 149,
+  o92.oee = 0.67,
+  o92.quality = "Low"
+
+MERGE (o93:Operation {id: "Operation136"})
+ON CREATE SET
+  o93.date = date("2025-04-26"),
+  o93.shift = "Day",
+  o93.duration = 139,
+  o93.oee = 0.85,
+  o93.quality = "Medium"
+
+MERGE (o94:Operation {id: "Operation142"})
+ON CREATE SET
+  o94.date = date("2025-04-29"),
+  o94.shift = "Morning",
+  o94.duration = 142,
+  o94.oee = 0.85,
+  o94.quality = "Low"
+
+MERGE (o95:Operation {id: "Operation146"})
+ON CREATE SET
+  o95.date = date("2025-04-29"),
+  o95.shift = "Morning",
+  o95.duration = 57,
+  o95.oee = 0.82,
+  o95.quality = "Medium"
+
+MERGE (o96:Operation {id: "Operation159"})
+ON CREATE SET
+  o96.date = date("2025-04-29"),
+  o96.shift = "Night",
+  o96.duration = 161,
+  o96.oee = 0.8,
+  o96.quality = "High"
+
+MERGE (o97:Operation {id: "Operation160"})
+ON CREATE SET
+  o97.date = date("2025-04-26"),
+  o97.shift = "Night",
+  o97.duration = 68,
+  o97.oee = 0.74,
+  o97.quality = "Low"
+
+MERGE (o98:Operation {id: "Operation173"})
+ON CREATE SET
+  o98.date = date("2025-04-26"),
+  o98.shift = "Day",
+  o98.duration = 93,
+  o98.oee = 0.94,
+  o98.quality = "Low"
+
+MERGE (o99:Operation {id: "Operation211"})
+ON CREATE SET
+  o99.date = date("2025-04-28"),
+  o99.shift = "Night",
+  o99.duration = 104,
+  o99.oee = 0.66,
+  o99.quality = "Medium"
+
+MERGE (o100:Operation {id: "Operation229"})
+ON CREATE SET
+  o100.date = date("2025-04-29"),
+  o100.shift = "Morning",
+  o100.duration = 154,
+  o100.oee = 0.83,
+  o100.quality = "Low"
+
+MERGE (o101:Operation {id: "Operation11"})
+ON CREATE SET
+  o101.date = date("2025-04-24"),
+  o101.shift = "Night",
+  o101.duration = 110,
+  o101.oee = 0.69,
+  o101.quality = "High"
+
+MERGE (o102:Operation {id: "Operation17"})
+ON CREATE SET
+  o102.date = date("2025-04-24"),
+  o102.shift = "Morning",
+  o102.duration = 159,
+  o102.oee = 0.7,
+  o102.quality = "High"
+
+MERGE (o103:Operation {id: "Operation45"})
+ON CREATE SET
+  o103.date = date("2025-04-24"),
+  o103.shift = "Night",
+  o103.duration = 109,
+  o103.oee = 0.7,
+  o103.quality = "High"
+
+MERGE (o104:Operation {id: "Operation47"})
+ON CREATE SET
+  o104.date = date("2025-04-28"),
+  o104.shift = "Night",
+  o104.duration = 88,
+  o104.oee = 0.7,
+  o104.quality = "Low"
+
+MERGE (o105:Operation {id: "Operation74"})
+ON CREATE SET
+  o105.date = date("2025-04-30"),
+  o105.shift = "Day",
+  o105.duration = 90,
+  o105.oee = 0.85,
+  o105.quality = "Low"
+
+MERGE (o106:Operation {id: "Operation75"})
+ON CREATE SET
+  o106.date = date("2025-04-30"),
+  o106.shift = "Night",
+  o106.duration = 33,
+  o106.oee = 0.65,
+  o106.quality = "Medium"
+
+MERGE (o107:Operation {id: "Operation119"})
+ON CREATE SET
+  o107.date = date("2025-04-24"),
+  o107.shift = "Morning",
+  o107.duration = 116,
+  o107.oee = 0.91,
+  o107.quality = "High"
+
+MERGE (o108:Operation {id: "Operation131"})
+ON CREATE SET
+  o108.date = date("2025-04-30"),
+  o108.shift = "Day",
+  o108.duration = 59,
+  o108.oee = 0.79,
+  o108.quality = "Medium"
+
+MERGE (o109:Operation {id: "Operation147"})
+ON CREATE SET
+  o109.date = date("2025-04-24"),
+  o109.shift = "Day",
+  o109.duration = 128,
+  o109.oee = 0.66,
+  o109.quality = "Medium"
+
+MERGE (o110:Operation {id: "Operation164"})
+ON CREATE SET
+  o110.date = date("2025-04-24"),
+  o110.shift = "Morning",
+  o110.duration = 91,
+  o110.oee = 0.93,
+  o110.quality = "Medium"
+
+MERGE (o111:Operation {id: "Operation185"})
+ON CREATE SET
+  o111.date = date("2025-04-29"),
+  o111.shift = "Night",
+  o111.duration = 176,
+  o111.oee = 0.89,
+  o111.quality = "High"
+
+MERGE (o112:Operation {id: "Operation187"})
+ON CREATE SET
+  o112.date = date("2025-04-29"),
+  o112.shift = "Day",
+  o112.duration = 21,
+  o112.oee = 0.9,
+  o112.quality = "High"
+
+MERGE (o113:Operation {id: "Operation192"})
+ON CREATE SET
+  o113.date = date("2025-04-27"),
+  o113.shift = "Morning",
+  o113.duration = 75,
+  o113.oee = 0.64,
+  o113.quality = "High"
+
+MERGE (o114:Operation {id: "Operation237"})
+ON CREATE SET
+  o114.date = date("2025-04-30"),
+  o114.shift = "Morning",
+  o114.duration = 75,
+  o114.oee = 0.86,
+  o114.quality = "High"
+
+MERGE (o115:Operation {id: "Operation245"})
+ON CREATE SET
+  o115.date = date("2025-04-28"),
+  o115.shift = "Morning",
+  o115.duration = 89,
+  o115.oee = 0.95,
+  o115.quality = "Low"
+
+MERGE (o116:Operation {id: "Operation4"})
+ON CREATE SET
+  o116.date = date("2025-04-25"),
+  o116.shift = "Morning",
+  o116.duration = 133,
+  o116.oee = 0.62,
+  o116.quality = "Low"
+
+MERGE (o117:Operation {id: "Operation5"})
+ON CREATE SET
+  o117.date = date("2025-04-29"),
+  o117.shift = "Morning",
+  o117.duration = 81,
+  o117.oee = 0.76,
+  o117.quality = "Medium"
+
+MERGE (o118:Operation {id: "Operation23"})
+ON CREATE SET
+  o118.date = date("2025-04-28"),
+  o118.shift = "Day",
+  o118.duration = 164,
+  o118.oee = 0.76,
+  o118.quality = "Low"
+
+MERGE (o119:Operation {id: "Operation34"})
+ON CREATE SET
+  o119.date = date("2025-04-28"),
+  o119.shift = "Night",
+  o119.duration = 135,
+  o119.oee = 0.65,
+  o119.quality = "Medium"
+
+MERGE (o120:Operation {id: "Operation43"})
+ON CREATE SET
+  o120.date = date("2025-04-25"),
+  o120.shift = "Night",
+  o120.duration = 133,
+  o120.oee = 0.81,
+  o120.quality = "High"
+
+MERGE (o121:Operation {id: "Operation51"})
+ON CREATE SET
+  o121.date = date("2025-04-30"),
+  o121.shift = "Day",
+  o121.duration = 54,
+  o121.oee = 0.69,
+  o121.quality = "Low"
+
+MERGE (o122:Operation {id: "Operation64"})
+ON CREATE SET
+  o122.date = date("2025-04-30"),
+  o122.shift = "Day",
+  o122.duration = 146,
+  o122.oee = 0.81,
+  o122.quality = "Medium"
+
+MERGE (o123:Operation {id: "Operation118"})
+ON CREATE SET
+  o123.date = date("2025-04-24"),
+  o123.shift = "Morning",
+  o123.duration = 95,
+  o123.oee = 0.71,
+  o123.quality = "Medium"
+
+MERGE (o124:Operation {id: "Operation150"})
+ON CREATE SET
+  o124.date = date("2025-04-28"),
+  o124.shift = "Day",
+  o124.duration = 21,
+  o124.oee = 0.9,
+  o124.quality = "High"
+
+MERGE (o125:Operation {id: "Operation153"})
+ON CREATE SET
+  o125.date = date("2025-04-27"),
+  o125.shift = "Night",
+  o125.duration = 78,
+  o125.oee = 0.65,
+  o125.quality = "Medium"
+
+MERGE (o126:Operation {id: "Operation195"})
+ON CREATE SET
+  o126.date = date("2025-04-30"),
+  o126.shift = "Morning",
+  o126.duration = 100,
+  o126.oee = 0.75,
+  o126.quality = "Low"
+
+MERGE (o127:Operation {id: "Operation206"})
+ON CREATE SET
+  o127.date = date("2025-04-24"),
+  o127.shift = "Morning",
+  o127.duration = 76,
+  o127.oee = 0.63,
+  o127.quality = "Medium"
+
+MERGE (o128:Operation {id: "Operation212"})
+ON CREATE SET
+  o128.date = date("2025-04-25"),
+  o128.shift = "Day",
+  o128.duration = 129,
+  o128.oee = 0.62,
+  o128.quality = "High"
+
+MERGE (o129:Operation {id: "Operation215"})
+ON CREATE SET
+  o129.date = date("2025-04-24"),
+  o129.shift = "Night",
+  o129.duration = 133,
+  o129.oee = 0.63,
+  o129.quality = "High"
+
+MERGE (o130:Operation {id: "Operation219"})
+ON CREATE SET
+  o130.date = date("2025-04-30"),
+  o130.shift = "Night",
+  o130.duration = 154,
+  o130.oee = 0.91,
+  o130.quality = "Low"
+
+MERGE (o131:Operation {id: "Operation10"})
+ON CREATE SET
+  o131.date = date("2025-04-27"),
+  o131.shift = "Day",
+  o131.duration = 162,
+  o131.oee = 0.82,
+  o131.quality = "Low"
+
+MERGE (o132:Operation {id: "Operation16"})
+ON CREATE SET
+  o132.date = date("2025-04-27"),
+  o132.shift = "Day",
+  o132.duration = 45,
+  o132.oee = 0.6,
+  o132.quality = "High"
+
+MERGE (o133:Operation {id: "Operation48"})
+ON CREATE SET
+  o133.date = date("2025-04-29"),
+  o133.shift = "Morning",
+  o133.duration = 139,
+  o133.oee = 0.79,
+  o133.quality = "Medium"
+
+MERGE (o134:Operation {id: "Operation72"})
+ON CREATE SET
+  o134.date = date("2025-04-28"),
+  o134.shift = "Night",
+  o134.duration = 163,
+  o134.oee = 0.75,
+  o134.quality = "High"
+
+MERGE (o135:Operation {id: "Operation80"})
+ON CREATE SET
+  o135.date = date("2025-04-25"),
+  o135.shift = "Day",
+  o135.duration = 167,
+  o135.oee = 0.94,
+  o135.quality = "High"
+
+MERGE (o136:Operation {id: "Operation83"})
+ON CREATE SET
+  o136.date = date("2025-04-26"),
+  o136.shift = "Day",
+  o136.duration = 140,
+  o136.oee = 0.89,
+  o136.quality = "Medium"
+
+MERGE (o137:Operation {id: "Operation102"})
+ON CREATE SET
+  o137.date = date("2025-04-26"),
+  o137.shift = "Day",
+  o137.duration = 69,
+  o137.oee = 0.68,
+  o137.quality = "High"
+
+MERGE (o138:Operation {id: "Operation108"})
+ON CREATE SET
+  o138.date = date("2025-04-29"),
+  o138.shift = "Day",
+  o138.duration = 171,
+  o138.oee = 0.77,
+  o138.quality = "Low"
+
+MERGE (o139:Operation {id: "Operation120"})
+ON CREATE SET
+  o139.date = date("2025-04-24"),
+  o139.shift = "Morning",
+  o139.duration = 57,
+  o139.oee = 0.84,
+  o139.quality = "High"
+
+MERGE (o140:Operation {id: "Operation124"})
+ON CREATE SET
+  o140.date = date("2025-04-28"),
+  o140.shift = "Day",
+  o140.duration = 126,
+  o140.oee = 0.74,
+  o140.quality = "High"
+
+MERGE (o141:Operation {id: "Operation154"})
+ON CREATE SET
+  o141.date = date("2025-04-26"),
+  o141.shift = "Morning",
+  o141.duration = 41,
+  o141.oee = 0.79,
+  o141.quality = "Medium"
+
+MERGE (o142:Operation {id: "Operation156"})
+ON CREATE SET
+  o142.date = date("2025-04-30"),
+  o142.shift = "Morning",
+  o142.duration = 43,
+  o142.oee = 0.94,
+  o142.quality = "High"
+
+MERGE (o143:Operation {id: "Operation190"})
+ON CREATE SET
+  o143.date = date("2025-04-25"),
+  o143.shift = "Morning",
+  o143.duration = 45,
+  o143.oee = 0.82,
+  o143.quality = "High"
+
+MERGE (o144:Operation {id: "Operation213"})
+ON CREATE SET
+  o144.date = date("2025-04-30"),
+  o144.shift = "Morning",
+  o144.duration = 109,
+  o144.oee = 0.74,
+  o144.quality = "Medium"
+
+MERGE (o145:Operation {id: "Operation220"})
+ON CREATE SET
+  o145.date = date("2025-04-27"),
+  o145.shift = "Day",
+  o145.duration = 45,
+  o145.oee = 0.66,
+  o145.quality = "High"
+
+MERGE (o146:Operation {id: "Operation241"})
+ON CREATE SET
+  o146.date = date("2025-04-25"),
+  o146.shift = "Day",
+  o146.duration = 178,
+  o146.oee = 0.79,
+  o146.quality = "Medium"
+
+MERGE (o147:Operation {id: "Operation243"})
+ON CREATE SET
+  o147.date = date("2025-04-24"),
+  o147.shift = "Day",
+  o147.duration = 90,
+  o147.oee = 0.74,
+  o147.quality = "Medium"
+
+MERGE (o148:Operation {id: "Operation52"})
+ON CREATE SET
+  o148.date = date("2025-04-24"),
+  o148.shift = "Night",
+  o148.duration = 45,
+  o148.oee = 0.93,
+  o148.quality = "Low"
+
+MERGE (o149:Operation {id: "Operation57"})
+ON CREATE SET
+  o149.date = date("2025-04-25"),
+  o149.shift = "Day",
+  o149.duration = 170,
+  o149.oee = 0.64,
+  o149.quality = "Medium"
+
+MERGE (o150:Operation {id: "Operation91"})
+ON CREATE SET
+  o150.date = date("2025-04-30"),
+  o150.shift = "Morning",
+  o150.duration = 101,
+  o150.oee = 0.72,
+  o150.quality = "Medium"
+
+MERGE (o151:Operation {id: "Operation97"})
+ON CREATE SET
+  o151.date = date("2025-04-27"),
+  o151.shift = "Day",
+  o151.duration = 161,
+  o151.oee = 0.85,
+  o151.quality = "Medium"
+
+MERGE (o152:Operation {id: "Operation101"})
+ON CREATE SET
+  o152.date = date("2025-04-30"),
+  o152.shift = "Night",
+  o152.duration = 75,
+  o152.oee = 0.95,
+  o152.quality = "High"
+
+MERGE (o153:Operation {id: "Operation144"})
+ON CREATE SET
+  o153.date = date("2025-04-29"),
+  o153.shift = "Morning",
+  o153.duration = 59,
+  o153.oee = 0.74,
+  o153.quality = "High"
+
+MERGE (o154:Operation {id: "Operation148"})
+ON CREATE SET
+  o154.date = date("2025-04-25"),
+  o154.shift = "Night",
+  o154.duration = 60,
+  o154.oee = 0.9,
+  o154.quality = "Low"
+
+MERGE (o155:Operation {id: "Operation158"})
+ON CREATE SET
+  o155.date = date("2025-04-25"),
+  o155.shift = "Day",
+  o155.duration = 152,
+  o155.oee = 0.93,
+  o155.quality = "Low"
+
+MERGE (o156:Operation {id: "Operation181"})
+ON CREATE SET
+  o156.date = date("2025-04-28"),
+  o156.shift = "Morning",
+  o156.duration = 114,
+  o156.oee = 0.8,
+  o156.quality = "Medium"
+
+MERGE (o157:Operation {id: "Operation200"})
+ON CREATE SET
+  o157.date = date("2025-04-29"),
+  o157.shift = "Morning",
+  o157.duration = 59,
+  o157.oee = 0.81,
+  o157.quality = "High"
+
+MERGE (o158:Operation {id: "Operation248"})
+ON CREATE SET
+  o158.date = date("2025-04-29"),
+  o158.shift = "Night",
+  o158.duration = 177,
+  o158.oee = 0.93,
+  o158.quality = "Low"
+
+MERGE (o159:Operation {id: "Operation9"})
+ON CREATE SET
+  o159.date = date("2025-04-26"),
+  o159.shift = "Morning",
+  o159.duration = 166,
+  o159.oee = 0.8,
+  o159.quality = "High"
+
+MERGE (o160:Operation {id: "Operation40"})
+ON CREATE SET
+  o160.date = date("2025-04-24"),
+  o160.shift = "Day",
+  o160.duration = 71,
+  o160.oee = 0.86,
+  o160.quality = "Low"
+
+MERGE (o161:Operation {id: "Operation63"})
+ON CREATE SET
+  o161.date = date("2025-04-27"),
+  o161.shift = "Night",
+  o161.duration = 68,
+  o161.oee = 0.79,
+  o161.quality = "Low"
+
+MERGE (o162:Operation {id: "Operation69"})
+ON CREATE SET
+  o162.date = date("2025-04-30"),
+  o162.shift = "Morning",
+  o162.duration = 44,
+  o162.oee = 0.84,
+  o162.quality = "Low"
+
+MERGE (o163:Operation {id: "Operation89"})
+ON CREATE SET
+  o163.date = date("2025-04-29"),
+  o163.shift = "Morning",
+  o163.duration = 115,
+  o163.oee = 0.89,
+  o163.quality = "Low"
+
+MERGE (o164:Operation {id: "Operation96"})
+ON CREATE SET
+  o164.date = date("2025-04-26"),
+  o164.shift = "Day",
+  o164.duration = 156,
+  o164.oee = 0.66,
+  o164.quality = "Low"
+
+MERGE (o165:Operation {id: "Operation109"})
+ON CREATE SET
+  o165.date = date("2025-04-25"),
+  o165.shift = "Night",
+  o165.duration = 121,
+  o165.oee = 0.62,
+  o165.quality = "Low"
+
+MERGE (o166:Operation {id: "Operation135"})
+ON CREATE SET
+  o166.date = date("2025-04-29"),
+  o166.shift = "Morning",
+  o166.duration = 177,
+  o166.oee = 0.68,
+  o166.quality = "Medium"
+
+MERGE (o167:Operation {id: "Operation137"})
+ON CREATE SET
+  o167.date = date("2025-04-29"),
+  o167.shift = "Morning",
+  o167.duration = 40,
+  o167.oee = 0.94,
+  o167.quality = "Medium"
+
+MERGE (o168:Operation {id: "Operation140"})
+ON CREATE SET
+  o168.date = date("2025-04-25"),
+  o168.shift = "Night",
+  o168.duration = 157,
+  o168.oee = 0.73,
+  o168.quality = "Medium"
+
+MERGE (o169:Operation {id: "Operation149"})
+ON CREATE SET
+  o169.date = date("2025-04-24"),
+  o169.shift = "Morning",
+  o169.duration = 81,
+  o169.oee = 0.73,
+  o169.quality = "Medium"
+
+MERGE (o170:Operation {id: "Operation157"})
+ON CREATE SET
+  o170.date = date("2025-04-29"),
+  o170.shift = "Day",
+  o170.duration = 22,
+  o170.oee = 0.79,
+  o170.quality = "Medium"
+
+MERGE (o171:Operation {id: "Operation188"})
+ON CREATE SET
+  o171.date = date("2025-04-30"),
+  o171.shift = "Night",
+  o171.duration = 121,
+  o171.oee = 0.61,
+  o171.quality = "High"
+
+MERGE (o172:Operation {id: "Operation196"})
+ON CREATE SET
+  o172.date = date("2025-04-24"),
+  o172.shift = "Night",
+  o172.duration = 153,
+  o172.oee = 0.88,
+  o172.quality = "Low"
+
+MERGE (o173:Operation {id: "Operation197"})
+ON CREATE SET
+  o173.date = date("2025-04-27"),
+  o173.shift = "Morning",
+  o173.duration = 94,
+  o173.oee = 0.63,
+  o173.quality = "Medium"
+
+MERGE (o174:Operation {id: "Operation199"})
+ON CREATE SET
+  o174.date = date("2025-04-24"),
+  o174.shift = "Morning",
+  o174.duration = 148,
+  o174.oee = 0.82,
+  o174.quality = "High"
+
+MERGE (o175:Operation {id: "Operation216"})
+ON CREATE SET
+  o175.date = date("2025-04-24"),
+  o175.shift = "Night",
+  o175.duration = 132,
+  o175.oee = 0.93,
+  o175.quality = "High"
+
+MERGE (o176:Operation {id: "Operation244"})
+ON CREATE SET
+  o176.date = date("2025-04-26"),
+  o176.shift = "Day",
+  o176.duration = 131,
+  o176.oee = 0.73,
+  o176.quality = "High"
+
+MERGE (o177:Operation {id: "Operation249"})
+ON CREATE SET
+  o177.date = date("2025-04-30"),
+  o177.shift = "Night",
+  o177.duration = 129,
+  o177.oee = 0.93,
+  o177.quality = "Low"
+
+MERGE (o178:Operation {id: "Operation12"})
+ON CREATE SET
+  o178.date = date("2025-04-26"),
+  o178.shift = "Morning",
+  o178.duration = 180,
+  o178.oee = 0.65,
+  o178.quality = "Medium"
+
+MERGE (o179:Operation {id: "Operation28"})
+ON CREATE SET
+  o179.date = date("2025-04-26"),
+  o179.shift = "Day",
+  o179.duration = 95,
+  o179.oee = 0.86,
+  o179.quality = "High"
+
+MERGE (o180:Operation {id: "Operation59"})
+ON CREATE SET
+  o180.date = date("2025-04-29"),
+  o180.shift = "Night",
+  o180.duration = 50,
+  o180.oee = 0.62,
+  o180.quality = "Medium"
+
+MERGE (o181:Operation {id: "Operation62"})
+ON CREATE SET
+  o181.date = date("2025-04-24"),
+  o181.shift = "Night",
+  o181.duration = 67,
+  o181.oee = 0.64,
+  o181.quality = "Medium"
+
+MERGE (o182:Operation {id: "Operation70"})
+ON CREATE SET
+  o182.date = date("2025-04-26"),
+  o182.shift = "Night",
+  o182.duration = 103,
+  o182.oee = 0.62,
+  o182.quality = "Low"
+
+MERGE (o183:Operation {id: "Operation79"})
+ON CREATE SET
+  o183.date = date("2025-04-24"),
+  o183.shift = "Morning",
+  o183.duration = 64,
+  o183.oee = 0.77,
+  o183.quality = "Medium"
+
+MERGE (o184:Operation {id: "Operation112"})
+ON CREATE SET
+  o184.date = date("2025-04-24"),
+  o184.shift = "Night",
+  o184.duration = 30,
+  o184.oee = 0.94,
+  o184.quality = "Low"
+
+MERGE (o185:Operation {id: "Operation139"})
+ON CREATE SET
+  o185.date = date("2025-04-26"),
+  o185.shift = "Day",
+  o185.duration = 145,
+  o185.oee = 0.69,
+  o185.quality = "High"
+
+MERGE (o186:Operation {id: "Operation163"})
+ON CREATE SET
+  o186.date = date("2025-04-27"),
+  o186.shift = "Night",
+  o186.duration = 36,
+  o186.oee = 0.77,
+  o186.quality = "Medium"
+
+MERGE (o187:Operation {id: "Operation177"})
+ON CREATE SET
+  o187.date = date("2025-04-26"),
+  o187.shift = "Night",
+  o187.duration = 124,
+  o187.oee = 0.87,
+  o187.quality = "High"
+
+MERGE (o188:Operation {id: "Operation179"})
+ON CREATE SET
+  o188.date = date("2025-04-24"),
+  o188.shift = "Day",
+  o188.duration = 70,
+  o188.oee = 0.69,
+  o188.quality = "Low"
+
+MERGE (o189:Operation {id: "Operation227"})
+ON CREATE SET
+  o189.date = date("2025-04-25"),
+  o189.shift = "Day",
+  o189.duration = 162,
+  o189.oee = 0.93,
+  o189.quality = "Medium"
+
+MERGE (o190:Operation {id: "Operation233"})
+ON CREATE SET
+  o190.date = date("2025-04-29"),
+  o190.shift = "Morning",
+  o190.duration = 154,
+  o190.oee = 0.77,
+  o190.quality = "High"
+
+MERGE (o191:Operation {id: "Operation65"})
+ON CREATE SET
+  o191.date = date("2025-04-26"),
+  o191.shift = "Night",
+  o191.duration = 54,
+  o191.oee = 0.77,
+  o191.quality = "High"
+
+MERGE (o192:Operation {id: "Operation73"})
+ON CREATE SET
+  o192.date = date("2025-04-25"),
+  o192.shift = "Day",
+  o192.duration = 61,
+  o192.oee = 0.69,
+  o192.quality = "High"
+
+MERGE (o193:Operation {id: "Operation87"})
+ON CREATE SET
+  o193.date = date("2025-04-24"),
+  o193.shift = "Morning",
+  o193.duration = 117,
+  o193.oee = 0.94,
+  o193.quality = "High"
+
+MERGE (o194:Operation {id: "Operation128"})
+ON CREATE SET
+  o194.date = date("2025-04-27"),
+  o194.shift = "Morning",
+  o194.duration = 176,
+  o194.oee = 0.81,
+  o194.quality = "Low"
+
+MERGE (o195:Operation {id: "Operation130"})
+ON CREATE SET
+  o195.date = date("2025-04-26"),
+  o195.shift = "Day",
+  o195.duration = 169,
+  o195.oee = 0.7,
+  o195.quality = "High"
+
+MERGE (o196:Operation {id: "Operation143"})
+ON CREATE SET
+  o196.date = date("2025-04-28"),
+  o196.shift = "Morning",
+  o196.duration = 27,
+  o196.oee = 0.88,
+  o196.quality = "Medium"
+
+MERGE (o197:Operation {id: "Operation207"})
+ON CREATE SET
+  o197.date = date("2025-04-26"),
+  o197.shift = "Day",
+  o197.duration = 153,
+  o197.oee = 0.63,
+  o197.quality = "Low"
+
+MERGE (o198:Operation {id: "Operation209"})
+ON CREATE SET
+  o198.date = date("2025-04-24"),
+  o198.shift = "Night",
+  o198.duration = 96,
+  o198.oee = 0.65,
+  o198.quality = "Low"
+
+MERGE (o199:Operation {id: "Operation210"})
+ON CREATE SET
+  o199.date = date("2025-04-26"),
+  o199.shift = "Night",
+  o199.duration = 33,
+  o199.oee = 0.83,
+  o199.quality = "Low"
+
+MERGE (o200:Operation {id: "Operation222"})
+ON CREATE SET
+  o200.date = date("2025-04-26"),
+  o200.shift = "Morning",
+  o200.duration = 105,
+  o200.oee = 0.71,
+  o200.quality = "Medium"
+
+MERGE (o201:Operation {id: "Operation240"})
+ON CREATE SET
+  o201.date = date("2025-04-27"),
+  o201.shift = "Morning",
+  o201.duration = 27,
+  o201.oee = 0.67,
+  o201.quality = "Low"
+
+MERGE (o202:Operation {id: "Operation247"})
+ON CREATE SET
+  o202.date = date("2025-04-25"),
+  o202.shift = "Night",
+  o202.duration = 91,
+  o202.oee = 0.76,
+  o202.quality = "High"
+
+MERGE (o203:Operation {id: "Operation92"})
+ON CREATE SET
+  o203.date = date("2025-04-25"),
+  o203.shift = "Day",
+  o203.duration = 122,
+  o203.oee = 0.89,
+  o203.quality = "High"
+
+MERGE (o204:Operation {id: "Operation134"})
+ON CREATE SET
+  o204.date = date("2025-04-30"),
+  o204.shift = "Night",
+  o204.duration = 97,
+  o204.oee = 0.72,
+  o204.quality = "High"
+
+MERGE (o205:Operation {id: "Operation141"})
+ON CREATE SET
+  o205.date = date("2025-04-25"),
+  o205.shift = "Morning",
+  o205.duration = 58,
+  o205.oee = 0.84,
+  o205.quality = "Medium"
+
+MERGE (o206:Operation {id: "Operation174"})
+ON CREATE SET
+  o206.date = date("2025-04-28"),
+  o206.shift = "Night",
+  o206.duration = 37,
+  o206.oee = 0.85,
+  o206.quality = "Medium"
+
+MERGE (o207:Operation {id: "Operation180"})
+ON CREATE SET
+  o207.date = date("2025-04-25"),
+  o207.shift = "Morning",
+  o207.duration = 35,
+  o207.oee = 0.63,
+  o207.quality = "High"
+
+MERGE (o208:Operation {id: "Operation231"})
+ON CREATE SET
+  o208.date = date("2025-04-24"),
+  o208.shift = "Morning",
+  o208.duration = 165,
+  o208.oee = 0.61,
+  o208.quality = "Low"
+
+MERGE (o209:Operation {id: "Operation18"})
+ON CREATE SET
+  o209.date = date("2025-04-26"),
+  o209.shift = "Day",
+  o209.duration = 142,
+  o209.oee = 0.79,
+  o209.quality = "High"
+
+MERGE (o210:Operation {id: "Operation22"})
+ON CREATE SET
+  o210.date = date("2025-04-30"),
+  o210.shift = "Night",
+  o210.duration = 141,
+  o210.oee = 0.84,
+  o210.quality = "High"
+
+MERGE (o211:Operation {id: "Operation42"})
+ON CREATE SET
+  o211.date = date("2025-04-25"),
+  o211.shift = "Day",
+  o211.duration = 161,
+  o211.oee = 0.91,
+  o211.quality = "Medium"
+
+MERGE (o212:Operation {id: "Operation44"})
+ON CREATE SET
+  o212.date = date("2025-04-29"),
+  o212.shift = "Day",
+  o212.duration = 169,
+  o212.oee = 0.64,
+  o212.quality = "Low"
+
+MERGE (o213:Operation {id: "Operation122"})
+ON CREATE SET
+  o213.date = date("2025-04-24"),
+  o213.shift = "Morning",
+  o213.duration = 180,
+  o213.oee = 0.75,
+  o213.quality = "Medium"
+
+MERGE (o214:Operation {id: "Operation126"})
+ON CREATE SET
+  o214.date = date("2025-04-30"),
+  o214.shift = "Day",
+  o214.duration = 86,
+  o214.oee = 0.67,
+  o214.quality = "Medium"
+
+MERGE (o215:Operation {id: "Operation133"})
+ON CREATE SET
+  o215.date = date("2025-04-30"),
+  o215.shift = "Day",
+  o215.duration = 136,
+  o215.oee = 0.89,
+  o215.quality = "High"
+
+MERGE (o216:Operation {id: "Operation155"})
+ON CREATE SET
+  o216.date = date("2025-04-26"),
+  o216.shift = "Day",
+  o216.duration = 166,
+  o216.oee = 0.93,
+  o216.quality = "Medium"
+
+MERGE (o217:Operation {id: "Operation189"})
+ON CREATE SET
+  o217.date = date("2025-04-29"),
+  o217.shift = "Day",
+  o217.duration = 93,
+  o217.oee = 0.66,
+  o217.quality = "Medium"
+
+MERGE (o218:Operation {id: "Operation217"})
+ON CREATE SET
+  o218.date = date("2025-04-29"),
+  o218.shift = "Night",
+  o218.duration = 78,
+  o218.oee = 0.73,
+  o218.quality = "Low"
+
+MERGE (o219:Operation {id: "Operation224"})
+ON CREATE SET
+  o219.date = date("2025-04-26"),
+  o219.shift = "Morning",
+  o219.duration = 148,
+  o219.oee = 0.65,
+  o219.quality = "Medium"
+
+MERGE (o220:Operation {id: "Operation8"})
+ON CREATE SET
+  o220.date = date("2025-04-30"),
+  o220.shift = "Morning",
+  o220.duration = 57,
+  o220.oee = 0.61,
+  o220.quality = "Medium"
+
+MERGE (o221:Operation {id: "Operation15"})
+ON CREATE SET
+  o221.date = date("2025-04-28"),
+  o221.shift = "Night",
+  o221.duration = 162,
+  o221.oee = 0.86,
+  o221.quality = "High"
+
+MERGE (o222:Operation {id: "Operation49"})
+ON CREATE SET
+  o222.date = date("2025-04-30"),
+  o222.shift = "Morning",
+  o222.duration = 171,
+  o222.oee = 0.84,
+  o222.quality = "Low"
+
+MERGE (o223:Operation {id: "Operation50"})
+ON CREATE SET
+  o223.date = date("2025-04-27"),
+  o223.shift = "Night",
+  o223.duration = 108,
+  o223.oee = 0.75,
+  o223.quality = "Low"
+
+MERGE (o224:Operation {id: "Operation94"})
+ON CREATE SET
+  o224.date = date("2025-04-29"),
+  o224.shift = "Day",
+  o224.duration = 152,
+  o224.oee = 0.81,
+  o224.quality = "Medium"
+
+MERGE (o225:Operation {id: "Operation98"})
+ON CREATE SET
+  o225.date = date("2025-04-30"),
+  o225.shift = "Morning",
+  o225.duration = 34,
+  o225.oee = 0.85,
+  o225.quality = "Medium"
+
+MERGE (o226:Operation {id: "Operation99"})
+ON CREATE SET
+  o226.date = date("2025-04-29"),
+  o226.shift = "Night",
+  o226.duration = 134,
+  o226.oee = 0.76,
+  o226.quality = "Low"
+
+MERGE (o227:Operation {id: "Operation117"})
+ON CREATE SET
+  o227.date = date("2025-04-26"),
+  o227.shift = "Day",
+  o227.duration = 152,
+  o227.oee = 0.62,
+  o227.quality = "Low"
+
+MERGE (o228:Operation {id: "Operation186"})
+ON CREATE SET
+  o228.date = date("2025-04-27"),
+  o228.shift = "Night",
+  o228.duration = 153,
+  o228.oee = 0.69,
+  o228.quality = "Low"
+
+MERGE (o229:Operation {id: "Operation246"})
+ON CREATE SET
+  o229.date = date("2025-04-27"),
+  o229.shift = "Morning",
+  o229.duration = 33,
+  o229.oee = 0.83,
+  o229.quality = "Medium"
+
+MERGE (o230:Operation {id: "Operation27"})
+ON CREATE SET
+  o230.date = date("2025-04-25"),
+  o230.shift = "Day",
+  o230.duration = 149,
+  o230.oee = 0.67,
+  o230.quality = "Low"
+
+MERGE (o231:Operation {id: "Operation38"})
+ON CREATE SET
+  o231.date = date("2025-04-29"),
+  o231.shift = "Night",
+  o231.duration = 26,
+  o231.oee = 0.63,
+  o231.quality = "High"
+
+MERGE (o232:Operation {id: "Operation39"})
+ON CREATE SET
+  o232.date = date("2025-04-25"),
+  o232.shift = "Morning",
+  o232.duration = 127,
+  o232.oee = 0.71,
+  o232.quality = "Medium"
+
+MERGE (o233:Operation {id: "Operation110"})
+ON CREATE SET
+  o233.date = date("2025-04-27"),
+  o233.shift = "Morning",
+  o233.duration = 39,
+  o233.oee = 0.87,
+  o233.quality = "High"
+
+MERGE (o234:Operation {id: "Operation121"})
+ON CREATE SET
+  o234.date = date("2025-04-26"),
+  o234.shift = "Night",
+  o234.duration = 26,
+  o234.oee = 0.86,
+  o234.quality = "Medium"
+
+MERGE (o235:Operation {id: "Operation176"})
+ON CREATE SET
+  o235.date = date("2025-04-29"),
+  o235.shift = "Night",
+  o235.duration = 105,
+  o235.oee = 0.76,
+  o235.quality = "High"
+
+MERGE (o236:Operation {id: "Operation193"})
+ON CREATE SET
+  o236.date = date("2025-04-26"),
+  o236.shift = "Night",
+  o236.duration = 69,
+  o236.oee = 0.68,
+  o236.quality = "High"
+
+MERGE (o237:Operation {id: "Operation198"})
+ON CREATE SET
+  o237.date = date("2025-04-24"),
+  o237.shift = "Day",
+  o237.duration = 134,
+  o237.oee = 0.75,
+  o237.quality = "Low"
+
+MERGE (o238:Operation {id: "Operation205"})
+ON CREATE SET
+  o238.date = date("2025-04-30"),
+  o238.shift = "Morning",
+  o238.duration = 90,
+  o238.oee = 0.76,
+  o238.quality = "High"
+
+MERGE (o239:Operation {id: "Operation235"})
+ON CREATE SET
+  o239.date = date("2025-04-25"),
+  o239.shift = "Night",
+  o239.duration = 127,
+  o239.oee = 0.78,
+  o239.quality = "Medium"
+
+MERGE (o240:Operation {id: "Operation14"})
+ON CREATE SET
+  o240.date = date("2025-04-27"),
+  o240.shift = "Day",
+  o240.duration = 115,
+  o240.oee = 0.76,
+  o240.quality = "Medium"
+
+MERGE (o241:Operation {id: "Operation61"})
+ON CREATE SET
+  o241.date = date("2025-04-29"),
+  o241.shift = "Night",
+  o241.duration = 164,
+  o241.oee = 0.78,
+  o241.quality = "High"
+
+MERGE (o242:Operation {id: "Operation68"})
+ON CREATE SET
+  o242.date = date("2025-04-27"),
+  o242.shift = "Day",
+  o242.duration = 162,
+  o242.oee = 0.8,
+  o242.quality = "High"
+
+MERGE (o243:Operation {id: "Operation86"})
+ON CREATE SET
+  o243.date = date("2025-04-30"),
+  o243.shift = "Morning",
+  o243.duration = 96,
+  o243.oee = 0.64,
+  o243.quality = "Low"
+
+MERGE (o244:Operation {id: "Operation105"})
+ON CREATE SET
+  o244.date = date("2025-04-28"),
+  o244.shift = "Morning",
+  o244.duration = 67,
+  o244.oee = 0.73,
+  o244.quality = "Medium"
+
+MERGE (o245:Operation {id: "Operation111"})
+ON CREATE SET
+  o245.date = date("2025-04-26"),
+  o245.shift = "Day",
+  o245.duration = 92,
+  o245.oee = 0.75,
+  o245.quality = "High"
+
+MERGE (o246:Operation {id: "Operation127"})
+ON CREATE SET
+  o246.date = date("2025-04-26"),
+  o246.shift = "Morning",
+  o246.duration = 53,
+  o246.oee = 0.79,
+  o246.quality = "Medium"
+
+MERGE (o247:Operation {id: "Operation208"})
+ON CREATE SET
+  o247.date = date("2025-04-24"),
+  o247.shift = "Night",
+  o247.duration = 109,
+  o247.oee = 0.88,
+  o247.quality = "Low"
+
+MERGE (o248:Operation {id: "Operation214"})
+ON CREATE SET
+  o248.date = date("2025-04-26"),
+  o248.shift = "Morning",
+  o248.duration = 113,
+  o248.oee = 0.65,
+  o248.quality = "Medium"
+
+MERGE (o249:Operation {id: "Operation221"})
+ON CREATE SET
+  o249.date = date("2025-04-27"),
+  o249.shift = "Morning",
+  o249.duration = 86,
+  o249.oee = 0.84,
+  o249.quality = "Low"
+
+MERGE (o250:Operation {id: "Operation250"})
+ON CREATE SET
+  o250.date = date("2025-04-27"),
+  o250.shift = "Morning",
+  o250.duration = 31,
+  o250.oee = 0.87,
+  o250.quality = "Medium"

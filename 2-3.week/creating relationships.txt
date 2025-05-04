@@ -1,0 +1,2500 @@
+// CREATING RELATIONSHIPS BETWEEN EMPLOYEE, OPERATION, MACHINE, AND PART
+CALL () {
+MATCH (e1:Employee {id: "Employee1"})
+MATCH (o1:Operation {id: "Operation1"})
+MATCH (m1:Machine {name: "M2"})
+MATCH (p1:Part {name: "Piston"})
+MERGE (e1)-[:PERFORMED]->(o1)
+MERGE (o1)-[:USED]->(m1)
+MERGE (o1)-[:PRODUCED]->(p1)
+} 
+
+CALL () {
+MATCH (e2:Employee {id: "Employee1"})
+MATCH (o2:Operation {id: "Operation19"})
+MATCH (m2:Machine {name: "M3"})
+MATCH (p2:Part {name: "Piston"})
+MERGE (e2)-[:PERFORMED]->(o2)
+MERGE (o2)-[:USED]->(m2)
+MERGE (o2)-[:PRODUCED]->(p2)
+} 
+
+CALL () {
+MATCH (e3:Employee {id: "Employee1"})
+MATCH (o3:Operation {id: "Operation25"})
+MATCH (m3:Machine {name: "M1"})
+MATCH (p3:Part {name: "Gearbox"})
+MERGE (e3)-[:PERFORMED]->(o3)
+MERGE (o3)-[:USED]->(m3)
+MERGE (o3)-[:PRODUCED]->(p3)
+} 
+
+CALL () {
+MATCH (e4:Employee {id: "Employee1"})
+MATCH (o4:Operation {id: "Operation32"})
+MATCH (m4:Machine {name: "M1"})
+MATCH (p4:Part {name: "Shaft"})
+MERGE (e4)-[:PERFORMED]->(o4)
+MERGE (o4)-[:USED]->(m4)
+MERGE (o4)-[:PRODUCED]->(p4)
+} 
+
+CALL () {
+MATCH (e5:Employee {id: "Employee1"})
+MATCH (o5:Operation {id: "Operation41"})
+MATCH (m5:Machine {name: "M4"})
+MATCH (p5:Part {name: "Bearing"})
+MERGE (e5)-[:PERFORMED]->(o5)
+MERGE (o5)-[:USED]->(m5)
+MERGE (o5)-[:PRODUCED]->(p5)
+} 
+
+CALL () {
+MATCH (e6:Employee {id: "Employee1"})
+MATCH (o6:Operation {id: "Operation60"})
+MATCH (m6:Machine {name: "M2"})
+MATCH (p6:Part {name: "Valve"})
+MERGE (e6)-[:PERFORMED]->(o6)
+MERGE (o6)-[:USED]->(m6)
+MERGE (o6)-[:PRODUCED]->(p6)
+} 
+
+CALL () {
+MATCH (e7:Employee {id: "Employee1"})
+MATCH (o7:Operation {id: "Operation78"})
+MATCH (m7:Machine {name: "M4"})
+MATCH (p7:Part {name: "Piston"})
+MERGE (e7)-[:PERFORMED]->(o7)
+MERGE (o7)-[:USED]->(m7)
+MERGE (o7)-[:PRODUCED]->(p7)
+} 
+
+CALL () {
+MATCH (e8:Employee {id: "Employee1"})
+MATCH (o8:Operation {id: "Operation81"})
+MATCH (m8:Machine {name: "M4"})
+MATCH (p8:Part {name: "Bearing"})
+MERGE (e8)-[:PERFORMED]->(o8)
+MERGE (o8)-[:USED]->(m8)
+MERGE (o8)-[:PRODUCED]->(p8)
+} 
+
+CALL () {
+MATCH (e9:Employee {id: "Employee1"})
+MATCH (o9:Operation {id: "Operation106"})
+MATCH (m9:Machine {name: "M2"})
+MATCH (p9:Part {name: "Valve"})
+MERGE (e9)-[:PERFORMED]->(o9)
+MERGE (o9)-[:USED]->(m9)
+MERGE (o9)-[:PRODUCED]->(p9)
+} 
+
+CALL () {
+MATCH (e10:Employee {id: "Employee1"})
+MATCH (o10:Operation {id: "Operation169"})
+MATCH (m10:Machine {name: "M3"})
+MATCH (p10:Part {name: "Shaft"})
+MERGE (e10)-[:PERFORMED]->(o10)
+MERGE (o10)-[:USED]->(m10)
+MERGE (o10)-[:PRODUCED]->(p10)
+} 
+
+CALL () {
+MATCH (e11:Employee {id: "Employee1"})
+MATCH (o11:Operation {id: "Operation170"})
+MATCH (m11:Machine {name: "M2"})
+MATCH (p11:Part {name: "Gearbox"})
+MERGE (e11)-[:PERFORMED]->(o11)
+MERGE (o11)-[:USED]->(m11)
+MERGE (o11)-[:PRODUCED]->(p11)
+} 
+
+CALL () {
+MATCH (e12:Employee {id: "Employee1"})
+MATCH (o12:Operation {id: "Operation171"})
+MATCH (m12:Machine {name: "M2"})
+MATCH (p12:Part {name: "Valve"})
+MERGE (e12)-[:PERFORMED]->(o12)
+MERGE (o12)-[:USED]->(m12)
+MERGE (o12)-[:PRODUCED]->(p12)
+} 
+
+CALL () {
+MATCH (e13:Employee {id: "Employee1"})
+MATCH (o13:Operation {id: "Operation234"})
+MATCH (m13:Machine {name: "M2"})
+MATCH (p13:Part {name: "Shaft"})
+MERGE (e13)-[:PERFORMED]->(o13)
+MERGE (o13)-[:USED]->(m13)
+MERGE (o13)-[:PRODUCED]->(p13)
+} 
+
+CALL () {
+MATCH (e14:Employee {id: "Employee2"})
+MATCH (o14:Operation {id: "Operation3"})
+MATCH (m14:Machine {name: "M4"})
+MATCH (p14:Part {name: "Bearing"})
+MERGE (e14)-[:PERFORMED]->(o14)
+MERGE (o14)-[:USED]->(m14)
+MERGE (o14)-[:PRODUCED]->(p14)
+} 
+
+CALL () {
+MATCH (e15:Employee {id: "Employee2"})
+MATCH (o15:Operation {id: "Operation33"})
+MATCH (m15:Machine {name: "M2"})
+MATCH (p15:Part {name: "Piston"})
+MERGE (e15)-[:PERFORMED]->(o15)
+MERGE (o15)-[:USED]->(m15)
+MERGE (o15)-[:PRODUCED]->(p15)
+} 
+
+CALL () {
+MATCH (e16:Employee {id: "Employee2"})
+MATCH (o16:Operation {id: "Operation36"})
+MATCH (m16:Machine {name: "M4"})
+MATCH (p16:Part {name: "Bearing"})
+MERGE (e16)-[:PERFORMED]->(o16)
+MERGE (o16)-[:USED]->(m16)
+MERGE (o16)-[:PRODUCED]->(p16)
+} 
+
+CALL () {
+MATCH (e17:Employee {id: "Employee2"})
+MATCH (o17:Operation {id: "Operation77"})
+MATCH (m17:Machine {name: "M2"})
+MATCH (p17:Part {name: "Piston"})
+MERGE (e17)-[:PERFORMED]->(o17)
+MERGE (o17)-[:USED]->(m17)
+MERGE (o17)-[:PRODUCED]->(p17)
+} 
+
+CALL () {
+MATCH (e18:Employee {id: "Employee2"})
+MATCH (o18:Operation {id: "Operation115"})
+MATCH (m18:Machine {name: "M2"})
+MATCH (p18:Part {name: "Valve"})
+MERGE (e18)-[:PERFORMED]->(o18)
+MERGE (o18)-[:USED]->(m18)
+MERGE (o18)-[:PRODUCED]->(p18)
+} 
+
+CALL () {
+MATCH (e19:Employee {id: "Employee2"})
+MATCH (o19:Operation {id: "Operation125"})
+MATCH (m19:Machine {name: "M4"})
+MATCH (p19:Part {name: "Gearbox"})
+MERGE (e19)-[:PERFORMED]->(o19)
+MERGE (o19)-[:USED]->(m19)
+MERGE (o19)-[:PRODUCED]->(p19)
+} 
+
+CALL () {
+MATCH (e20:Employee {id: "Employee2"})
+MATCH (o20:Operation {id: "Operation151"})
+MATCH (m20:Machine {name: "M4"})
+MATCH (p20:Part {name: "Valve"})
+MERGE (e20)-[:PERFORMED]->(o20)
+MERGE (o20)-[:USED]->(m20)
+MERGE (o20)-[:PRODUCED]->(p20)
+} 
+
+CALL () {
+MATCH (e21:Employee {id: "Employee2"})
+MATCH (o21:Operation {id: "Operation161"})
+MATCH (m21:Machine {name: "M1"})
+MATCH (p21:Part {name: "Valve"})
+MERGE (e21)-[:PERFORMED]->(o21)
+MERGE (o21)-[:USED]->(m21)
+MERGE (o21)-[:PRODUCED]->(p21)
+} 
+
+CALL () {
+MATCH (e22:Employee {id: "Employee2"})
+MATCH (o22:Operation {id: "Operation167"})
+MATCH (m22:Machine {name: "M3"})
+MATCH (p22:Part {name: "Shaft"})
+MERGE (e22)-[:PERFORMED]->(o22)
+MERGE (o22)-[:USED]->(m22)
+MERGE (o22)-[:PRODUCED]->(p22)
+} 
+
+CALL () {
+MATCH (e23:Employee {id: "Employee2"})
+MATCH (o23:Operation {id: "Operation183"})
+MATCH (m23:Machine {name: "M3"})
+MATCH (p23:Part {name: "Bearing"})
+MERGE (e23)-[:PERFORMED]->(o23)
+MERGE (o23)-[:USED]->(m23)
+MERGE (o23)-[:PRODUCED]->(p23)
+} 
+
+CALL () {
+MATCH (e24:Employee {id: "Employee2"})
+MATCH (o24:Operation {id: "Operation194"})
+MATCH (m24:Machine {name: "M1"})
+MATCH (p24:Part {name: "Shaft"})
+MERGE (e24)-[:PERFORMED]->(o24)
+MERGE (o24)-[:USED]->(m24)
+MERGE (o24)-[:PRODUCED]->(p24)
+} 
+
+CALL () {
+MATCH (e25:Employee {id: "Employee2"})
+MATCH (o25:Operation {id: "Operation225"})
+MATCH (m25:Machine {name: "M4"})
+MATCH (p25:Part {name: "Valve"})
+MERGE (e25)-[:PERFORMED]->(o25)
+MERGE (o25)-[:USED]->(m25)
+MERGE (o25)-[:PRODUCED]->(p25)
+} 
+
+CALL () {
+MATCH (e26:Employee {id: "Employee2"})
+MATCH (o26:Operation {id: "Operation228"})
+MATCH (m26:Machine {name: "M4"})
+MATCH (p26:Part {name: "Bearing"})
+MERGE (e26)-[:PERFORMED]->(o26)
+MERGE (o26)-[:USED]->(m26)
+MERGE (o26)-[:PRODUCED]->(p26)
+} 
+
+CALL () {
+MATCH (e27:Employee {id: "Employee2"})
+MATCH (o27:Operation {id: "Operation242"})
+MATCH (m27:Machine {name: "M2"})
+MATCH (p27:Part {name: "Valve"})
+MERGE (e27)-[:PERFORMED]->(o27)
+MERGE (o27)-[:USED]->(m27)
+MERGE (o27)-[:PRODUCED]->(p27)
+} 
+
+CALL () {
+MATCH (e28:Employee {id: "Employee3"})
+MATCH (o28:Operation {id: "Operation7"})
+MATCH (m28:Machine {name: "M2"})
+MATCH (p28:Part {name: "Bearing"})
+MERGE (e28)-[:PERFORMED]->(o28)
+MERGE (o28)-[:USED]->(m28)
+MERGE (o28)-[:PRODUCED]->(p28)
+} 
+
+CALL () {
+MATCH (e29:Employee {id: "Employee3"})
+MATCH (o29:Operation {id: "Operation13"})
+MATCH (m29:Machine {name: "M1"})
+MATCH (p29:Part {name: "Gearbox"})
+MERGE (e29)-[:PERFORMED]->(o29)
+MERGE (o29)-[:USED]->(m29)
+MERGE (o29)-[:PRODUCED]->(p29)
+} 
+
+CALL () {
+MATCH (e30:Employee {id: "Employee3"})
+MATCH (o30:Operation {id: "Operation21"})
+MATCH (m30:Machine {name: "M2"})
+MATCH (p30:Part {name: "Shaft"})
+MERGE (e30)-[:PERFORMED]->(o30)
+MERGE (o30)-[:USED]->(m30)
+MERGE (o30)-[:PRODUCED]->(p30)
+} 
+
+CALL () {
+MATCH (e31:Employee {id: "Employee3"})
+MATCH (o31:Operation {id: "Operation26"})
+MATCH (m31:Machine {name: "M2"})
+MATCH (p31:Part {name: "Valve"})
+MERGE (e31)-[:PERFORMED]->(o31)
+MERGE (o31)-[:USED]->(m31)
+MERGE (o31)-[:PRODUCED]->(p31)
+} 
+
+CALL () {
+MATCH (e32:Employee {id: "Employee3"})
+MATCH (o32:Operation {id: "Operation84"})
+MATCH (m32:Machine {name: "M4"})
+MATCH (p32:Part {name: "Gearbox"})
+MERGE (e32)-[:PERFORMED]->(o32)
+MERGE (o32)-[:USED]->(m32)
+MERGE (o32)-[:PRODUCED]->(p32)
+} 
+
+CALL () {
+MATCH (e33:Employee {id: "Employee3"})
+MATCH (o33:Operation {id: "Operation100"})
+MATCH (m33:Machine {name: "M3"})
+MATCH (p33:Part {name: "Shaft"})
+MERGE (e33)-[:PERFORMED]->(o33)
+MERGE (o33)-[:USED]->(m33)
+MERGE (o33)-[:PRODUCED]->(p33)
+} 
+
+CALL () {
+MATCH (e34:Employee {id: "Employee3"})
+MATCH (o34:Operation {id: "Operation114"})
+MATCH (m34:Machine {name: "M2"})
+MATCH (p34:Part {name: "Gearbox"})
+MERGE (e34)-[:PERFORMED]->(o34)
+MERGE (o34)-[:USED]->(m34)
+MERGE (o34)-[:PRODUCED]->(p34)
+} 
+
+CALL () {
+MATCH (e35:Employee {id: "Employee3"})
+MATCH (o35:Operation {id: "Operation123"})
+MATCH (m35:Machine {name: "M4"})
+MATCH (p35:Part {name: "Valve"})
+MERGE (e35)-[:PERFORMED]->(o35)
+MERGE (o35)-[:USED]->(m35)
+MERGE (o35)-[:PRODUCED]->(p35)
+} 
+
+CALL () {
+MATCH (e36:Employee {id: "Employee3"})
+MATCH (o36:Operation {id: "Operation172"})
+MATCH (m36:Machine {name: "M4"})
+MATCH (p36:Part {name: "Piston"})
+MERGE (e36)-[:PERFORMED]->(o36)
+MERGE (o36)-[:USED]->(m36)
+MERGE (o36)-[:PRODUCED]->(p36)
+} 
+
+CALL () {
+MATCH (e37:Employee {id: "Employee3"})
+MATCH (o37:Operation {id: "Operation175"})
+MATCH (m37:Machine {name: "M1"})
+MATCH (p37:Part {name: "Valve"})
+MERGE (e37)-[:PERFORMED]->(o37)
+MERGE (o37)-[:USED]->(m37)
+MERGE (o37)-[:PRODUCED]->(p37)
+} 
+
+CALL () {
+MATCH (e38:Employee {id: "Employee3"})
+MATCH (o38:Operation {id: "Operation191"})
+MATCH (m38:Machine {name: "M3"})
+MATCH (p38:Part {name: "Piston"})
+MERGE (e38)-[:PERFORMED]->(o38)
+MERGE (o38)-[:USED]->(m38)
+MERGE (o38)-[:PRODUCED]->(p38)
+} 
+
+CALL () {
+MATCH (e39:Employee {id: "Employee3"})
+MATCH (o39:Operation {id: "Operation201"})
+MATCH (m39:Machine {name: "M4"})
+MATCH (p39:Part {name: "Valve"})
+MERGE (e39)-[:PERFORMED]->(o39)
+MERGE (o39)-[:USED]->(m39)
+MERGE (o39)-[:PRODUCED]->(p39)
+} 
+
+CALL () {
+MATCH (e40:Employee {id: "Employee3"})
+MATCH (o40:Operation {id: "Operation202"})
+MATCH (m40:Machine {name: "M1"})
+MATCH (p40:Part {name: "Bearing"})
+MERGE (e40)-[:PERFORMED]->(o40)
+MERGE (o40)-[:USED]->(m40)
+MERGE (o40)-[:PRODUCED]->(p40)
+} 
+
+CALL () {
+MATCH (e41:Employee {id: "Employee3"})
+MATCH (o41:Operation {id: "Operation204"})
+MATCH (m41:Machine {name: "M2"})
+MATCH (p41:Part {name: "Piston"})
+MERGE (e41)-[:PERFORMED]->(o41)
+MERGE (o41)-[:USED]->(m41)
+MERGE (o41)-[:PRODUCED]->(p41)
+} 
+
+CALL () {
+MATCH (e42:Employee {id: "Employee3"})
+MATCH (o42:Operation {id: "Operation236"})
+MATCH (m42:Machine {name: "M1"})
+MATCH (p42:Part {name: "Piston"})
+MERGE (e42)-[:PERFORMED]->(o42)
+MERGE (o42)-[:USED]->(m42)
+MERGE (o42)-[:PRODUCED]->(p42)
+} 
+
+CALL () {
+MATCH (e43:Employee {id: "Employee4"})
+MATCH (o43:Operation {id: "Operation2"})
+MATCH (m43:Machine {name: "M1"})
+MATCH (p43:Part {name: "Piston"})
+MERGE (e43)-[:PERFORMED]->(o43)
+MERGE (o43)-[:USED]->(m43)
+MERGE (o43)-[:PRODUCED]->(p43)
+} 
+
+CALL () {
+MATCH (e44:Employee {id: "Employee4"})
+MATCH (o44:Operation {id: "Operation29"})
+MATCH (m44:Machine {name: "M1"})
+MATCH (p44:Part {name: "Piston"})
+MERGE (e44)-[:PERFORMED]->(o44)
+MERGE (o44)-[:USED]->(m44)
+MERGE (o44)-[:PRODUCED]->(p44)
+} 
+
+CALL () {
+MATCH (e45:Employee {id: "Employee4"})
+MATCH (o45:Operation {id: "Operation71"})
+MATCH (m45:Machine {name: "M4"})
+MATCH (p45:Part {name: "Shaft"})
+MERGE (e45)-[:PERFORMED]->(o45)
+MERGE (o45)-[:USED]->(m45)
+MERGE (o45)-[:PRODUCED]->(p45)
+} 
+
+CALL () {
+MATCH (e46:Employee {id: "Employee4"})
+MATCH (o46:Operation {id: "Operation88"})
+MATCH (m46:Machine {name: "M2"})
+MATCH (p46:Part {name: "Valve"})
+MERGE (e46)-[:PERFORMED]->(o46)
+MERGE (o46)-[:USED]->(m46)
+MERGE (o46)-[:PRODUCED]->(p46)
+} 
+
+CALL () {
+MATCH (e47:Employee {id: "Employee4"})
+MATCH (o47:Operation {id: "Operation90"})
+MATCH (m47:Machine {name: "M3"})
+MATCH (p47:Part {name: "Bearing"})
+MERGE (e47)-[:PERFORMED]->(o47)
+MERGE (o47)-[:USED]->(m47)
+MERGE (o47)-[:PRODUCED]->(p47)
+} 
+
+CALL () {
+MATCH (e48:Employee {id: "Employee4"})
+MATCH (o48:Operation {id: "Operation138"})
+MATCH (m48:Machine {name: "M4"})
+MATCH (p48:Part {name: "Gearbox"})
+MERGE (e48)-[:PERFORMED]->(o48)
+MERGE (o48)-[:USED]->(m48)
+MERGE (o48)-[:PRODUCED]->(p48)
+} 
+
+CALL () {
+MATCH (e49:Employee {id: "Employee4"})
+MATCH (o49:Operation {id: "Operation165"})
+MATCH (m49:Machine {name: "M3"})
+MATCH (p49:Part {name: "Bearing"})
+MERGE (e49)-[:PERFORMED]->(o49)
+MERGE (o49)-[:USED]->(m49)
+MERGE (o49)-[:PRODUCED]->(p49)
+} 
+
+CALL () {
+MATCH (e50:Employee {id: "Employee4"})
+MATCH (o50:Operation {id: "Operation166"})
+MATCH (m50:Machine {name: "M4"})
+MATCH (p50:Part {name: "Gearbox"})
+MERGE (e50)-[:PERFORMED]->(o50)
+MERGE (o50)-[:USED]->(m50)
+MERGE (o50)-[:PRODUCED]->(p50)
+} 
+
+CALL () {
+MATCH (e51:Employee {id: "Employee4"})
+MATCH (o51:Operation {id: "Operation182"})
+MATCH (m51:Machine {name: "M4"})
+MATCH (p51:Part {name: "Valve"})
+MERGE (e51)-[:PERFORMED]->(o51)
+MERGE (o51)-[:USED]->(m51)
+MERGE (o51)-[:PRODUCED]->(p51)
+} 
+
+CALL () {
+MATCH (e52:Employee {id: "Employee4"})
+MATCH (o52:Operation {id: "Operation226"})
+MATCH (m52:Machine {name: "M3"})
+MATCH (p52:Part {name: "Gearbox"})
+MERGE (e52)-[:PERFORMED]->(o52)
+MERGE (o52)-[:USED]->(m52)
+MERGE (o52)-[:PRODUCED]->(p52)
+} 
+
+CALL () {
+MATCH (e53:Employee {id: "Employee4"})
+MATCH (o53:Operation {id: "Operation238"})
+MATCH (m53:Machine {name: "M3"})
+MATCH (p53:Part {name: "Shaft"})
+MERGE (e53)-[:PERFORMED]->(o53)
+MERGE (o53)-[:USED]->(m53)
+MERGE (o53)-[:PRODUCED]->(p53)
+} 
+
+CALL () {
+MATCH (e54:Employee {id: "Employee5"})
+MATCH (o54:Operation {id: "Operation76"})
+MATCH (m54:Machine {name: "M2"})
+MATCH (p54:Part {name: "Gearbox"})
+MERGE (e54)-[:PERFORMED]->(o54)
+MERGE (o54)-[:USED]->(m54)
+MERGE (o54)-[:PRODUCED]->(p54)
+} 
+
+CALL () {
+MATCH (e55:Employee {id: "Employee5"})
+MATCH (o55:Operation {id: "Operation82"})
+MATCH (m55:Machine {name: "M4"})
+MATCH (p55:Part {name: "Shaft"})
+MERGE (e55)-[:PERFORMED]->(o55)
+MERGE (o55)-[:USED]->(m55)
+MERGE (o55)-[:PRODUCED]->(p55)
+} 
+
+CALL () {
+MATCH (e56:Employee {id: "Employee5"})
+MATCH (o56:Operation {id: "Operation93"})
+MATCH (m56:Machine {name: "M4"})
+MATCH (p56:Part {name: "Shaft"})
+MERGE (e56)-[:PERFORMED]->(o56)
+MERGE (o56)-[:USED]->(m56)
+MERGE (o56)-[:PRODUCED]->(p56)
+} 
+
+CALL () {
+MATCH (e57:Employee {id: "Employee5"})
+MATCH (o57:Operation {id: "Operation107"})
+MATCH (m57:Machine {name: "M4"})
+MATCH (p57:Part {name: "Gearbox"})
+MERGE (e57)-[:PERFORMED]->(o57)
+MERGE (o57)-[:USED]->(m57)
+MERGE (o57)-[:PRODUCED]->(p57)
+} 
+
+CALL () {
+MATCH (e58:Employee {id: "Employee5"})
+MATCH (o58:Operation {id: "Operation162"})
+MATCH (m58:Machine {name: "M4"})
+MATCH (p58:Part {name: "Piston"})
+MERGE (e58)-[:PERFORMED]->(o58)
+MERGE (o58)-[:USED]->(m58)
+MERGE (o58)-[:PRODUCED]->(p58)
+} 
+
+CALL () {
+MATCH (e59:Employee {id: "Employee5"})
+MATCH (o59:Operation {id: "Operation184"})
+MATCH (m59:Machine {name: "M4"})
+MATCH (p59:Part {name: "Shaft"})
+MERGE (e59)-[:PERFORMED]->(o59)
+MERGE (o59)-[:USED]->(m59)
+MERGE (o59)-[:PRODUCED]->(p59)
+} 
+
+CALL () {
+MATCH (e60:Employee {id: "Employee5"})
+MATCH (o60:Operation {id: "Operation203"})
+MATCH (m60:Machine {name: "M2"})
+MATCH (p60:Part {name: "Gearbox"})
+MERGE (e60)-[:PERFORMED]->(o60)
+MERGE (o60)-[:USED]->(m60)
+MERGE (o60)-[:PRODUCED]->(p60)
+} 
+
+CALL () {
+MATCH (e61:Employee {id: "Employee5"})
+MATCH (o61:Operation {id: "Operation230"})
+MATCH (m61:Machine {name: "M1"})
+MATCH (p61:Part {name: "Valve"})
+MERGE (e61)-[:PERFORMED]->(o61)
+MERGE (o61)-[:USED]->(m61)
+MERGE (o61)-[:PRODUCED]->(p61)
+} 
+
+CALL () {
+MATCH (e62:Employee {id: "Employee5"})
+MATCH (o62:Operation {id: "Operation232"})
+MATCH (m62:Machine {name: "M4"})
+MATCH (p62:Part {name: "Gearbox"})
+MERGE (e62)-[:PERFORMED]->(o62)
+MERGE (o62)-[:USED]->(m62)
+MERGE (o62)-[:PRODUCED]->(p62)
+} 
+
+CALL () {
+MATCH (e63:Employee {id: "Employee6"})
+MATCH (o63:Operation {id: "Operation6"})
+MATCH (m63:Machine {name: "M3"})
+MATCH (p63:Part {name: "Valve"})
+MERGE (e63)-[:PERFORMED]->(o63)
+MERGE (o63)-[:USED]->(m63)
+MERGE (o63)-[:PRODUCED]->(p63)
+} 
+
+CALL () {
+MATCH (e64:Employee {id: "Employee6"})
+MATCH (o64:Operation {id: "Operation37"})
+MATCH (m64:Machine {name: "M1"})
+MATCH (p64:Part {name: "Bearing"})
+MERGE (e64)-[:PERFORMED]->(o64)
+MERGE (o64)-[:USED]->(m64)
+MERGE (o64)-[:PRODUCED]->(p64)
+} 
+
+CALL () {
+MATCH (e65:Employee {id: "Employee6"})
+MATCH (o65:Operation {id: "Operation53"})
+MATCH (m65:Machine {name: "M4"})
+MATCH (p65:Part {name: "Gearbox"})
+MERGE (e65)-[:PERFORMED]->(o65)
+MERGE (o65)-[:USED]->(m65)
+MERGE (o65)-[:PRODUCED]->(p65)
+} 
+
+CALL () {
+MATCH (e66:Employee {id: "Employee6"})
+MATCH (o66:Operation {id: "Operation58"})
+MATCH (m66:Machine {name: "M3"})
+MATCH (p66:Part {name: "Gearbox"})
+MERGE (e66)-[:PERFORMED]->(o66)
+MERGE (o66)-[:USED]->(m66)
+MERGE (o66)-[:PRODUCED]->(p66)
+} 
+
+CALL () {
+MATCH (e67:Employee {id: "Employee6"})
+MATCH (o67:Operation {id: "Operation66"})
+MATCH (m67:Machine {name: "M1"})
+MATCH (p67:Part {name: "Valve"})
+MERGE (e67)-[:PERFORMED]->(o67)
+MERGE (o67)-[:USED]->(m67)
+MERGE (o67)-[:PRODUCED]->(p67)
+} 
+
+CALL () {
+MATCH (e68:Employee {id: "Employee6"})
+MATCH (o68:Operation {id: "Operation129"})
+MATCH (m68:Machine {name: "M3"})
+MATCH (p68:Part {name: "Bearing"})
+MERGE (e68)-[:PERFORMED]->(o68)
+MERGE (o68)-[:USED]->(m68)
+MERGE (o68)-[:PRODUCED]->(p68)
+} 
+
+CALL () {
+MATCH (e69:Employee {id: "Employee6"})
+MATCH (o69:Operation {id: "Operation145"})
+MATCH (m69:Machine {name: "M2"})
+MATCH (p69:Part {name: "Shaft"})
+MERGE (e69)-[:PERFORMED]->(o69)
+MERGE (o69)-[:USED]->(m69)
+MERGE (o69)-[:PRODUCED]->(p69)
+} 
+
+CALL () {
+MATCH (e70:Employee {id: "Employee6"})
+MATCH (o70:Operation {id: "Operation239"})
+MATCH (m70:Machine {name: "M4"})
+MATCH (p70:Part {name: "Piston"})
+MERGE (e70)-[:PERFORMED]->(o70)
+MERGE (o70)-[:USED]->(m70)
+MERGE (o70)-[:PRODUCED]->(p70)
+} 
+
+CALL () {
+MATCH (e71:Employee {id: "Employee7"})
+MATCH (o71:Operation {id: "Operation30"})
+MATCH (m71:Machine {name: "M2"})
+MATCH (p71:Part {name: "Bearing"})
+MERGE (e71)-[:PERFORMED]->(o71)
+MERGE (o71)-[:USED]->(m71)
+MERGE (o71)-[:PRODUCED]->(p71)
+} 
+
+CALL () {
+MATCH (e72:Employee {id: "Employee7"})
+MATCH (o72:Operation {id: "Operation35"})
+MATCH (m72:Machine {name: "M1"})
+MATCH (p72:Part {name: "Bearing"})
+MERGE (e72)-[:PERFORMED]->(o72)
+MERGE (o72)-[:USED]->(m72)
+MERGE (o72)-[:PRODUCED]->(p72)
+} 
+
+CALL () {
+MATCH (e73:Employee {id: "Employee7"})
+MATCH (o73:Operation {id: "Operation46"})
+MATCH (m73:Machine {name: "M3"})
+MATCH (p73:Part {name: "Shaft"})
+MERGE (e73)-[:PERFORMED]->(o73)
+MERGE (o73)-[:USED]->(m73)
+MERGE (o73)-[:PRODUCED]->(p73)
+} 
+
+CALL () {
+MATCH (e74:Employee {id: "Employee7"})
+MATCH (o74:Operation {id: "Operation103"})
+MATCH (m74:Machine {name: "M3"})
+MATCH (p74:Part {name: "Gearbox"})
+MERGE (e74)-[:PERFORMED]->(o74)
+MERGE (o74)-[:USED]->(m74)
+MERGE (o74)-[:PRODUCED]->(p74)
+} 
+
+CALL () {
+MATCH (e75:Employee {id: "Employee7"})
+MATCH (o75:Operation {id: "Operation104"})
+MATCH (m75:Machine {name: "M2"})
+MATCH (p75:Part {name: "Piston"})
+MERGE (e75)-[:PERFORMED]->(o75)
+MERGE (o75)-[:USED]->(m75)
+MERGE (o75)-[:PRODUCED]->(p75)
+} 
+
+CALL () {
+MATCH (e76:Employee {id: "Employee7"})
+MATCH (o76:Operation {id: "Operation113"})
+MATCH (m76:Machine {name: "M2"})
+MATCH (p76:Part {name: "Valve"})
+MERGE (e76)-[:PERFORMED]->(o76)
+MERGE (o76)-[:USED]->(m76)
+MERGE (o76)-[:PRODUCED]->(p76)
+} 
+
+CALL () {
+MATCH (e77:Employee {id: "Employee7"})
+MATCH (o77:Operation {id: "Operation132"})
+MATCH (m77:Machine {name: "M2"})
+MATCH (p77:Part {name: "Gearbox"})
+MERGE (e77)-[:PERFORMED]->(o77)
+MERGE (o77)-[:USED]->(m77)
+MERGE (o77)-[:PRODUCED]->(p77)
+} 
+
+CALL () {
+MATCH (e78:Employee {id: "Employee7"})
+MATCH (o78:Operation {id: "Operation152"})
+MATCH (m78:Machine {name: "M3"})
+MATCH (p78:Part {name: "Shaft"})
+MERGE (e78)-[:PERFORMED]->(o78)
+MERGE (o78)-[:USED]->(m78)
+MERGE (o78)-[:PRODUCED]->(p78)
+} 
+
+CALL () {
+MATCH (e79:Employee {id: "Employee7"})
+MATCH (o79:Operation {id: "Operation168"})
+MATCH (m79:Machine {name: "M2"})
+MATCH (p79:Part {name: "Shaft"})
+MERGE (e79)-[:PERFORMED]->(o79)
+MERGE (o79)-[:USED]->(m79)
+MERGE (o79)-[:PRODUCED]->(p79)
+} 
+
+CALL () {
+MATCH (e80:Employee {id: "Employee7"})
+MATCH (o80:Operation {id: "Operation178"})
+MATCH (m80:Machine {name: "M4"})
+MATCH (p80:Part {name: "Piston"})
+MERGE (e80)-[:PERFORMED]->(o80)
+MERGE (o80)-[:USED]->(m80)
+MERGE (o80)-[:PRODUCED]->(p80)
+} 
+
+CALL () {
+MATCH (e81:Employee {id: "Employee7"})
+MATCH (o81:Operation {id: "Operation218"})
+MATCH (m81:Machine {name: "M3"})
+MATCH (p81:Part {name: "Piston"})
+MERGE (e81)-[:PERFORMED]->(o81)
+MERGE (o81)-[:USED]->(m81)
+MERGE (o81)-[:PRODUCED]->(p81)
+} 
+
+CALL () {
+MATCH (e82:Employee {id: "Employee7"})
+MATCH (o82:Operation {id: "Operation223"})
+MATCH (m82:Machine {name: "M3"})
+MATCH (p82:Part {name: "Bearing"})
+MERGE (e82)-[:PERFORMED]->(o82)
+MERGE (o82)-[:USED]->(m82)
+MERGE (o82)-[:PRODUCED]->(p82)
+} 
+
+CALL () {
+MATCH (e83:Employee {id: "Employee8"})
+MATCH (o83:Operation {id: "Operation20"})
+MATCH (m83:Machine {name: "M1"})
+MATCH (p83:Part {name: "Shaft"})
+MERGE (e83)-[:PERFORMED]->(o83)
+MERGE (o83)-[:USED]->(m83)
+MERGE (o83)-[:PRODUCED]->(p83)
+} 
+
+CALL () {
+MATCH (e84:Employee {id: "Employee8"})
+MATCH (o84:Operation {id: "Operation24"})
+MATCH (m84:Machine {name: "M1"})
+MATCH (p84:Part {name: "Valve"})
+MERGE (e84)-[:PERFORMED]->(o84)
+MERGE (o84)-[:USED]->(m84)
+MERGE (o84)-[:PRODUCED]->(p84)
+} 
+
+CALL () {
+MATCH (e85:Employee {id: "Employee8"})
+MATCH (o85:Operation {id: "Operation31"})
+MATCH (m85:Machine {name: "M1"})
+MATCH (p85:Part {name: "Piston"})
+MERGE (e85)-[:PERFORMED]->(o85)
+MERGE (o85)-[:USED]->(m85)
+MERGE (o85)-[:PRODUCED]->(p85)
+} 
+
+CALL () {
+MATCH (e86:Employee {id: "Employee8"})
+MATCH (o86:Operation {id: "Operation54"})
+MATCH (m86:Machine {name: "M3"})
+MATCH (p86:Part {name: "Shaft"})
+MERGE (e86)-[:PERFORMED]->(o86)
+MERGE (o86)-[:USED]->(m86)
+MERGE (o86)-[:PRODUCED]->(p86)
+} 
+
+CALL () {
+MATCH (e87:Employee {id: "Employee8"})
+MATCH (o87:Operation {id: "Operation55"})
+MATCH (m87:Machine {name: "M2"})
+MATCH (p87:Part {name: "Piston"})
+MERGE (e87)-[:PERFORMED]->(o87)
+MERGE (o87)-[:USED]->(m87)
+MERGE (o87)-[:PRODUCED]->(p87)
+} 
+
+CALL () {
+MATCH (e88:Employee {id: "Employee8"})
+MATCH (o88:Operation {id: "Operation56"})
+MATCH (m88:Machine {name: "M1"})
+MATCH (p88:Part {name: "Shaft"})
+MERGE (e88)-[:PERFORMED]->(o88)
+MERGE (o88)-[:USED]->(m88)
+MERGE (o88)-[:PRODUCED]->(p88)
+} 
+
+CALL () {
+MATCH (e89:Employee {id: "Employee8"})
+MATCH (o89:Operation {id: "Operation67"})
+MATCH (m89:Machine {name: "M3"})
+MATCH (p89:Part {name: "Shaft"})
+MERGE (e89)-[:PERFORMED]->(o89)
+MERGE (o89)-[:USED]->(m89)
+MERGE (o89)-[:PRODUCED]->(p89)
+} 
+
+CALL () {
+MATCH (e90:Employee {id: "Employee8"})
+MATCH (o90:Operation {id: "Operation85"})
+MATCH (m90:Machine {name: "M1"})
+MATCH (p90:Part {name: "Gearbox"})
+MERGE (e90)-[:PERFORMED]->(o90)
+MERGE (o90)-[:USED]->(m90)
+MERGE (o90)-[:PRODUCED]->(p90)
+} 
+
+CALL () {
+MATCH (e91:Employee {id: "Employee8"})
+MATCH (o91:Operation {id: "Operation95"})
+MATCH (m91:Machine {name: "M1"})
+MATCH (p91:Part {name: "Valve"})
+MERGE (e91)-[:PERFORMED]->(o91)
+MERGE (o91)-[:USED]->(m91)
+MERGE (o91)-[:PRODUCED]->(p91)
+} 
+
+CALL () {
+MATCH (e92:Employee {id: "Employee8"})
+MATCH (o92:Operation {id: "Operation116"})
+MATCH (m92:Machine {name: "M3"})
+MATCH (p92:Part {name: "Bearing"})
+MERGE (e92)-[:PERFORMED]->(o92)
+MERGE (o92)-[:USED]->(m92)
+MERGE (o92)-[:PRODUCED]->(p92)
+} 
+
+CALL () {
+MATCH (e93:Employee {id: "Employee8"})
+MATCH (o93:Operation {id: "Operation136"})
+MATCH (m93:Machine {name: "M4"})
+MATCH (p93:Part {name: "Gearbox"})
+MERGE (e93)-[:PERFORMED]->(o93)
+MERGE (o93)-[:USED]->(m93)
+MERGE (o93)-[:PRODUCED]->(p93)
+} 
+
+CALL () {
+MATCH (e94:Employee {id: "Employee8"})
+MATCH (o94:Operation {id: "Operation142"})
+MATCH (m94:Machine {name: "M1"})
+MATCH (p94:Part {name: "Piston"})
+MERGE (e94)-[:PERFORMED]->(o94)
+MERGE (o94)-[:USED]->(m94)
+MERGE (o94)-[:PRODUCED]->(p94)
+} 
+
+CALL () {
+MATCH (e95:Employee {id: "Employee8"})
+MATCH (o95:Operation {id: "Operation146"})
+MATCH (m95:Machine {name: "M4"})
+MATCH (p95:Part {name: "Bearing"})
+MERGE (e95)-[:PERFORMED]->(o95)
+MERGE (o95)-[:USED]->(m95)
+MERGE (o95)-[:PRODUCED]->(p95)
+} 
+
+CALL () {
+MATCH (e96:Employee {id: "Employee8"})
+MATCH (o96:Operation {id: "Operation159"})
+MATCH (m96:Machine {name: "M4"})
+MATCH (p96:Part {name: "Gearbox"})
+MERGE (e96)-[:PERFORMED]->(o96)
+MERGE (o96)-[:USED]->(m96)
+MERGE (o96)-[:PRODUCED]->(p96)
+} 
+
+CALL () {
+MATCH (e97:Employee {id: "Employee8"})
+MATCH (o97:Operation {id: "Operation160"})
+MATCH (m97:Machine {name: "M1"})
+MATCH (p97:Part {name: "Piston"})
+MERGE (e97)-[:PERFORMED]->(o97)
+MERGE (o97)-[:USED]->(m97)
+MERGE (o97)-[:PRODUCED]->(p97)
+} 
+
+CALL () {
+MATCH (e98:Employee {id: "Employee8"})
+MATCH (o98:Operation {id: "Operation173"})
+MATCH (m98:Machine {name: "M1"})
+MATCH (p98:Part {name: "Bearing"})
+MERGE (e98)-[:PERFORMED]->(o98)
+MERGE (o98)-[:USED]->(m98)
+MERGE (o98)-[:PRODUCED]->(p98)
+} 
+
+CALL () {
+MATCH (e99:Employee {id: "Employee8"})
+MATCH (o99:Operation {id: "Operation211"})
+MATCH (m99:Machine {name: "M4"})
+MATCH (p99:Part {name: "Piston"})
+MERGE (e99)-[:PERFORMED]->(o99)
+MERGE (o99)-[:USED]->(m99)
+MERGE (o99)-[:PRODUCED]->(p99)
+} 
+
+CALL () {
+MATCH (e100:Employee {id: "Employee8"})
+MATCH (o100:Operation {id: "Operation229"})
+MATCH (m100:Machine {name: "M1"})
+MATCH (p100:Part {name: "Valve"})
+MERGE (e100)-[:PERFORMED]->(o100)
+MERGE (o100)-[:USED]->(m100)
+MERGE (o100)-[:PRODUCED]->(p100)
+} 
+
+CALL () {
+MATCH (e101:Employee {id: "Employee9"})
+MATCH (o101:Operation {id: "Operation11"})
+MATCH (m101:Machine {name: "M2"})
+MATCH (p101:Part {name: "Shaft"})
+MERGE (e101)-[:PERFORMED]->(o101)
+MERGE (o101)-[:USED]->(m101)
+MERGE (o101)-[:PRODUCED]->(p101)
+} 
+
+CALL () {
+MATCH (e102:Employee {id: "Employee9"})
+MATCH (o102:Operation {id: "Operation17"})
+MATCH (m102:Machine {name: "M2"})
+MATCH (p102:Part {name: "Bearing"})
+MERGE (e102)-[:PERFORMED]->(o102)
+MERGE (o102)-[:USED]->(m102)
+MERGE (o102)-[:PRODUCED]->(p102)
+} 
+
+CALL () {
+MATCH (e103:Employee {id: "Employee9"})
+MATCH (o103:Operation {id: "Operation45"})
+MATCH (m103:Machine {name: "M1"})
+MATCH (p103:Part {name: "Gearbox"})
+MERGE (e103)-[:PERFORMED]->(o103)
+MERGE (o103)-[:USED]->(m103)
+MERGE (o103)-[:PRODUCED]->(p103)
+} 
+
+CALL () {
+MATCH (e104:Employee {id: "Employee9"})
+MATCH (o104:Operation {id: "Operation47"})
+MATCH (m104:Machine {name: "M1"})
+MATCH (p104:Part {name: "Gearbox"})
+MERGE (e104)-[:PERFORMED]->(o104)
+MERGE (o104)-[:USED]->(m104)
+MERGE (o104)-[:PRODUCED]->(p104)
+} 
+
+CALL () {
+MATCH (e105:Employee {id: "Employee9"})
+MATCH (o105:Operation {id: "Operation74"})
+MATCH (m105:Machine {name: "M4"})
+MATCH (p105:Part {name: "Shaft"})
+MERGE (e105)-[:PERFORMED]->(o105)
+MERGE (o105)-[:USED]->(m105)
+MERGE (o105)-[:PRODUCED]->(p105)
+} 
+
+CALL () {
+MATCH (e106:Employee {id: "Employee9"})
+MATCH (o106:Operation {id: "Operation75"})
+MATCH (m106:Machine {name: "M3"})
+MATCH (p106:Part {name: "Valve"})
+MERGE (e106)-[:PERFORMED]->(o106)
+MERGE (o106)-[:USED]->(m106)
+MERGE (o106)-[:PRODUCED]->(p106)
+} 
+
+CALL () {
+MATCH (e107:Employee {id: "Employee9"})
+MATCH (o107:Operation {id: "Operation119"})
+MATCH (m107:Machine {name: "M4"})
+MATCH (p107:Part {name: "Piston"})
+MERGE (e107)-[:PERFORMED]->(o107)
+MERGE (o107)-[:USED]->(m107)
+MERGE (o107)-[:PRODUCED]->(p107)
+} 
+
+CALL () {
+MATCH (e108:Employee {id: "Employee9"})
+MATCH (o108:Operation {id: "Operation131"})
+MATCH (m108:Machine {name: "M4"})
+MATCH (p108:Part {name: "Piston"})
+MERGE (e108)-[:PERFORMED]->(o108)
+MERGE (o108)-[:USED]->(m108)
+MERGE (o108)-[:PRODUCED]->(p108)
+} 
+
+CALL () {
+MATCH (e109:Employee {id: "Employee9"})
+MATCH (o109:Operation {id: "Operation147"})
+MATCH (m109:Machine {name: "M1"})
+MATCH (p109:Part {name: "Piston"})
+MERGE (e109)-[:PERFORMED]->(o109)
+MERGE (o109)-[:USED]->(m109)
+MERGE (o109)-[:PRODUCED]->(p109)
+} 
+
+CALL () {
+MATCH (e110:Employee {id: "Employee9"})
+MATCH (o110:Operation {id: "Operation164"})
+MATCH (m110:Machine {name: "M1"})
+MATCH (p110:Part {name: "Valve"})
+MERGE (e110)-[:PERFORMED]->(o110)
+MERGE (o110)-[:USED]->(m110)
+MERGE (o110)-[:PRODUCED]->(p110)
+} 
+
+CALL () {
+MATCH (e111:Employee {id: "Employee9"})
+MATCH (o111:Operation {id: "Operation185"})
+MATCH (m111:Machine {name: "M2"})
+MATCH (p111:Part {name: "Piston"})
+MERGE (e111)-[:PERFORMED]->(o111)
+MERGE (o111)-[:USED]->(m111)
+MERGE (o111)-[:PRODUCED]->(p111)
+} 
+
+CALL () {
+MATCH (e112:Employee {id: "Employee9"})
+MATCH (o112:Operation {id: "Operation187"})
+MATCH (m112:Machine {name: "M3"})
+MATCH (p112:Part {name: "Valve"})
+MERGE (e112)-[:PERFORMED]->(o112)
+MERGE (o112)-[:USED]->(m112)
+MERGE (o112)-[:PRODUCED]->(p112)
+} 
+
+CALL () {
+MATCH (e113:Employee {id: "Employee9"})
+MATCH (o113:Operation {id: "Operation192"})
+MATCH (m113:Machine {name: "M2"})
+MATCH (p113:Part {name: "Bearing"})
+MERGE (e113)-[:PERFORMED]->(o113)
+MERGE (o113)-[:USED]->(m113)
+MERGE (o113)-[:PRODUCED]->(p113)
+} 
+
+CALL () {
+MATCH (e114:Employee {id: "Employee9"})
+MATCH (o114:Operation {id: "Operation237"})
+MATCH (m114:Machine {name: "M1"})
+MATCH (p114:Part {name: "Valve"})
+MERGE (e114)-[:PERFORMED]->(o114)
+MERGE (o114)-[:USED]->(m114)
+MERGE (o114)-[:PRODUCED]->(p114)
+} 
+
+CALL () {
+MATCH (e115:Employee {id: "Employee9"})
+MATCH (o115:Operation {id: "Operation245"})
+MATCH (m115:Machine {name: "M1"})
+MATCH (p115:Part {name: "Piston"})
+MERGE (e115)-[:PERFORMED]->(o115)
+MERGE (o115)-[:USED]->(m115)
+MERGE (o115)-[:PRODUCED]->(p115)
+} 
+
+CALL () {
+MATCH (e116:Employee {id: "Employee10"})
+MATCH (o116:Operation {id: "Operation4"})
+MATCH (m116:Machine {name: "M3"})
+MATCH (p116:Part {name: "Bearing"})
+MERGE (e116)-[:PERFORMED]->(o116)
+MERGE (o116)-[:USED]->(m116)
+MERGE (o116)-[:PRODUCED]->(p116)
+} 
+
+CALL () {
+MATCH (e117:Employee {id: "Employee10"})
+MATCH (o117:Operation {id: "Operation5"})
+MATCH (m117:Machine {name: "M1"})
+MATCH (p117:Part {name: "Shaft"})
+MERGE (e117)-[:PERFORMED]->(o117)
+MERGE (o117)-[:USED]->(m117)
+MERGE (o117)-[:PRODUCED]->(p117)
+} 
+
+CALL () {
+MATCH (e118:Employee {id: "Employee10"})
+MATCH (o118:Operation {id: "Operation23"})
+MATCH (m118:Machine {name: "M4"})
+MATCH (p118:Part {name: "Valve"})
+MERGE (e118)-[:PERFORMED]->(o118)
+MERGE (o118)-[:USED]->(m118)
+MERGE (o118)-[:PRODUCED]->(p118)
+} 
+
+CALL () {
+MATCH (e119:Employee {id: "Employee10"})
+MATCH (o119:Operation {id: "Operation34"})
+MATCH (m119:Machine {name: "M4"})
+MATCH (p119:Part {name: "Bearing"})
+MERGE (e119)-[:PERFORMED]->(o119)
+MERGE (o119)-[:USED]->(m119)
+MERGE (o119)-[:PRODUCED]->(p119)
+} 
+
+CALL () {
+MATCH (e120:Employee {id: "Employee10"})
+MATCH (o120:Operation {id: "Operation43"})
+MATCH (m120:Machine {name: "M2"})
+MATCH (p120:Part {name: "Piston"})
+MERGE (e120)-[:PERFORMED]->(o120)
+MERGE (o120)-[:USED]->(m120)
+MERGE (o120)-[:PRODUCED]->(p120)
+} 
+
+CALL () {
+MATCH (e121:Employee {id: "Employee10"})
+MATCH (o121:Operation {id: "Operation51"})
+MATCH (m121:Machine {name: "M3"})
+MATCH (p121:Part {name: "Gearbox"})
+MERGE (e121)-[:PERFORMED]->(o121)
+MERGE (o121)-[:USED]->(m121)
+MERGE (o121)-[:PRODUCED]->(p121)
+} 
+
+CALL () {
+MATCH (e122:Employee {id: "Employee10"})
+MATCH (o122:Operation {id: "Operation64"})
+MATCH (m122:Machine {name: "M3"})
+MATCH (p122:Part {name: "Shaft"})
+MERGE (e122)-[:PERFORMED]->(o122)
+MERGE (o122)-[:USED]->(m122)
+MERGE (o122)-[:PRODUCED]->(p122)
+} 
+
+CALL () {
+MATCH (e123:Employee {id: "Employee10"})
+MATCH (o123:Operation {id: "Operation118"})
+MATCH (m123:Machine {name: "M3"})
+MATCH (p123:Part {name: "Piston"})
+MERGE (e123)-[:PERFORMED]->(o123)
+MERGE (o123)-[:USED]->(m123)
+MERGE (o123)-[:PRODUCED]->(p123)
+} 
+
+CALL () {
+MATCH (e124:Employee {id: "Employee10"})
+MATCH (o124:Operation {id: "Operation150"})
+MATCH (m124:Machine {name: "M1"})
+MATCH (p124:Part {name: "Piston"})
+MERGE (e124)-[:PERFORMED]->(o124)
+MERGE (o124)-[:USED]->(m124)
+MERGE (o124)-[:PRODUCED]->(p124)
+} 
+
+CALL () {
+MATCH (e125:Employee {id: "Employee10"})
+MATCH (o125:Operation {id: "Operation153"})
+MATCH (m125:Machine {name: "M4"})
+MATCH (p125:Part {name: "Gearbox"})
+MERGE (e125)-[:PERFORMED]->(o125)
+MERGE (o125)-[:USED]->(m125)
+MERGE (o125)-[:PRODUCED]->(p125)
+} 
+
+CALL () {
+MATCH (e126:Employee {id: "Employee10"})
+MATCH (o126:Operation {id: "Operation195"})
+MATCH (m126:Machine {name: "M3"})
+MATCH (p126:Part {name: "Gearbox"})
+MERGE (e126)-[:PERFORMED]->(o126)
+MERGE (o126)-[:USED]->(m126)
+MERGE (o126)-[:PRODUCED]->(p126)
+} 
+
+CALL () {
+MATCH (e127:Employee {id: "Employee10"})
+MATCH (o127:Operation {id: "Operation206"})
+MATCH (m127:Machine {name: "M3"})
+MATCH (p127:Part {name: "Bearing"})
+MERGE (e127)-[:PERFORMED]->(o127)
+MERGE (o127)-[:USED]->(m127)
+MERGE (o127)-[:PRODUCED]->(p127)
+} 
+
+CALL () {
+MATCH (e128:Employee {id: "Employee10"})
+MATCH (o128:Operation {id: "Operation212"})
+MATCH (m128:Machine {name: "M4"})
+MATCH (p128:Part {name: "Piston"})
+MERGE (e128)-[:PERFORMED]->(o128)
+MERGE (o128)-[:USED]->(m128)
+MERGE (o128)-[:PRODUCED]->(p128)
+} 
+
+CALL () {
+MATCH (e129:Employee {id: "Employee10"})
+MATCH (o129:Operation {id: "Operation215"})
+MATCH (m129:Machine {name: "M4"})
+MATCH (p129:Part {name: "Shaft"})
+MERGE (e129)-[:PERFORMED]->(o129)
+MERGE (o129)-[:USED]->(m129)
+MERGE (o129)-[:PRODUCED]->(p129)
+} 
+
+CALL () {
+MATCH (e130:Employee {id: "Employee10"})
+MATCH (o130:Operation {id: "Operation219"})
+MATCH (m130:Machine {name: "M1"})
+MATCH (p130:Part {name: "Bearing"})
+MERGE (e130)-[:PERFORMED]->(o130)
+MERGE (o130)-[:USED]->(m130)
+MERGE (o130)-[:PRODUCED]->(p130)
+} 
+
+CALL () {
+MATCH (e131:Employee {id: "Employee11"})
+MATCH (o131:Operation {id: "Operation10"})
+MATCH (m131:Machine {name: "M2"})
+MATCH (p131:Part {name: "Piston"})
+MERGE (e131)-[:PERFORMED]->(o131)
+MERGE (o131)-[:USED]->(m131)
+MERGE (o131)-[:PRODUCED]->(p131)
+} 
+
+CALL () {
+MATCH (e132:Employee {id: "Employee11"})
+MATCH (o132:Operation {id: "Operation16"})
+MATCH (m132:Machine {name: "M1"})
+MATCH (p132:Part {name: "Valve"})
+MERGE (e132)-[:PERFORMED]->(o132)
+MERGE (o132)-[:USED]->(m132)
+MERGE (o132)-[:PRODUCED]->(p132)
+} 
+
+CALL () {
+MATCH (e133:Employee {id: "Employee11"})
+MATCH (o133:Operation {id: "Operation48"})
+MATCH (m133:Machine {name: "M2"})
+MATCH (p133:Part {name: "Valve"})
+MERGE (e133)-[:PERFORMED]->(o133)
+MERGE (o133)-[:USED]->(m133)
+MERGE (o133)-[:PRODUCED]->(p133)
+} 
+
+CALL () {
+MATCH (e134:Employee {id: "Employee11"})
+MATCH (o134:Operation {id: "Operation72"})
+MATCH (m134:Machine {name: "M4"})
+MATCH (p134:Part {name: "Bearing"})
+MERGE (e134)-[:PERFORMED]->(o134)
+MERGE (o134)-[:USED]->(m134)
+MERGE (o134)-[:PRODUCED]->(p134)
+} 
+
+CALL () {
+MATCH (e135:Employee {id: "Employee11"})
+MATCH (o135:Operation {id: "Operation80"})
+MATCH (m135:Machine {name: "M4"})
+MATCH (p135:Part {name: "Shaft"})
+MERGE (e135)-[:PERFORMED]->(o135)
+MERGE (o135)-[:USED]->(m135)
+MERGE (o135)-[:PRODUCED]->(p135)
+} 
+
+CALL () {
+MATCH (e136:Employee {id: "Employee11"})
+MATCH (o136:Operation {id: "Operation83"})
+MATCH (m136:Machine {name: "M3"})
+MATCH (p136:Part {name: "Piston"})
+MERGE (e136)-[:PERFORMED]->(o136)
+MERGE (o136)-[:USED]->(m136)
+MERGE (o136)-[:PRODUCED]->(p136)
+} 
+
+CALL () {
+MATCH (e137:Employee {id: "Employee11"})
+MATCH (o137:Operation {id: "Operation102"})
+MATCH (m137:Machine {name: "M3"})
+MATCH (p137:Part {name: "Piston"})
+MERGE (e137)-[:PERFORMED]->(o137)
+MERGE (o137)-[:USED]->(m137)
+MERGE (o137)-[:PRODUCED]->(p137)
+} 
+
+CALL () {
+MATCH (e138:Employee {id: "Employee11"})
+MATCH (o138:Operation {id: "Operation108"})
+MATCH (m138:Machine {name: "M2"})
+MATCH (p138:Part {name: "Gearbox"})
+MERGE (e138)-[:PERFORMED]->(o138)
+MERGE (o138)-[:USED]->(m138)
+MERGE (o138)-[:PRODUCED]->(p138)
+} 
+
+CALL () {
+MATCH (e139:Employee {id: "Employee11"})
+MATCH (o139:Operation {id: "Operation120"})
+MATCH (m139:Machine {name: "M3"})
+MATCH (p139:Part {name: "Gearbox"})
+MERGE (e139)-[:PERFORMED]->(o139)
+MERGE (o139)-[:USED]->(m139)
+MERGE (o139)-[:PRODUCED]->(p139)
+} 
+
+CALL () {
+MATCH (e140:Employee {id: "Employee11"})
+MATCH (o140:Operation {id: "Operation124"})
+MATCH (m140:Machine {name: "M4"})
+MATCH (p140:Part {name: "Piston"})
+MERGE (e140)-[:PERFORMED]->(o140)
+MERGE (o140)-[:USED]->(m140)
+MERGE (o140)-[:PRODUCED]->(p140)
+} 
+
+CALL () {
+MATCH (e141:Employee {id: "Employee11"})
+MATCH (o141:Operation {id: "Operation154"})
+MATCH (m141:Machine {name: "M4"})
+MATCH (p141:Part {name: "Shaft"})
+MERGE (e141)-[:PERFORMED]->(o141)
+MERGE (o141)-[:USED]->(m141)
+MERGE (o141)-[:PRODUCED]->(p141)
+} 
+
+CALL () {
+MATCH (e142:Employee {id: "Employee11"})
+MATCH (o142:Operation {id: "Operation156"})
+MATCH (m142:Machine {name: "M1"})
+MATCH (p142:Part {name: "Piston"})
+MERGE (e142)-[:PERFORMED]->(o142)
+MERGE (o142)-[:USED]->(m142)
+MERGE (o142)-[:PRODUCED]->(p142)
+} 
+
+CALL () {
+MATCH (e143:Employee {id: "Employee11"})
+MATCH (o143:Operation {id: "Operation190"})
+MATCH (m143:Machine {name: "M1"})
+MATCH (p143:Part {name: "Gearbox"})
+MERGE (e143)-[:PERFORMED]->(o143)
+MERGE (o143)-[:USED]->(m143)
+MERGE (o143)-[:PRODUCED]->(p143)
+} 
+
+CALL () {
+MATCH (e144:Employee {id: "Employee11"})
+MATCH (o144:Operation {id: "Operation213"})
+MATCH (m144:Machine {name: "M1"})
+MATCH (p144:Part {name: "Valve"})
+MERGE (e144)-[:PERFORMED]->(o144)
+MERGE (o144)-[:USED]->(m144)
+MERGE (o144)-[:PRODUCED]->(p144)
+} 
+
+CALL () {
+MATCH (e145:Employee {id: "Employee11"})
+MATCH (o145:Operation {id: "Operation220"})
+MATCH (m145:Machine {name: "M2"})
+MATCH (p145:Part {name: "Bearing"})
+MERGE (e145)-[:PERFORMED]->(o145)
+MERGE (o145)-[:USED]->(m145)
+MERGE (o145)-[:PRODUCED]->(p145)
+} 
+
+CALL () {
+MATCH (e146:Employee {id: "Employee11"})
+MATCH (o146:Operation {id: "Operation241"})
+MATCH (m146:Machine {name: "M3"})
+MATCH (p146:Part {name: "Bearing"})
+MERGE (e146)-[:PERFORMED]->(o146)
+MERGE (o146)-[:USED]->(m146)
+MERGE (o146)-[:PRODUCED]->(p146)
+} 
+
+CALL () {
+MATCH (e147:Employee {id: "Employee11"})
+MATCH (o147:Operation {id: "Operation243"})
+MATCH (m147:Machine {name: "M3"})
+MATCH (p147:Part {name: "Gearbox"})
+MERGE (e147)-[:PERFORMED]->(o147)
+MERGE (o147)-[:USED]->(m147)
+MERGE (o147)-[:PRODUCED]->(p147)
+} 
+
+CALL () {
+MATCH (e148:Employee {id: "Employee12"})
+MATCH (o148:Operation {id: "Operation52"})
+MATCH (m148:Machine {name: "M4"})
+MATCH (p148:Part {name: "Bearing"})
+MERGE (e148)-[:PERFORMED]->(o148)
+MERGE (o148)-[:USED]->(m148)
+MERGE (o148)-[:PRODUCED]->(p148)
+} 
+
+CALL () {
+MATCH (e149:Employee {id: "Employee12"})
+MATCH (o149:Operation {id: "Operation57"})
+MATCH (m149:Machine {name: "M4"})
+MATCH (p149:Part {name: "Bearing"})
+MERGE (e149)-[:PERFORMED]->(o149)
+MERGE (o149)-[:USED]->(m149)
+MERGE (o149)-[:PRODUCED]->(p149)
+} 
+
+CALL () {
+MATCH (e150:Employee {id: "Employee12"})
+MATCH (o150:Operation {id: "Operation91"})
+MATCH (m150:Machine {name: "M4"})
+MATCH (p150:Part {name: "Valve"})
+MERGE (e150)-[:PERFORMED]->(o150)
+MERGE (o150)-[:USED]->(m150)
+MERGE (o150)-[:PRODUCED]->(p150)
+} 
+
+CALL () {
+MATCH (e151:Employee {id: "Employee12"})
+MATCH (o151:Operation {id: "Operation97"})
+MATCH (m151:Machine {name: "M3"})
+MATCH (p151:Part {name: "Valve"})
+MERGE (e151)-[:PERFORMED]->(o151)
+MERGE (o151)-[:USED]->(m151)
+MERGE (o151)-[:PRODUCED]->(p151)
+} 
+
+CALL () {
+MATCH (e152:Employee {id: "Employee12"})
+MATCH (o152:Operation {id: "Operation101"})
+MATCH (m152:Machine {name: "M4"})
+MATCH (p152:Part {name: "Bearing"})
+MERGE (e152)-[:PERFORMED]->(o152)
+MERGE (o152)-[:USED]->(m152)
+MERGE (o152)-[:PRODUCED]->(p152)
+} 
+
+CALL () {
+MATCH (e153:Employee {id: "Employee12"})
+MATCH (o153:Operation {id: "Operation144"})
+MATCH (m153:Machine {name: "M3"})
+MATCH (p153:Part {name: "Piston"})
+MERGE (e153)-[:PERFORMED]->(o153)
+MERGE (o153)-[:USED]->(m153)
+MERGE (o153)-[:PRODUCED]->(p153)
+} 
+
+CALL () {
+MATCH (e154:Employee {id: "Employee12"})
+MATCH (o154:Operation {id: "Operation148"})
+MATCH (m154:Machine {name: "M3"})
+MATCH (p154:Part {name: "Piston"})
+MERGE (e154)-[:PERFORMED]->(o154)
+MERGE (o154)-[:USED]->(m154)
+MERGE (o154)-[:PRODUCED]->(p154)
+} 
+
+CALL () {
+MATCH (e155:Employee {id: "Employee12"})
+MATCH (o155:Operation {id: "Operation158"})
+MATCH (m155:Machine {name: "M3"})
+MATCH (p155:Part {name: "Bearing"})
+MERGE (e155)-[:PERFORMED]->(o155)
+MERGE (o155)-[:USED]->(m155)
+MERGE (o155)-[:PRODUCED]->(p155)
+} 
+
+CALL () {
+MATCH (e156:Employee {id: "Employee12"})
+MATCH (o156:Operation {id: "Operation181"})
+MATCH (m156:Machine {name: "M2"})
+MATCH (p156:Part {name: "Bearing"})
+MERGE (e156)-[:PERFORMED]->(o156)
+MERGE (o156)-[:USED]->(m156)
+MERGE (o156)-[:PRODUCED]->(p156)
+} 
+
+CALL () {
+MATCH (e157:Employee {id: "Employee12"})
+MATCH (o157:Operation {id: "Operation200"})
+MATCH (m157:Machine {name: "M1"})
+MATCH (p157:Part {name: "Piston"})
+MERGE (e157)-[:PERFORMED]->(o157)
+MERGE (o157)-[:USED]->(m157)
+MERGE (o157)-[:PRODUCED]->(p157)
+} 
+
+CALL () {
+MATCH (e158:Employee {id: "Employee12"})
+MATCH (o158:Operation {id: "Operation248"})
+MATCH (m158:Machine {name: "M4"})
+MATCH (p158:Part {name: "Valve"})
+MERGE (e158)-[:PERFORMED]->(o158)
+MERGE (o158)-[:USED]->(m158)
+MERGE (o158)-[:PRODUCED]->(p158)
+} 
+
+CALL () {
+MATCH (e159:Employee {id: "Employee13"})
+MATCH (o159:Operation {id: "Operation9"})
+MATCH (m159:Machine {name: "M3"})
+MATCH (p159:Part {name: "Gearbox"})
+MERGE (e159)-[:PERFORMED]->(o159)
+MERGE (o159)-[:USED]->(m159)
+MERGE (o159)-[:PRODUCED]->(p159)
+} 
+
+CALL () {
+MATCH (e160:Employee {id: "Employee13"})
+MATCH (o160:Operation {id: "Operation40"})
+MATCH (m160:Machine {name: "M2"})
+MATCH (p160:Part {name: "Valve"})
+MERGE (e160)-[:PERFORMED]->(o160)
+MERGE (o160)-[:USED]->(m160)
+MERGE (o160)-[:PRODUCED]->(p160)
+} 
+
+CALL () {
+MATCH (e161:Employee {id: "Employee13"})
+MATCH (o161:Operation {id: "Operation63"})
+MATCH (m161:Machine {name: "M2"})
+MATCH (p161:Part {name: "Bearing"})
+MERGE (e161)-[:PERFORMED]->(o161)
+MERGE (o161)-[:USED]->(m161)
+MERGE (o161)-[:PRODUCED]->(p161)
+} 
+
+CALL () {
+MATCH (e162:Employee {id: "Employee13"})
+MATCH (o162:Operation {id: "Operation69"})
+MATCH (m162:Machine {name: "M4"})
+MATCH (p162:Part {name: "Piston"})
+MERGE (e162)-[:PERFORMED]->(o162)
+MERGE (o162)-[:USED]->(m162)
+MERGE (o162)-[:PRODUCED]->(p162)
+} 
+
+CALL () {
+MATCH (e163:Employee {id: "Employee13"})
+MATCH (o163:Operation {id: "Operation89"})
+MATCH (m163:Machine {name: "M4"})
+MATCH (p163:Part {name: "Shaft"})
+MERGE (e163)-[:PERFORMED]->(o163)
+MERGE (o163)-[:USED]->(m163)
+MERGE (o163)-[:PRODUCED]->(p163)
+} 
+
+CALL () {
+MATCH (e164:Employee {id: "Employee13"})
+MATCH (o164:Operation {id: "Operation96"})
+MATCH (m164:Machine {name: "M3"})
+MATCH (p164:Part {name: "Gearbox"})
+MERGE (e164)-[:PERFORMED]->(o164)
+MERGE (o164)-[:USED]->(m164)
+MERGE (o164)-[:PRODUCED]->(p164)
+} 
+
+CALL () {
+MATCH (e165:Employee {id: "Employee13"})
+MATCH (o165:Operation {id: "Operation109"})
+MATCH (m165:Machine {name: "M4"})
+MATCH (p165:Part {name: "Gearbox"})
+MERGE (e165)-[:PERFORMED]->(o165)
+MERGE (o165)-[:USED]->(m165)
+MERGE (o165)-[:PRODUCED]->(p165)
+} 
+
+CALL () {
+MATCH (e166:Employee {id: "Employee13"})
+MATCH (o166:Operation {id: "Operation135"})
+MATCH (m166:Machine {name: "M4"})
+MATCH (p166:Part {name: "Valve"})
+MERGE (e166)-[:PERFORMED]->(o166)
+MERGE (o166)-[:USED]->(m166)
+MERGE (o166)-[:PRODUCED]->(p166)
+} 
+
+CALL () {
+MATCH (e167:Employee {id: "Employee13"})
+MATCH (o167:Operation {id: "Operation137"})
+MATCH (m167:Machine {name: "M2"})
+MATCH (p167:Part {name: "Piston"})
+MERGE (e167)-[:PERFORMED]->(o167)
+MERGE (o167)-[:USED]->(m167)
+MERGE (o167)-[:PRODUCED]->(p167)
+} 
+
+CALL () {
+MATCH (e168:Employee {id: "Employee13"})
+MATCH (o168:Operation {id: "Operation140"})
+MATCH (m168:Machine {name: "M1"})
+MATCH (p168:Part {name: "Valve"})
+MERGE (e168)-[:PERFORMED]->(o168)
+MERGE (o168)-[:USED]->(m168)
+MERGE (o168)-[:PRODUCED]->(p168)
+} 
+
+CALL () {
+MATCH (e169:Employee {id: "Employee13"})
+MATCH (o169:Operation {id: "Operation149"})
+MATCH (m169:Machine {name: "M4"})
+MATCH (p169:Part {name: "Gearbox"})
+MERGE (e169)-[:PERFORMED]->(o169)
+MERGE (o169)-[:USED]->(m169)
+MERGE (o169)-[:PRODUCED]->(p169)
+} 
+
+CALL () {
+MATCH (e170:Employee {id: "Employee13"})
+MATCH (o170:Operation {id: "Operation157"})
+MATCH (m170:Machine {name: "M3"})
+MATCH (p170:Part {name: "Gearbox"})
+MERGE (e170)-[:PERFORMED]->(o170)
+MERGE (o170)-[:USED]->(m170)
+MERGE (o170)-[:PRODUCED]->(p170)
+} 
+
+CALL () {
+MATCH (e171:Employee {id: "Employee13"})
+MATCH (o171:Operation {id: "Operation188"})
+MATCH (m171:Machine {name: "M1"})
+MATCH (p171:Part {name: "Shaft"})
+MERGE (e171)-[:PERFORMED]->(o171)
+MERGE (o171)-[:USED]->(m171)
+MERGE (o171)-[:PRODUCED]->(p171)
+} 
+
+CALL () {
+MATCH (e172:Employee {id: "Employee13"})
+MATCH (o172:Operation {id: "Operation196"})
+MATCH (m172:Machine {name: "M2"})
+MATCH (p172:Part {name: "Bearing"})
+MERGE (e172)-[:PERFORMED]->(o172)
+MERGE (o172)-[:USED]->(m172)
+MERGE (o172)-[:PRODUCED]->(p172)
+} 
+
+CALL () {
+MATCH (e173:Employee {id: "Employee13"})
+MATCH (o173:Operation {id: "Operation197"})
+MATCH (m173:Machine {name: "M1"})
+MATCH (p173:Part {name: "Piston"})
+MERGE (e173)-[:PERFORMED]->(o173)
+MERGE (o173)-[:USED]->(m173)
+MERGE (o173)-[:PRODUCED]->(p173)
+} 
+
+CALL () {
+MATCH (e174:Employee {id: "Employee13"})
+MATCH (o174:Operation {id: "Operation199"})
+MATCH (m174:Machine {name: "M1"})
+MATCH (p174:Part {name: "Valve"})
+MERGE (e174)-[:PERFORMED]->(o174)
+MERGE (o174)-[:USED]->(m174)
+MERGE (o174)-[:PRODUCED]->(p174)
+} 
+
+CALL () {
+MATCH (e175:Employee {id: "Employee13"})
+MATCH (o175:Operation {id: "Operation216"})
+MATCH (m175:Machine {name: "M3"})
+MATCH (p175:Part {name: "Shaft"})
+MERGE (e175)-[:PERFORMED]->(o175)
+MERGE (o175)-[:USED]->(m175)
+MERGE (o175)-[:PRODUCED]->(p175)
+} 
+
+CALL () {
+MATCH (e176:Employee {id: "Employee13"})
+MATCH (o176:Operation {id: "Operation244"})
+MATCH (m176:Machine {name: "M3"})
+MATCH (p176:Part {name: "Shaft"})
+MERGE (e176)-[:PERFORMED]->(o176)
+MERGE (o176)-[:USED]->(m176)
+MERGE (o176)-[:PRODUCED]->(p176)
+} 
+
+CALL () {
+MATCH (e177:Employee {id: "Employee13"})
+MATCH (o177:Operation {id: "Operation249"})
+MATCH (m177:Machine {name: "M3"})
+MATCH (p177:Part {name: "Bearing"})
+MERGE (e177)-[:PERFORMED]->(o177)
+MERGE (o177)-[:USED]->(m177)
+MERGE (o177)-[:PRODUCED]->(p177)
+} 
+
+CALL () {
+MATCH (e178:Employee {id: "Employee14"})
+MATCH (o178:Operation {id: "Operation12"})
+MATCH (m178:Machine {name: "M4"})
+MATCH (p178:Part {name: "Valve"})
+MERGE (e178)-[:PERFORMED]->(o178)
+MERGE (o178)-[:USED]->(m178)
+MERGE (o178)-[:PRODUCED]->(p178)
+} 
+
+CALL () {
+MATCH (e179:Employee {id: "Employee14"})
+MATCH (o179:Operation {id: "Operation28"})
+MATCH (m179:Machine {name: "M3"})
+MATCH (p179:Part {name: "Piston"})
+MERGE (e179)-[:PERFORMED]->(o179)
+MERGE (o179)-[:USED]->(m179)
+MERGE (o179)-[:PRODUCED]->(p179)
+} 
+
+CALL () {
+MATCH (e180:Employee {id: "Employee14"})
+MATCH (o180:Operation {id: "Operation59"})
+MATCH (m180:Machine {name: "M1"})
+MATCH (p180:Part {name: "Piston"})
+MERGE (e180)-[:PERFORMED]->(o180)
+MERGE (o180)-[:USED]->(m180)
+MERGE (o180)-[:PRODUCED]->(p180)
+} 
+
+CALL () {
+MATCH (e181:Employee {id: "Employee14"})
+MATCH (o181:Operation {id: "Operation62"})
+MATCH (m181:Machine {name: "M3"})
+MATCH (p181:Part {name: "Piston"})
+MERGE (e181)-[:PERFORMED]->(o181)
+MERGE (o181)-[:USED]->(m181)
+MERGE (o181)-[:PRODUCED]->(p181)
+} 
+
+CALL () {
+MATCH (e182:Employee {id: "Employee14"})
+MATCH (o182:Operation {id: "Operation70"})
+MATCH (m182:Machine {name: "M2"})
+MATCH (p182:Part {name: "Shaft"})
+MERGE (e182)-[:PERFORMED]->(o182)
+MERGE (o182)-[:USED]->(m182)
+MERGE (o182)-[:PRODUCED]->(p182)
+} 
+
+CALL () {
+MATCH (e183:Employee {id: "Employee14"})
+MATCH (o183:Operation {id: "Operation79"})
+MATCH (m183:Machine {name: "M2"})
+MATCH (p183:Part {name: "Piston"})
+MERGE (e183)-[:PERFORMED]->(o183)
+MERGE (o183)-[:USED]->(m183)
+MERGE (o183)-[:PRODUCED]->(p183)
+} 
+
+CALL () {
+MATCH (e184:Employee {id: "Employee14"})
+MATCH (o184:Operation {id: "Operation112"})
+MATCH (m184:Machine {name: "M3"})
+MATCH (p184:Part {name: "Bearing"})
+MERGE (e184)-[:PERFORMED]->(o184)
+MERGE (o184)-[:USED]->(m184)
+MERGE (o184)-[:PRODUCED]->(p184)
+} 
+
+CALL () {
+MATCH (e185:Employee {id: "Employee14"})
+MATCH (o185:Operation {id: "Operation139"})
+MATCH (m185:Machine {name: "M2"})
+MATCH (p185:Part {name: "Gearbox"})
+MERGE (e185)-[:PERFORMED]->(o185)
+MERGE (o185)-[:USED]->(m185)
+MERGE (o185)-[:PRODUCED]->(p185)
+} 
+
+CALL () {
+MATCH (e186:Employee {id: "Employee14"})
+MATCH (o186:Operation {id: "Operation163"})
+MATCH (m186:Machine {name: "M2"})
+MATCH (p186:Part {name: "Piston"})
+MERGE (e186)-[:PERFORMED]->(o186)
+MERGE (o186)-[:USED]->(m186)
+MERGE (o186)-[:PRODUCED]->(p186)
+} 
+
+CALL () {
+MATCH (e187:Employee {id: "Employee14"})
+MATCH (o187:Operation {id: "Operation177"})
+MATCH (m187:Machine {name: "M1"})
+MATCH (p187:Part {name: "Gearbox"})
+MERGE (e187)-[:PERFORMED]->(o187)
+MERGE (o187)-[:USED]->(m187)
+MERGE (o187)-[:PRODUCED]->(p187)
+} 
+
+CALL () {
+MATCH (e188:Employee {id: "Employee14"})
+MATCH (o188:Operation {id: "Operation179"})
+MATCH (m188:Machine {name: "M1"})
+MATCH (p188:Part {name: "Valve"})
+MERGE (e188)-[:PERFORMED]->(o188)
+MERGE (o188)-[:USED]->(m188)
+MERGE (o188)-[:PRODUCED]->(p188)
+} 
+
+CALL () {
+MATCH (e189:Employee {id: "Employee14"})
+MATCH (o189:Operation {id: "Operation227"})
+MATCH (m189:Machine {name: "M1"})
+MATCH (p189:Part {name: "Shaft"})
+MERGE (e189)-[:PERFORMED]->(o189)
+MERGE (o189)-[:USED]->(m189)
+MERGE (o189)-[:PRODUCED]->(p189)
+} 
+
+CALL () {
+MATCH (e190:Employee {id: "Employee14"})
+MATCH (o190:Operation {id: "Operation233"})
+MATCH (m190:Machine {name: "M4"})
+MATCH (p190:Part {name: "Gearbox"})
+MERGE (e190)-[:PERFORMED]->(o190)
+MERGE (o190)-[:USED]->(m190)
+MERGE (o190)-[:PRODUCED]->(p190)
+} 
+
+CALL () {
+MATCH (e191:Employee {id: "Employee15"})
+MATCH (o191:Operation {id: "Operation65"})
+MATCH (m191:Machine {name: "M4"})
+MATCH (p191:Part {name: "Piston"})
+MERGE (e191)-[:PERFORMED]->(o191)
+MERGE (o191)-[:USED]->(m191)
+MERGE (o191)-[:PRODUCED]->(p191)
+} 
+
+CALL () {
+MATCH (e192:Employee {id: "Employee15"})
+MATCH (o192:Operation {id: "Operation73"})
+MATCH (m192:Machine {name: "M2"})
+MATCH (p192:Part {name: "Piston"})
+MERGE (e192)-[:PERFORMED]->(o192)
+MERGE (o192)-[:USED]->(m192)
+MERGE (o192)-[:PRODUCED]->(p192)
+} 
+
+CALL () {
+MATCH (e193:Employee {id: "Employee15"})
+MATCH (o193:Operation {id: "Operation87"})
+MATCH (m193:Machine {name: "M3"})
+MATCH (p193:Part {name: "Valve"})
+MERGE (e193)-[:PERFORMED]->(o193)
+MERGE (o193)-[:USED]->(m193)
+MERGE (o193)-[:PRODUCED]->(p193)
+} 
+
+CALL () {
+MATCH (e194:Employee {id: "Employee15"})
+MATCH (o194:Operation {id: "Operation128"})
+MATCH (m194:Machine {name: "M4"})
+MATCH (p194:Part {name: "Gearbox"})
+MERGE (e194)-[:PERFORMED]->(o194)
+MERGE (o194)-[:USED]->(m194)
+MERGE (o194)-[:PRODUCED]->(p194)
+} 
+
+CALL () {
+MATCH (e195:Employee {id: "Employee15"})
+MATCH (o195:Operation {id: "Operation130"})
+MATCH (m195:Machine {name: "M1"})
+MATCH (p195:Part {name: "Shaft"})
+MERGE (e195)-[:PERFORMED]->(o195)
+MERGE (o195)-[:USED]->(m195)
+MERGE (o195)-[:PRODUCED]->(p195)
+} 
+
+CALL () {
+MATCH (e196:Employee {id: "Employee15"})
+MATCH (o196:Operation {id: "Operation143"})
+MATCH (m196:Machine {name: "M2"})
+MATCH (p196:Part {name: "Valve"})
+MERGE (e196)-[:PERFORMED]->(o196)
+MERGE (o196)-[:USED]->(m196)
+MERGE (o196)-[:PRODUCED]->(p196)
+} 
+
+CALL () {
+MATCH (e197:Employee {id: "Employee15"})
+MATCH (o197:Operation {id: "Operation207"})
+MATCH (m197:Machine {name: "M1"})
+MATCH (p197:Part {name: "Gearbox"})
+MERGE (e197)-[:PERFORMED]->(o197)
+MERGE (o197)-[:USED]->(m197)
+MERGE (o197)-[:PRODUCED]->(p197)
+} 
+
+CALL () {
+MATCH (e198:Employee {id: "Employee15"})
+MATCH (o198:Operation {id: "Operation209"})
+MATCH (m198:Machine {name: "M2"})
+MATCH (p198:Part {name: "Valve"})
+MERGE (e198)-[:PERFORMED]->(o198)
+MERGE (o198)-[:USED]->(m198)
+MERGE (o198)-[:PRODUCED]->(p198)
+} 
+
+CALL () {
+MATCH (e199:Employee {id: "Employee15"})
+MATCH (o199:Operation {id: "Operation210"})
+MATCH (m199:Machine {name: "M1"})
+MATCH (p199:Part {name: "Valve"})
+MERGE (e199)-[:PERFORMED]->(o199)
+MERGE (o199)-[:USED]->(m199)
+MERGE (o199)-[:PRODUCED]->(p199)
+} 
+
+CALL () {
+MATCH (e200:Employee {id: "Employee15"})
+MATCH (o200:Operation {id: "Operation222"})
+MATCH (m200:Machine {name: "M3"})
+MATCH (p200:Part {name: "Piston"})
+MERGE (e200)-[:PERFORMED]->(o200)
+MERGE (o200)-[:USED]->(m200)
+MERGE (o200)-[:PRODUCED]->(p200)
+} 
+
+CALL () {
+MATCH (e201:Employee {id: "Employee15"})
+MATCH (o201:Operation {id: "Operation240"})
+MATCH (m201:Machine {name: "M1"})
+MATCH (p201:Part {name: "Valve"})
+MERGE (e201)-[:PERFORMED]->(o201)
+MERGE (o201)-[:USED]->(m201)
+MERGE (o201)-[:PRODUCED]->(p201)
+} 
+
+CALL () {
+MATCH (e202:Employee {id: "Employee15"})
+MATCH (o202:Operation {id: "Operation247"})
+MATCH (m202:Machine {name: "M4"})
+MATCH (p202:Part {name: "Shaft"})
+MERGE (e202)-[:PERFORMED]->(o202)
+MERGE (o202)-[:USED]->(m202)
+MERGE (o202)-[:PRODUCED]->(p202)
+} 
+
+CALL () {
+MATCH (e203:Employee {id: "Employee16"})
+MATCH (o203:Operation {id: "Operation92"})
+MATCH (m203:Machine {name: "M1"})
+MATCH (p203:Part {name: "Piston"})
+MERGE (e203)-[:PERFORMED]->(o203)
+MERGE (o203)-[:USED]->(m203)
+MERGE (o203)-[:PRODUCED]->(p203)
+} 
+
+CALL () {
+MATCH (e204:Employee {id: "Employee16"})
+MATCH (o204:Operation {id: "Operation134"})
+MATCH (m204:Machine {name: "M2"})
+MATCH (p204:Part {name: "Piston"})
+MERGE (e204)-[:PERFORMED]->(o204)
+MERGE (o204)-[:USED]->(m204)
+MERGE (o204)-[:PRODUCED]->(p204)
+} 
+
+CALL () {
+MATCH (e205:Employee {id: "Employee16"})
+MATCH (o205:Operation {id: "Operation141"})
+MATCH (m205:Machine {name: "M1"})
+MATCH (p205:Part {name: "Bearing"})
+MERGE (e205)-[:PERFORMED]->(o205)
+MERGE (o205)-[:USED]->(m205)
+MERGE (o205)-[:PRODUCED]->(p205)
+} 
+
+CALL () {
+MATCH (e206:Employee {id: "Employee16"})
+MATCH (o206:Operation {id: "Operation174"})
+MATCH (m206:Machine {name: "M4"})
+MATCH (p206:Part {name: "Piston"})
+MERGE (e206)-[:PERFORMED]->(o206)
+MERGE (o206)-[:USED]->(m206)
+MERGE (o206)-[:PRODUCED]->(p206)
+} 
+
+CALL () {
+MATCH (e207:Employee {id: "Employee16"})
+MATCH (o207:Operation {id: "Operation180"})
+MATCH (m207:Machine {name: "M1"})
+MATCH (p207:Part {name: "Gearbox"})
+MERGE (e207)-[:PERFORMED]->(o207)
+MERGE (o207)-[:USED]->(m207)
+MERGE (o207)-[:PRODUCED]->(p207)
+} 
+
+CALL () {
+MATCH (e208:Employee {id: "Employee16"})
+MATCH (o208:Operation {id: "Operation231"})
+MATCH (m208:Machine {name: "M4"})
+MATCH (p208:Part {name: "Bearing"})
+MERGE (e208)-[:PERFORMED]->(o208)
+MERGE (o208)-[:USED]->(m208)
+MERGE (o208)-[:PRODUCED]->(p208)
+} 
+
+CALL () {
+MATCH (e209:Employee {id: "Employee17"})
+MATCH (o209:Operation {id: "Operation18"})
+MATCH (m209:Machine {name: "M2"})
+MATCH (p209:Part {name: "Shaft"})
+MERGE (e209)-[:PERFORMED]->(o209)
+MERGE (o209)-[:USED]->(m209)
+MERGE (o209)-[:PRODUCED]->(p209)
+} 
+
+CALL () {
+MATCH (e210:Employee {id: "Employee17"})
+MATCH (o210:Operation {id: "Operation22"})
+MATCH (m210:Machine {name: "M4"})
+MATCH (p210:Part {name: "Shaft"})
+MERGE (e210)-[:PERFORMED]->(o210)
+MERGE (o210)-[:USED]->(m210)
+MERGE (o210)-[:PRODUCED]->(p210)
+} 
+
+CALL () {
+MATCH (e211:Employee {id: "Employee17"})
+MATCH (o211:Operation {id: "Operation42"})
+MATCH (m211:Machine {name: "M3"})
+MATCH (p211:Part {name: "Shaft"})
+MERGE (e211)-[:PERFORMED]->(o211)
+MERGE (o211)-[:USED]->(m211)
+MERGE (o211)-[:PRODUCED]->(p211)
+} 
+
+CALL () {
+MATCH (e212:Employee {id: "Employee17"})
+MATCH (o212:Operation {id: "Operation44"})
+MATCH (m212:Machine {name: "M1"})
+MATCH (p212:Part {name: "Bearing"})
+MERGE (e212)-[:PERFORMED]->(o212)
+MERGE (o212)-[:USED]->(m212)
+MERGE (o212)-[:PRODUCED]->(p212)
+} 
+
+CALL () {
+MATCH (e213:Employee {id: "Employee17"})
+MATCH (o213:Operation {id: "Operation122"})
+MATCH (m213:Machine {name: "M4"})
+MATCH (p213:Part {name: "Valve"})
+MERGE (e213)-[:PERFORMED]->(o213)
+MERGE (o213)-[:USED]->(m213)
+MERGE (o213)-[:PRODUCED]->(p213)
+} 
+
+CALL () {
+MATCH (e214:Employee {id: "Employee17"})
+MATCH (o214:Operation {id: "Operation126"})
+MATCH (m214:Machine {name: "M1"})
+MATCH (p214:Part {name: "Bearing"})
+MERGE (e214)-[:PERFORMED]->(o214)
+MERGE (o214)-[:USED]->(m214)
+MERGE (o214)-[:PRODUCED]->(p214)
+} 
+
+CALL () {
+MATCH (e215:Employee {id: "Employee17"})
+MATCH (o215:Operation {id: "Operation133"})
+MATCH (m215:Machine {name: "M3"})
+MATCH (p215:Part {name: "Gearbox"})
+MERGE (e215)-[:PERFORMED]->(o215)
+MERGE (o215)-[:USED]->(m215)
+MERGE (o215)-[:PRODUCED]->(p215)
+} 
+
+CALL () {
+MATCH (e216:Employee {id: "Employee17"})
+MATCH (o216:Operation {id: "Operation155"})
+MATCH (m216:Machine {name: "M3"})
+MATCH (p216:Part {name: "Shaft"})
+MERGE (e216)-[:PERFORMED]->(o216)
+MERGE (o216)-[:USED]->(m216)
+MERGE (o216)-[:PRODUCED]->(p216)
+} 
+
+CALL () {
+MATCH (e217:Employee {id: "Employee17"})
+MATCH (o217:Operation {id: "Operation189"})
+MATCH (m217:Machine {name: "M2"})
+MATCH (p217:Part {name: "Piston"})
+MERGE (e217)-[:PERFORMED]->(o217)
+MERGE (o217)-[:USED]->(m217)
+MERGE (o217)-[:PRODUCED]->(p217)
+} 
+
+CALL () {
+MATCH (e218:Employee {id: "Employee17"})
+MATCH (o218:Operation {id: "Operation217"})
+MATCH (m218:Machine {name: "M1"})
+MATCH (p218:Part {name: "Piston"})
+MERGE (e218)-[:PERFORMED]->(o218)
+MERGE (o218)-[:USED]->(m218)
+MERGE (o218)-[:PRODUCED]->(p218)
+} 
+
+CALL () {
+MATCH (e219:Employee {id: "Employee17"})
+MATCH (o219:Operation {id: "Operation224"})
+MATCH (m219:Machine {name: "M4"})
+MATCH (p219:Part {name: "Shaft"})
+MERGE (e219)-[:PERFORMED]->(o219)
+MERGE (o219)-[:USED]->(m219)
+MERGE (o219)-[:PRODUCED]->(p219)
+} 
+
+CALL () {
+MATCH (e220:Employee {id: "Employee18"})
+MATCH (o220:Operation {id: "Operation8"})
+MATCH (m220:Machine {name: "M2"})
+MATCH (p220:Part {name: "Valve"})
+MERGE (e220)-[:PERFORMED]->(o220)
+MERGE (o220)-[:USED]->(m220)
+MERGE (o220)-[:PRODUCED]->(p220)
+} 
+
+CALL () {
+MATCH (e221:Employee {id: "Employee18"})
+MATCH (o221:Operation {id: "Operation15"})
+MATCH (m221:Machine {name: "M1"})
+MATCH (p221:Part {name: "Gearbox"})
+MERGE (e221)-[:PERFORMED]->(o221)
+MERGE (o221)-[:USED]->(m221)
+MERGE (o221)-[:PRODUCED]->(p221)
+} 
+
+CALL () {
+MATCH (e222:Employee {id: "Employee18"})
+MATCH (o222:Operation {id: "Operation49"})
+MATCH (m222:Machine {name: "M1"})
+MATCH (p222:Part {name: "Gearbox"})
+MERGE (e222)-[:PERFORMED]->(o222)
+MERGE (o222)-[:USED]->(m222)
+MERGE (o222)-[:PRODUCED]->(p222)
+} 
+
+CALL () {
+MATCH (e223:Employee {id: "Employee18"})
+MATCH (o223:Operation {id: "Operation50"})
+MATCH (m223:Machine {name: "M1"})
+MATCH (p223:Part {name: "Valve"})
+MERGE (e223)-[:PERFORMED]->(o223)
+MERGE (o223)-[:USED]->(m223)
+MERGE (o223)-[:PRODUCED]->(p223)
+} 
+
+CALL () {
+MATCH (e224:Employee {id: "Employee18"})
+MATCH (o224:Operation {id: "Operation94"})
+MATCH (m224:Machine {name: "M4"})
+MATCH (p224:Part {name: "Piston"})
+MERGE (e224)-[:PERFORMED]->(o224)
+MERGE (o224)-[:USED]->(m224)
+MERGE (o224)-[:PRODUCED]->(p224)
+} 
+
+CALL () {
+MATCH (e225:Employee {id: "Employee18"})
+MATCH (o225:Operation {id: "Operation98"})
+MATCH (m225:Machine {name: "M1"})
+MATCH (p225:Part {name: "Bearing"})
+MERGE (e225)-[:PERFORMED]->(o225)
+MERGE (o225)-[:USED]->(m225)
+MERGE (o225)-[:PRODUCED]->(p225)
+} 
+
+CALL () {
+MATCH (e226:Employee {id: "Employee18"})
+MATCH (o226:Operation {id: "Operation99"})
+MATCH (m226:Machine {name: "M2"})
+MATCH (p226:Part {name: "Piston"})
+MERGE (e226)-[:PERFORMED]->(o226)
+MERGE (o226)-[:USED]->(m226)
+MERGE (o226)-[:PRODUCED]->(p226)
+} 
+
+CALL () {
+MATCH (e227:Employee {id: "Employee18"})
+MATCH (o227:Operation {id: "Operation117"})
+MATCH (m227:Machine {name: "M2"})
+MATCH (p227:Part {name: "Shaft"})
+MERGE (e227)-[:PERFORMED]->(o227)
+MERGE (o227)-[:USED]->(m227)
+MERGE (o227)-[:PRODUCED]->(p227)
+} 
+
+CALL () {
+MATCH (e228:Employee {id: "Employee18"})
+MATCH (o228:Operation {id: "Operation186"})
+MATCH (m228:Machine {name: "M1"})
+MATCH (p228:Part {name: "Bearing"})
+MERGE (e228)-[:PERFORMED]->(o228)
+MERGE (o228)-[:USED]->(m228)
+MERGE (o228)-[:PRODUCED]->(p228)
+} 
+
+CALL () {
+MATCH (e229:Employee {id: "Employee18"})
+MATCH (o229:Operation {id: "Operation246"})
+MATCH (m229:Machine {name: "M3"})
+MATCH (p229:Part {name: "Valve"})
+MERGE (e229)-[:PERFORMED]->(o229)
+MERGE (o229)-[:USED]->(m229)
+MERGE (o229)-[:PRODUCED]->(p229)
+} 
+
+CALL () {
+MATCH (e230:Employee {id: "Employee19"})
+MATCH (o230:Operation {id: "Operation27"})
+MATCH (m230:Machine {name: "M4"})
+MATCH (p230:Part {name: "Shaft"})
+MERGE (e230)-[:PERFORMED]->(o230)
+MERGE (o230)-[:USED]->(m230)
+MERGE (o230)-[:PRODUCED]->(p230)
+} 
+
+CALL () {
+MATCH (e231:Employee {id: "Employee19"})
+MATCH (o231:Operation {id: "Operation38"})
+MATCH (m231:Machine {name: "M2"})
+MATCH (p231:Part {name: "Bearing"})
+MERGE (e231)-[:PERFORMED]->(o231)
+MERGE (o231)-[:USED]->(m231)
+MERGE (o231)-[:PRODUCED]->(p231)
+} 
+
+CALL () {
+MATCH (e232:Employee {id: "Employee19"})
+MATCH (o232:Operation {id: "Operation39"})
+MATCH (m232:Machine {name: "M3"})
+MATCH (p232:Part {name: "Valve"})
+MERGE (e232)-[:PERFORMED]->(o232)
+MERGE (o232)-[:USED]->(m232)
+MERGE (o232)-[:PRODUCED]->(p232)
+} 
+
+CALL () {
+MATCH (e233:Employee {id: "Employee19"})
+MATCH (o233:Operation {id: "Operation110"})
+MATCH (m233:Machine {name: "M3"})
+MATCH (p233:Part {name: "Gearbox"})
+MERGE (e233)-[:PERFORMED]->(o233)
+MERGE (o233)-[:USED]->(m233)
+MERGE (o233)-[:PRODUCED]->(p233)
+} 
+
+CALL () {
+MATCH (e234:Employee {id: "Employee19"})
+MATCH (o234:Operation {id: "Operation121"})
+MATCH (m234:Machine {name: "M1"})
+MATCH (p234:Part {name: "Valve"})
+MERGE (e234)-[:PERFORMED]->(o234)
+MERGE (o234)-[:USED]->(m234)
+MERGE (o234)-[:PRODUCED]->(p234)
+} 
+
+CALL () {
+MATCH (e235:Employee {id: "Employee19"})
+MATCH (o235:Operation {id: "Operation176"})
+MATCH (m235:Machine {name: "M3"})
+MATCH (p235:Part {name: "Piston"})
+MERGE (e235)-[:PERFORMED]->(o235)
+MERGE (o235)-[:USED]->(m235)
+MERGE (o235)-[:PRODUCED]->(p235)
+} 
+
+CALL () {
+MATCH (e236:Employee {id: "Employee19"})
+MATCH (o236:Operation {id: "Operation193"})
+MATCH (m236:Machine {name: "M4"})
+MATCH (p236:Part {name: "Bearing"})
+MERGE (e236)-[:PERFORMED]->(o236)
+MERGE (o236)-[:USED]->(m236)
+MERGE (o236)-[:PRODUCED]->(p236)
+} 
+
+CALL () {
+MATCH (e237:Employee {id: "Employee19"})
+MATCH (o237:Operation {id: "Operation198"})
+MATCH (m237:Machine {name: "M4"})
+MATCH (p237:Part {name: "Bearing"})
+MERGE (e237)-[:PERFORMED]->(o237)
+MERGE (o237)-[:USED]->(m237)
+MERGE (o237)-[:PRODUCED]->(p237)
+} 
+
+CALL () {
+MATCH (e238:Employee {id: "Employee19"})
+MATCH (o238:Operation {id: "Operation205"})
+MATCH (m238:Machine {name: "M3"})
+MATCH (p238:Part {name: "Valve"})
+MERGE (e238)-[:PERFORMED]->(o238)
+MERGE (o238)-[:USED]->(m238)
+MERGE (o238)-[:PRODUCED]->(p238)
+} 
+
+CALL () {
+MATCH (e239:Employee {id: "Employee19"})
+MATCH (o239:Operation {id: "Operation235"})
+MATCH (m239:Machine {name: "M4"})
+MATCH (p239:Part {name: "Shaft"})
+MERGE (e239)-[:PERFORMED]->(o239)
+MERGE (o239)-[:USED]->(m239)
+MERGE (o239)-[:PRODUCED]->(p239)
+} 
+
+CALL () {
+MATCH (e240:Employee {id: "Employee20"})
+MATCH (o240:Operation {id: "Operation14"})
+MATCH (m240:Machine {name: "M1"})
+MATCH (p240:Part {name: "Piston"})
+MERGE (e240)-[:PERFORMED]->(o240)
+MERGE (o240)-[:USED]->(m240)
+MERGE (o240)-[:PRODUCED]->(p240)
+} 
+
+CALL () {
+MATCH (e241:Employee {id: "Employee20"})
+MATCH (o241:Operation {id: "Operation61"})
+MATCH (m241:Machine {name: "M3"})
+MATCH (p241:Part {name: "Gearbox"})
+MERGE (e241)-[:PERFORMED]->(o241)
+MERGE (o241)-[:USED]->(m241)
+MERGE (o241)-[:PRODUCED]->(p241)
+} 
+
+CALL () {
+MATCH (e242:Employee {id: "Employee20"})
+MATCH (o242:Operation {id: "Operation68"})
+MATCH (m242:Machine {name: "M1"})
+MATCH (p242:Part {name: "Piston"})
+MERGE (e242)-[:PERFORMED]->(o242)
+MERGE (o242)-[:USED]->(m242)
+MERGE (o242)-[:PRODUCED]->(p242)
+} 
+
+CALL () {
+MATCH (e243:Employee {id: "Employee20"})
+MATCH (o243:Operation {id: "Operation86"})
+MATCH (m243:Machine {name: "M2"})
+MATCH (p243:Part {name: "Shaft"})
+MERGE (e243)-[:PERFORMED]->(o243)
+MERGE (o243)-[:USED]->(m243)
+MERGE (o243)-[:PRODUCED]->(p243)
+} 
+
+CALL () {
+MATCH (e244:Employee {id: "Employee20"})
+MATCH (o244:Operation {id: "Operation105"})
+MATCH (m244:Machine {name: "M3"})
+MATCH (p244:Part {name: "Gearbox"})
+MERGE (e244)-[:PERFORMED]->(o244)
+MERGE (o244)-[:USED]->(m244)
+MERGE (o244)-[:PRODUCED]->(p244)
+} 
+
+CALL () {
+MATCH (e245:Employee {id: "Employee20"})
+MATCH (o245:Operation {id: "Operation111"})
+MATCH (m245:Machine {name: "M2"})
+MATCH (p245:Part {name: "Bearing"})
+MERGE (e245)-[:PERFORMED]->(o245)
+MERGE (o245)-[:USED]->(m245)
+MERGE (o245)-[:PRODUCED]->(p245)
+} 
+
+CALL () {
+MATCH (e246:Employee {id: "Employee20"})
+MATCH (o246:Operation {id: "Operation127"})
+MATCH (m246:Machine {name: "M4"})
+MATCH (p246:Part {name: "Piston"})
+MERGE (e246)-[:PERFORMED]->(o246)
+MERGE (o246)-[:USED]->(m246)
+MERGE (o246)-[:PRODUCED]->(p246)
+} 
+
+CALL () {
+MATCH (e247:Employee {id: "Employee20"})
+MATCH (o247:Operation {id: "Operation208"})
+MATCH (m247:Machine {name: "M4"})
+MATCH (p247:Part {name: "Piston"})
+MERGE (e247)-[:PERFORMED]->(o247)
+MERGE (o247)-[:USED]->(m247)
+MERGE (o247)-[:PRODUCED]->(p247)
+} 
+
+CALL () {
+MATCH (e248:Employee {id: "Employee20"})
+MATCH (o248:Operation {id: "Operation214"})
+MATCH (m248:Machine {name: "M2"})
+MATCH (p248:Part {name: "Valve"})
+MERGE (e248)-[:PERFORMED]->(o248)
+MERGE (o248)-[:USED]->(m248)
+MERGE (o248)-[:PRODUCED]->(p248)
+} 
+
+CALL () {
+MATCH (e249:Employee {id: "Employee20"})
+MATCH (o249:Operation {id: "Operation221"})
+MATCH (m249:Machine {name: "M2"})
+MATCH (p249:Part {name: "Piston"})
+MERGE (e249)-[:PERFORMED]->(o249)
+MERGE (o249)-[:USED]->(m249)
+MERGE (o249)-[:PRODUCED]->(p249)
+} 
+
+CALL () {
+MATCH (e250:Employee {id: "Employee20"})
+MATCH (o250:Operation {id: "Operation250"})
+MATCH (m250:Machine {name: "M4"})
+MATCH (p250:Part {name: "Gearbox"})
+MERGE (e250)-[:PERFORMED]->(o250)
+MERGE (o250)-[:USED]->(m250)
+MERGE (o250)-[:PRODUCED]->(p250)
+} 

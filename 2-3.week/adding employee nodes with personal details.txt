@@ -1,0 +1,120 @@
+// CREATING EMPLOYEE NODES WITH PERSONAL DETAILS
+MERGE (Employee1:Employee {id: "Employee1"})
+ON CREATE SET
+  Employee1.name = "Danielle Johnson",
+  Employee1.gender = "M",
+  Employee1.birthdate = date("1983-01-17")
+
+MERGE (Employee2:Employee {id: "Employee2"})
+ON CREATE SET
+  Employee2.name = "John Taylor",
+  Employee2.gender = "M",
+  Employee2.birthdate = date("1971-04-22")
+
+MERGE (Employee3:Employee {id: "Employee3"})
+ON CREATE SET
+  Employee3.name = "Erica Mcclain",
+  Employee3.gender = "F",
+  Employee3.birthdate = date("1970-03-31")
+
+MERGE (Employee4:Employee {id: "Employee4"})
+ON CREATE SET
+  Employee4.name = "Brittany Johnson",
+  Employee4.gender = "M",
+  Employee4.birthdate = date("1970-09-15")
+
+MERGE (Employee5:Employee {id: "Employee5"})
+ON CREATE SET
+  Employee5.name = "Jeffery Wagner",
+  Employee5.gender = "M",
+  Employee5.birthdate = date("1966-02-19")
+
+MERGE (Employee6:Employee {id: "Employee6"})
+ON CREATE SET
+  Employee6.name = "Anna Baldwin",
+  Employee6.gender = "M",
+  Employee6.birthdate = date("2001-05-31")
+
+MERGE (Employee7:Employee {id: "Employee7"})
+ON CREATE SET
+  Employee7.name = "Robert Cole",
+  Employee7.gender = "M",
+  Employee7.birthdate = date("1983-04-06")
+
+MERGE (Employee8:Employee {id: "Employee8"})
+ON CREATE SET
+  Employee8.name = "Lisa Smith",
+  Employee8.gender = "M",
+  Employee8.birthdate = date("1975-03-13")
+
+MERGE (Employee9:Employee {id: "Employee9"})
+ON CREATE SET
+  Employee9.name = "Helen Peterson",
+  Employee9.gender = "F",
+  Employee9.birthdate = date("1974-11-29")
+
+MERGE (Employee10:Employee {id: "Employee10"})
+ON CREATE SET
+  Employee10.name = "Jason Gallagher",
+  Employee10.gender = "M",
+  Employee10.birthdate = date("1971-04-15")
+
+MERGE (Employee11:Employee {id: "Employee11"})
+ON CREATE SET
+  Employee11.name = "Christopher Davis",
+  Employee11.gender = "M",
+  Employee11.birthdate = date("1987-09-27")
+
+MERGE (Employee12:Employee {id: "Employee12"})
+ON CREATE SET
+  Employee12.name = "Cassandra Roman",
+  Employee12.gender = "M",
+  Employee12.birthdate = date("1995-08-06")
+
+MERGE (Employee13:Employee {id: "Employee13"})
+ON CREATE SET
+  Employee13.name = "Amanda Dudley",
+  Employee13.gender = "M",
+  Employee13.birthdate = date("1990-02-02")
+
+MERGE (Employee14:Employee {id: "Employee14"})
+ON CREATE SET
+  Employee14.name = "Christian Carter",
+  Employee14.gender = "M",
+  Employee14.birthdate = date("1988-12-09")
+
+MERGE (Employee15:Employee {id: "Employee15"})
+ON CREATE SET
+  Employee15.name = "Barbara Bush",
+  Employee15.gender = "M",
+  Employee15.birthdate = date("1967-06-13")
+
+MERGE (Employee16:Employee {id: "Employee16"})
+ON CREATE SET
+  Employee16.name = "Donna Mejia",
+  Employee16.gender = "M",
+  Employee16.birthdate = date("1969-10-05")
+
+MERGE (Employee17:Employee {id: "Employee17"})
+ON CREATE SET
+  Employee17.name = "Melissa Delacruz",
+  Employee17.gender = "F",
+  Employee17.birthdate = date("1990-03-14")
+
+MERGE (Employee18:Employee {id: "Employee18"})
+ON CREATE SET
+  Employee18.name = "Joshua Reid",
+  Employee18.gender = "M",
+  Employee18.birthdate = date("1989-02-26")
+
+MERGE (Employee19:Employee {id: "Employee19"})
+ON CREATE SET
+  Employee19.name = "Francisco Kelly",
+  Employee19.gender = "F",
+  Employee19.birthdate = date("1982-07-01")
+
+MERGE (Employee20:Employee {id: "Employee20"})
+ON CREATE SET
+  Employee20.name = "Jacqueline Sutton",
+  Employee20.gender = "F",
+  Employee20.birthdate = date("1969-03-10")
